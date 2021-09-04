@@ -16,10 +16,19 @@ namespace TechShop
         FormDsKhachHang formDsKhachHang = new FormDsKhachHang();
         FormDashboard frmDashboard = new FormDashboard();
         FormBanHang frmBanHang = new FormBanHang();
+        FormDonHang frmDonHang = new FormDonHang();
         public FormMain()
         {
             InitializeComponent();
             this.IsMdiContainer = true;
+        }
+        private void Main_Load(object sender, EventArgs e)
+        {
+            this.IsMdiContainer = true;
+            //this.WindowState = FormWindowState.Maximized;
+            sidePanel.Dispose();
+            btnDashboard.PerformClick();
+
         }
         private void OpenChildForm(Form childForm)
         {
@@ -30,23 +39,13 @@ namespace TechShop
             this.pnMain.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
-        private void Main_Load(object sender, EventArgs e)
-        {
-            this.IsMdiContainer = true;
-            //this.WindowState = FormWindowState.Maximized;
-            sidePanel.Dispose();
-            btnDashboard.PerformClick();
 
-        }
-        
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             resetBtnBackColor();
             hideSubmenu();
             setBtnBackColor(btnDashboard);
-
             OpenChildForm(frmDashboard);
         }
 
@@ -55,7 +54,6 @@ namespace TechShop
             resetBtnBackColor();
             hideSubmenu();
             setBtnBackColor(btnBanHang);
-
             OpenChildForm(frmBanHang);
         }
 
@@ -64,14 +62,15 @@ namespace TechShop
             resetBtnBackColor();
             hideSubmenu();
             setBtnBackColor(btnDonHang);
-            pnDonHangSubMenu.Visible = true;
+            OpenChildForm(frmDonHang);
         }
         private void btnSanPham_Click(object sender, EventArgs e)
         {
             resetBtnBackColor();
             hideSubmenu();
             setBtnBackColor(btnSanPham);
-            pnSanPhamSubmenu.Visible = true;
+            OpenChildForm(formDsSanPham);
+            formDsSanPham.LoadData();
         }
         public void btnDsSanPham_Click(object sender, EventArgs e)
         {
@@ -83,7 +82,6 @@ namespace TechShop
             resetBtnBackColor();
             hideSubmenu();
             setBtnBackColor(btnKhachHang);
-
             OpenChildForm(formDsKhachHang);
             formDsKhachHang.LoadData();
 
@@ -123,15 +121,7 @@ namespace TechShop
         }
         private void hideSubmenu()
         {
-            pnDonHangSubMenu.Visible = false;
-            pnSanPhamSubmenu.Visible = false;
             pnBaoCaoSubmenu.Visible = false;
         }
-
-        
-
-
-
-        
     }     
 }

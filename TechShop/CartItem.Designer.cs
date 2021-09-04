@@ -50,6 +50,11 @@ namespace TechShop
             0,
             0,
             0});
+            this.quantity.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.quantity.Name = "quantity";
             this.quantity.Size = new System.Drawing.Size(64, 31);
             this.quantity.TabIndex = 44;

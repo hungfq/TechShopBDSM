@@ -35,7 +35,7 @@ namespace TechShop
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -61,7 +61,7 @@ namespace TechShop
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(12, 67);
@@ -108,13 +108,13 @@ namespace TechShop
             this.label6.TabIndex = 12;
             this.label6.Text = "Giá:";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(24, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(750, 28);
-            this.textBox1.TabIndex = 1;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(24, 97);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(750, 28);
+            this.txtName.TabIndex = 1;
             // 
             // label1
             // 
@@ -286,7 +286,7 @@ namespace TechShop
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label10;

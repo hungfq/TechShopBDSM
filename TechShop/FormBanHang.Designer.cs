@@ -32,7 +32,7 @@ namespace TechShop
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBanHang));
             this.btnSearch = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnSearch = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -40,16 +40,19 @@ namespace TechShop
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTienKhachDua = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbTongSoSp = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbTotalMoney = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThanhToan = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.pnCart = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
+            this.ecThToan = new TechShop.ElipseControl();
+            this.ecHuy = new TechShop.ElipseControl();
+            this.ecPnSearch = new TechShop.ElipseControl();
+            this.pnSearch.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,15 +78,15 @@ namespace TechShop
             this.textBox1.Size = new System.Drawing.Size(588, 32);
             this.textBox1.TabIndex = 57;
             // 
-            // panel2
+            // pnSearch
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.btnSearch);
-            this.panel2.Location = new System.Drawing.Point(27, 33);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(722, 46);
-            this.panel2.TabIndex = 58;
+            this.pnSearch.BackColor = System.Drawing.Color.White;
+            this.pnSearch.Controls.Add(this.textBox1);
+            this.pnSearch.Controls.Add(this.btnSearch);
+            this.pnSearch.Location = new System.Drawing.Point(27, 33);
+            this.pnSearch.Name = "pnSearch";
+            this.pnSearch.Size = new System.Drawing.Size(722, 46);
+            this.pnSearch.TabIndex = 58;
             // 
             // comboBox2
             // 
@@ -132,7 +135,7 @@ namespace TechShop
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.txtTienKhachDua);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.lbTongSoSp);
             this.panel3.Controls.Add(this.label2);
@@ -153,6 +156,7 @@ namespace TechShop
             this.label5.Size = new System.Drawing.Size(161, 38);
             this.label5.TabIndex = 60;
             this.label5.Text = "00.000.000";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
@@ -164,14 +168,14 @@ namespace TechShop
             this.label4.TabIndex = 59;
             this.label4.Text = "Tiền thừa:";
             // 
-            // textBox2
+            // txtTienKhachDua
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(195, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 39);
-            this.textBox2.TabIndex = 58;
+            this.txtTienKhachDua.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTienKhachDua.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTienKhachDua.Location = new System.Drawing.Point(195, 116);
+            this.txtTienKhachDua.Name = "txtTienKhachDua";
+            this.txtTienKhachDua.Size = new System.Drawing.Size(191, 39);
+            this.txtTienKhachDua.TabIndex = 58;
             // 
             // label3
             // 
@@ -213,6 +217,7 @@ namespace TechShop
             this.lbTotalMoney.Size = new System.Drawing.Size(190, 45);
             this.lbTotalMoney.TabIndex = 2;
             this.lbTotalMoney.Text = "00.000.000";
+            this.lbTotalMoney.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -238,19 +243,20 @@ namespace TechShop
             this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnHuy
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Open Sans", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.button1.Location = new System.Drawing.Point(773, 657);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 159);
-            this.button1.TabIndex = 62;
-            this.button1.Text = "Hủy";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnHuy.BackColor = System.Drawing.Color.DarkGray;
+            this.btnHuy.FlatAppearance.BorderSize = 0;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Font = new System.Drawing.Font("Open Sans", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnHuy.Location = new System.Drawing.Point(773, 657);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(105, 159);
+            this.btnHuy.TabIndex = 62;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // pnCart
             // 
@@ -261,6 +267,21 @@ namespace TechShop
             this.pnCart.Size = new System.Drawing.Size(415, 291);
             this.pnCart.TabIndex = 60;
             // 
+            // ecThToan
+            // 
+            this.ecThToan.CornerRadius = 10;
+            this.ecThToan.TargetControl = this.btnThanhToan;
+            // 
+            // ecHuy
+            // 
+            this.ecHuy.CornerRadius = 10;
+            this.ecHuy.TargetControl = this.btnHuy;
+            // 
+            // ecPnSearch
+            // 
+            this.ecPnSearch.CornerRadius = 25;
+            this.ecPnSearch.TargetControl = this.pnSearch;
+            // 
             // FormBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -268,19 +289,19 @@ namespace TechShop
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1221, 844);
             this.Controls.Add(this.pnCart);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.pnListItem);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnSearch);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormBanHang";
             this.Text = "FormBanHang";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnSearch.ResumeLayout(false);
+            this.pnSearch.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -290,7 +311,7 @@ namespace TechShop
         #endregion
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnSearch;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -300,12 +321,15 @@ namespace TechShop
         private System.Windows.Forms.Label lbTongSoSp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThanhToan;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTienKhachDua;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnCart;
+        private ElipseControl ecThToan;
+        private ElipseControl ecHuy;
+        private ElipseControl ecPnSearch;
     }
 }

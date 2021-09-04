@@ -1,57 +1,55 @@
-﻿using System;
+﻿using AppTier;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AppTier;
 
 namespace TechShop
 {
-    public partial class FormDsSanPham : Form
+    public partial class FormDonHang : Form
     {
-        DbProduct dbProduct;
-        DataTable dtProduct = null;
-        public FormDsSanPham()
+        DbOrder dbOrder;
+        DataTable dtOrder = null;
+        public FormDonHang()
         {
             InitializeComponent();
-            dbProduct = new DbProduct();
+            dbOrder = new DbOrder();
             LoadData();
         }
-        
+
+
         public void LoadData()
         {
             try
             {
                 // Vận chuyển dữ liệu vào DataTable dtKhachHang 
-                dtProduct = new DataTable();
-                dtProduct.Clear();
-                dtProduct = dbProduct.getAllProduct().Tables[0];
+                dtOrder = new DataTable();
+                dtOrder.Clear();
+                dtOrder = dbOrder.getAllOrder().Tables[0];
 
 
-                List<Product> productDetails = new List<Product>();
-                productDetails = Model.ConvertDataTable<Product>(dtProduct);
-                List<ProductItem> productIem = new List<ProductItem>();
+                List<Order> productDetails = new List<Order>();
+                productDetails = Model.ConvertDataTable<Order>(dtOrder);
+                List<OrderItem> productIem = new List<OrderItem>();
                 int x = 0;
-                foreach (Product i in productDetails)
+                foreach (Order i in productDetails)
                 {
-                    ProductItem item = new ProductItem();
-                    item.lbName.Text = i.name;
-                    item.lbBrand.Text = i.brand_id.ToString();
-                    item.lbCategory.Text = i.category_id.ToString();
-                    item.lbID.Text = i.product_id.ToString();
-                    item.lbImage.Text = i.image;
-                    item.lbPrice.Text = i.price.ToString();
-                    item.lbInsuarence.Text = i.insuarence_id.ToString();
+                    OrderItem item = new OrderItem();
+                    item.lbName.Text = i.customer_id.ToString();
+                    item.lbID.Text = i.order_id.ToString();
+                    item.lbSale.Text = i.seller_id.ToString();
+                    item.lbSoldDate.Text = i.sold_date.ToString();
+                    item.lbTotalMoney.Text = i.total_money.ToString();
 
                     item.Visible = true;
                     item.Location = new System.Drawing.Point(0, x);
-                    pnDsSp.Controls.Add(item);
+                    pnDsOrder.Controls.Add(item);
                     productIem.Add(item);
                     x += Int32.Parse(item.Height.ToString());
                 }
@@ -65,7 +63,7 @@ namespace TechShop
         {
             this.Controls.Clear();
             InitializeComponent();
-            dbProduct = new DbProduct();
+            dbOrder = new DbOrder();
             LoadData();
         }
         private void btnThemSP_Click(object sender, EventArgs e)

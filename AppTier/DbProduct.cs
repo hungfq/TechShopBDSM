@@ -16,9 +16,13 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
-		public DataSet getProduct()
+		public DataSet getAllProduct()
 		{
 			return db.ExecuteQueryDataSet("select * from products", CommandType.Text, null);
+		}
+		public DataSet getProduct(int id)
+		{
+			return db.ExecuteQueryDataSet("select * from products where product_id = " + id.ToString(), CommandType.Text, null);
 		}
 	}
 

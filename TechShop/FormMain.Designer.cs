@@ -36,12 +36,7 @@ namespace TechShop
             this.btnBaoCaoTaiChinh = new System.Windows.Forms.Button();
             this.btnBaoCao = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
-            this.pnSanPhamSubmenu = new System.Windows.Forms.Panel();
-            this.btnDsSanPham = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
-            this.pnDonHangSubMenu = new System.Windows.Forms.Panel();
-            this.btnDsDonHang = new System.Windows.Forms.Button();
-            this.btnTaoDonHang = new System.Windows.Forms.Button();
             this.btnDonHang = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.btnSetting = new System.Windows.Forms.Button();
@@ -55,8 +50,6 @@ namespace TechShop
             this.pnMain = new System.Windows.Forms.Panel();
             this.pnCtrl.SuspendLayout();
             this.pnBaoCaoSubmenu.SuspendLayout();
-            this.pnSanPhamSubmenu.SuspendLayout();
-            this.pnDonHangSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,9 +60,7 @@ namespace TechShop
             this.pnCtrl.Controls.Add(this.pnBaoCaoSubmenu);
             this.pnCtrl.Controls.Add(this.btnBaoCao);
             this.pnCtrl.Controls.Add(this.btnKhachHang);
-            this.pnCtrl.Controls.Add(this.pnSanPhamSubmenu);
             this.pnCtrl.Controls.Add(this.btnSanPham);
-            this.pnCtrl.Controls.Add(this.pnDonHangSubMenu);
             this.pnCtrl.Controls.Add(this.btnDonHang);
             this.pnCtrl.Controls.Add(this.sidePanel);
             this.pnCtrl.Controls.Add(this.btnSetting);
@@ -89,7 +80,7 @@ namespace TechShop
             this.pnBaoCaoSubmenu.Controls.Add(this.btnBaoCaoKhachHang);
             this.pnBaoCaoSubmenu.Controls.Add(this.btnBaoCaoTaiChinh);
             this.pnBaoCaoSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnBaoCaoSubmenu.Location = new System.Drawing.Point(0, 652);
+            this.pnBaoCaoSubmenu.Location = new System.Drawing.Point(0, 481);
             this.pnBaoCaoSubmenu.Name = "pnBaoCaoSubmenu";
             this.pnBaoCaoSubmenu.Size = new System.Drawing.Size(308, 117);
             this.pnBaoCaoSubmenu.TabIndex = 17;
@@ -136,7 +127,7 @@ namespace TechShop
             this.btnBaoCao.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaoCao.ForeColor = System.Drawing.Color.White;
             this.btnBaoCao.Image = ((System.Drawing.Image)(resources.GetObject("btnBaoCao.Image")));
-            this.btnBaoCao.Location = new System.Drawing.Point(0, 596);
+            this.btnBaoCao.Location = new System.Drawing.Point(0, 425);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Size = new System.Drawing.Size(308, 56);
             this.btnBaoCao.TabIndex = 12;
@@ -154,7 +145,7 @@ namespace TechShop
             this.btnKhachHang.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.Color.White;
             this.btnKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.Image")));
-            this.btnKhachHang.Location = new System.Drawing.Point(0, 540);
+            this.btnKhachHang.Location = new System.Drawing.Point(0, 369);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(308, 56);
             this.btnKhachHang.TabIndex = 5;
@@ -164,34 +155,6 @@ namespace TechShop
             this.btnKhachHang.UseVisualStyleBackColor = true;
             this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
-            // pnSanPhamSubmenu
-            // 
-            this.pnSanPhamSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(55)))));
-            this.pnSanPhamSubmenu.Controls.Add(this.btnDsSanPham);
-            this.pnSanPhamSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnSanPhamSubmenu.Location = new System.Drawing.Point(0, 484);
-            this.pnSanPhamSubmenu.Name = "pnSanPhamSubmenu";
-            this.pnSanPhamSubmenu.Size = new System.Drawing.Size(308, 56);
-            this.pnSanPhamSubmenu.TabIndex = 15;
-            // 
-            // btnDsSanPham
-            // 
-            this.btnDsSanPham.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDsSanPham.FlatAppearance.BorderSize = 0;
-            this.btnDsSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDsSanPham.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDsSanPham.ForeColor = System.Drawing.Color.White;
-            this.btnDsSanPham.Location = new System.Drawing.Point(0, 0);
-            this.btnDsSanPham.Name = "btnDsSanPham";
-            this.btnDsSanPham.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
-            this.btnDsSanPham.Size = new System.Drawing.Size(308, 56);
-            this.btnDsSanPham.TabIndex = 14;
-            this.btnDsSanPham.Text = "Danh sách sản phẩm";
-            this.btnDsSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDsSanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDsSanPham.UseVisualStyleBackColor = true;
-            this.btnDsSanPham.Click += new System.EventHandler(this.btnDsSanPham_Click);
-            // 
             // btnSanPham
             // 
             this.btnSanPham.Dock = System.Windows.Forms.DockStyle.Top;
@@ -200,7 +163,7 @@ namespace TechShop
             this.btnSanPham.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSanPham.ForeColor = System.Drawing.Color.White;
             this.btnSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnSanPham.Image")));
-            this.btnSanPham.Location = new System.Drawing.Point(0, 428);
+            this.btnSanPham.Location = new System.Drawing.Point(0, 313);
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.Size = new System.Drawing.Size(308, 56);
             this.btnSanPham.TabIndex = 4;
@@ -209,51 +172,6 @@ namespace TechShop
             this.btnSanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSanPham.UseVisualStyleBackColor = true;
             this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
-            // 
-            // pnDonHangSubMenu
-            // 
-            this.pnDonHangSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(55)))));
-            this.pnDonHangSubMenu.Controls.Add(this.btnDsDonHang);
-            this.pnDonHangSubMenu.Controls.Add(this.btnTaoDonHang);
-            this.pnDonHangSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnDonHangSubMenu.Location = new System.Drawing.Point(0, 313);
-            this.pnDonHangSubMenu.Name = "pnDonHangSubMenu";
-            this.pnDonHangSubMenu.Size = new System.Drawing.Size(308, 115);
-            this.pnDonHangSubMenu.TabIndex = 14;
-            // 
-            // btnDsDonHang
-            // 
-            this.btnDsDonHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDsDonHang.FlatAppearance.BorderSize = 0;
-            this.btnDsDonHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDsDonHang.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDsDonHang.ForeColor = System.Drawing.Color.White;
-            this.btnDsDonHang.Location = new System.Drawing.Point(0, 56);
-            this.btnDsDonHang.Name = "btnDsDonHang";
-            this.btnDsDonHang.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
-            this.btnDsDonHang.Size = new System.Drawing.Size(308, 56);
-            this.btnDsDonHang.TabIndex = 14;
-            this.btnDsDonHang.Text = "Danh sách đơn hàng";
-            this.btnDsDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDsDonHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDsDonHang.UseVisualStyleBackColor = true;
-            // 
-            // btnTaoDonHang
-            // 
-            this.btnTaoDonHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTaoDonHang.FlatAppearance.BorderSize = 0;
-            this.btnTaoDonHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaoDonHang.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaoDonHang.ForeColor = System.Drawing.Color.White;
-            this.btnTaoDonHang.Location = new System.Drawing.Point(0, 0);
-            this.btnTaoDonHang.Name = "btnTaoDonHang";
-            this.btnTaoDonHang.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
-            this.btnTaoDonHang.Size = new System.Drawing.Size(308, 56);
-            this.btnTaoDonHang.TabIndex = 13;
-            this.btnTaoDonHang.Text = "Tạo đơn hàng";
-            this.btnTaoDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaoDonHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTaoDonHang.UseVisualStyleBackColor = true;
             // 
             // btnDonHang
             // 
@@ -422,8 +340,6 @@ namespace TechShop
             this.Load += new System.EventHandler(this.Main_Load);
             this.pnCtrl.ResumeLayout(false);
             this.pnBaoCaoSubmenu.ResumeLayout(false);
-            this.pnSanPhamSubmenu.ResumeLayout(false);
-            this.pnDonHangSubMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -447,14 +363,9 @@ namespace TechShop
         private System.Windows.Forms.Button btnSanPham;
         private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Button btnBaoCao;
-        private System.Windows.Forms.Button btnTaoDonHang;
-        private System.Windows.Forms.Panel pnDonHangSubMenu;
-        private System.Windows.Forms.Panel pnSanPhamSubmenu;
-        private System.Windows.Forms.Button btnDsDonHang;
         private System.Windows.Forms.Panel pnBaoCaoSubmenu;
         private System.Windows.Forms.Button btnBaoCaoKhachHang;
         private System.Windows.Forms.Button btnBaoCaoTaiChinh;
-        public System.Windows.Forms.Button btnDsSanPham;
         public System.Windows.Forms.Panel pnMain;
     }
 }

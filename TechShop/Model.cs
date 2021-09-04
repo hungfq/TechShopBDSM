@@ -56,4 +56,19 @@ namespace TechShop
         public int age { get; set; }
         public string phone_number { get; set; }
     }
+    public class Order
+    {
+        public int order_id { get; set; }
+        public int customer_id { get; set; }
+        public int seller_id { get; set; }
+        public DateTime sold_date { get; set; }
+        public int total_money   { get; set; }
+    }
+    public class OrderDetail
+    {
+        public int orderdetail_id { get; set; }
+        public int product_id { get; set; }
+        public int order_id { get; set; }
+        public int quantity { get; set; }
+    }    
 }
