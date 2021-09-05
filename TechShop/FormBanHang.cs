@@ -90,7 +90,7 @@ namespace TechShop
             int id = Int32.Parse(obj.Text);
 
             DataTable dt = new DataTable();
-            dt = dbProduct.getProduct(id).Tables[0];
+            dt = dbProduct.getProduct(id.ToString()).Tables[0];
             List<Product> pdDetails = new List<Product>();
             pdDetails = Model.ConvertDataTable<Product>(dt);
             // add item to cart

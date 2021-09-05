@@ -17,6 +17,10 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
+        public DataSet getAllOrder()
+        {
+            return db.ExecuteQueryDataSet("select * from orders", CommandType.Text, null);
+        }
         public bool insertOrder(ref string err, int customer_id, int seller_id, DateTime sold_date, int total_money)
         {
             return db.MyExecuteNonQuery("sp_InsertOrder", CommandType.StoredProcedure, ref err, new SqlParameter("@customer_id", customer_id), new SqlParameter("@seller_id", seller_id), new SqlParameter("@sold_date", sold_date), new SqlParameter("@total_money", total_money));
