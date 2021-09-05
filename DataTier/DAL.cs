@@ -10,7 +10,7 @@ namespace DataTier
 {
     public class DAL
     {
-        string ConnStr = "Data Source=(local);Initial Catalog = techshopdbms; Integrated Security = True";
+        string ConnStr = "Data Source=DESKTOP-6FD628N;Initial Catalog=techshopdbms;Integrated Security=True";
         SqlConnection conn = null;
         SqlCommand comm = null;
         SqlDataAdapter da = null;
