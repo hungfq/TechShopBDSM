@@ -23,7 +23,13 @@ namespace TechShop
             LoadData();
         }
 
-
+        public void ReLoad()
+        {
+            this.Controls.Clear();
+            InitializeComponent();
+            dbOrder = new DbOrder();
+            LoadData();
+        }
         public void LoadData()
         {
             try
@@ -81,6 +87,11 @@ namespace TechShop
 
             formThemSP.btnReturn.Click += btnReturn_Click;
             formThemSP.btnExit.Click += btnReturn_Click;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            ReLoad();
         }
     }
 }

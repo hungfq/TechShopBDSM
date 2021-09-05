@@ -33,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AppTier, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AppTier\bin\Debug\AppTier.dll</HintPath>
+    </Reference>
+    <Reference Include="DataTier, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AppTier\bin\Debug\DataTier.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -204,12 +212,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AppTier\AppTier.csproj">
-      <Project>{fc0bcc33-c1b5-4f89-83e5-3792759322cf}</Project>
-      <Name>AppTier</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
