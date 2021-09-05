@@ -265,7 +265,7 @@ namespace TechShop
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(308, 56);
             this.btnDashboard.TabIndex = 1;
-            this.btnDashboard.Text = "      Dashboard";
+            this.btnDashboard.Text = "      Dashboard   ";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = true;

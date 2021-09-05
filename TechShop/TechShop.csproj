@@ -94,6 +94,12 @@
     <Compile Include="FormDonHang.Designer.cs">
       <DependentUpon>FormDonHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDonHang_ChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDonHang_ChiTiet.Designer.cs">
+      <DependentUpon>FormDonHang_ChiTiet.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDsKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,12 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Model.cs" />
+    <Compile Include="OrderDetailItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderDetailItem.Designer.cs">
+      <DependentUpon>OrderDetailItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,6 +175,9 @@
     <EmbeddedResource Include="FormDonHang.resx">
       <DependentUpon>FormDonHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDonHang_ChiTiet.resx">
+      <DependentUpon>FormDonHang_ChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDsKhachHang.resx">
       <DependentUpon>FormDsKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDetailItem.resx">
+      <DependentUpon>OrderDetailItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderItem.resx">
       <DependentUpon>OrderItem.cs</DependentUpon>

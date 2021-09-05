@@ -29,12 +29,14 @@ namespace TechShop
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderItem));
             this.lbID = new System.Windows.Forms.Label();
             this.lbSoldDate = new System.Windows.Forms.Label();
             this.lbSale = new System.Windows.Forms.Label();
             this.lbTotalMoney = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.ck = new System.Windows.Forms.CheckBox();
+            this.btnView = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbID
@@ -96,10 +98,24 @@ namespace TechShop
             this.ck.TabIndex = 8;
             this.ck.UseVisualStyleBackColor = true;
             // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.Transparent;
+            this.btnView.FlatAppearance.BorderSize = 0;
+            this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.Image = ((System.Drawing.Image)(resources.GetObject("btnView.Image")));
+            this.btnView.Location = new System.Drawing.Point(1097, 0);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(93, 60);
+            this.btnView.TabIndex = 41;
+            this.btnView.UseVisualStyleBackColor = false;
+            // 
             // OrderItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnView);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.lbSoldDate);
             this.Controls.Add(this.lbSale);
@@ -107,7 +123,7 @@ namespace TechShop
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.ck);
             this.Name = "OrderItem";
-            this.Size = new System.Drawing.Size(1108, 60);
+            this.Size = new System.Drawing.Size(1190, 60);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +137,6 @@ namespace TechShop
         public System.Windows.Forms.Label lbTotalMoney;
         public System.Windows.Forms.Label lbName;
         public System.Windows.Forms.CheckBox ck;
+        public System.Windows.Forms.Button btnView;
     }
 }
