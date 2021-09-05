@@ -132,4 +132,10 @@
         b3CoIr5Rc9x7J3rdZuHYoiJqFfZIZ3ETxxptY62d3oYvgiBI3QbMNcAPei2T2QAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="ecSearch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="ecBtnAdd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>130, 17</value>
+  </metadata>
 </root>

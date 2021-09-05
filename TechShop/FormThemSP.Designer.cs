@@ -47,11 +47,14 @@ namespace TechShop
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbImage = new System.Windows.Forms.PictureBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.txtImgPath = new System.Windows.Forms.TextBox();
+            this.btnSaveImg = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -245,14 +248,51 @@ namespace TechShop
             this.label11.TabIndex = 14;
             this.label11.Text = "Loại sản phẩm:";
             // 
-            // pictureBox1
+            // pbImage
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 367);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(814, 465);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.pbImage.BackColor = System.Drawing.Color.White;
+            this.pbImage.Location = new System.Drawing.Point(12, 367);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(814, 421);
+            this.pbImage.TabIndex = 13;
+            this.pbImage.TabStop = false;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.BackColor = System.Drawing.Color.White;
+            this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowse.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(255)))));
+            this.btnBrowse.Location = new System.Drawing.Point(485, 794);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(155, 38);
+            this.btnBrowse.TabIndex = 9;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = false;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // txtImgPath
+            // 
+            this.txtImgPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImgPath.Location = new System.Drawing.Point(12, 800);
+            this.txtImgPath.Name = "txtImgPath";
+            this.txtImgPath.Size = new System.Drawing.Size(444, 28);
+            this.txtImgPath.TabIndex = 17;
+            // 
+            // btnSaveImg
+            // 
+            this.btnSaveImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(255)))));
+            this.btnSaveImg.FlatAppearance.BorderSize = 0;
+            this.btnSaveImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveImg.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveImg.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSaveImg.Location = new System.Drawing.Point(660, 794);
+            this.btnSaveImg.Name = "btnSaveImg";
+            this.btnSaveImg.Size = new System.Drawing.Size(166, 38);
+            this.btnSaveImg.TabIndex = 9;
+            this.btnSaveImg.Text = "Save image";
+            this.btnSaveImg.UseVisualStyleBackColor = false;
+            this.btnSaveImg.Click += new System.EventHandler(this.btnSaveImg_Click);
             // 
             // FormThemSP
             // 
@@ -260,7 +300,10 @@ namespace TechShop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1218, 844);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnSaveImg);
+            this.Controls.Add(this.txtImgPath);
+            this.Controls.Add(this.btnBrowse);
+            this.Controls.Add(this.pbImage);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -272,8 +315,9 @@ namespace TechShop
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -292,10 +336,13 @@ namespace TechShop
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbImage;
         public System.Windows.Forms.Button btnReturn;
         public System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.TextBox txtImgPath;
+        public System.Windows.Forms.Button btnSaveImg;
     }
 }

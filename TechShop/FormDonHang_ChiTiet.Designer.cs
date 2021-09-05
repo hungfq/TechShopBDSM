@@ -37,6 +37,7 @@ namespace TechShop
             this.pnHome = new System.Windows.Forms.Panel();
             this.btnReturn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,9 +98,9 @@ namespace TechShop
             this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(124)))), ((int)(((byte)(135)))));
             this.btnReturn.Image = ((System.Drawing.Image)(resources.GetObject("btnReturn.Image")));
-            this.btnReturn.Location = new System.Drawing.Point(12, 12);
+            this.btnReturn.Location = new System.Drawing.Point(12, 6);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(355, 31);
+            this.btnReturn.Size = new System.Drawing.Size(355, 43);
             this.btnReturn.TabIndex = 6;
             this.btnReturn.Text = "Quay lại danh sách đơn hàng";
             this.btnReturn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -107,13 +108,27 @@ namespace TechShop
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.btnHuy);
             this.panel2.Controls.Add(this.btnReturn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1221, 52);
             this.panel2.TabIndex = 55;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.BackColor = System.Drawing.Color.White;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.Red;
+            this.btnHuy.Location = new System.Drawing.Point(1031, 7);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(176, 38);
+            this.btnHuy.TabIndex = 56;
+            this.btnHuy.Text = "Xóa đơn hàng";
+            this.btnHuy.UseVisualStyleBackColor = false;
             // 
             // FormDonHang_ChiTiet
             // 
@@ -144,5 +159,6 @@ namespace TechShop
         private System.Windows.Forms.Panel pnHome;
         public System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Button btnHuy;
     }
 }

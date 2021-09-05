@@ -43,11 +43,12 @@ namespace TechShop
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnThemSP = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnSearch = new System.Windows.Forms.Panel();
+            this.ecSearch = new TechShop.ElipseControl();
+            this.ecBtnAdd = new TechShop.ElipseControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,17 +85,17 @@ namespace TechShop
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(863, 194);
+            this.label3.Location = new System.Drawing.Point(904, 194);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 26);
+            this.label3.Size = new System.Drawing.Size(100, 26);
             this.label3.TabIndex = 30;
-            this.label3.Text = "T.gian bảo hành";
+            this.label3.Text = "Bảo hành";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(643, 194);
+            this.label4.Location = new System.Drawing.Point(669, 194);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 26);
             this.label4.TabIndex = 29;
@@ -104,7 +105,7 @@ namespace TechShop
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(731, 194);
+            this.label5.Location = new System.Drawing.Point(772, 194);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 26);
             this.label5.TabIndex = 28;
@@ -114,7 +115,7 @@ namespace TechShop
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1028, 194);
+            this.label6.Location = new System.Drawing.Point(1016, 194);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 26);
             this.label6.TabIndex = 27;
@@ -124,7 +125,7 @@ namespace TechShop
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(542, 194);
+            this.label7.Location = new System.Drawing.Point(557, 194);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 26);
             this.label7.TabIndex = 26;
@@ -155,7 +156,7 @@ namespace TechShop
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(27, 136);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(611, 31);
+            this.textBox1.Size = new System.Drawing.Size(710, 31);
             this.textBox1.TabIndex = 32;
             // 
             // comboBox1
@@ -163,7 +164,7 @@ namespace TechShop
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(712, 136);
+            this.comboBox1.Location = new System.Drawing.Point(837, 136);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(184, 30);
             this.comboBox1.TabIndex = 33;
@@ -174,20 +175,11 @@ namespace TechShop
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(902, 136);
+            this.comboBox2.Location = new System.Drawing.Point(1027, 136);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(155, 30);
             this.comboBox2.TabIndex = 34;
             this.comboBox2.Text = "  Nhãn hiệu";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(1073, 136);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 30);
-            this.comboBox4.TabIndex = 36;
             // 
             // btnSearch
             // 
@@ -196,7 +188,7 @@ namespace TechShop
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(632, 127);
+            this.btnSearch.Location = new System.Drawing.Point(743, 127);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(74, 48);
             this.btnSearch.TabIndex = 2;
@@ -227,13 +219,23 @@ namespace TechShop
             this.panel1.Size = new System.Drawing.Size(1221, 56);
             this.panel1.TabIndex = 38;
             // 
-            // panel2
+            // pnSearch
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(12, 127);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1194, 48);
-            this.panel2.TabIndex = 39;
+            this.pnSearch.BackColor = System.Drawing.Color.White;
+            this.pnSearch.Location = new System.Drawing.Point(12, 127);
+            this.pnSearch.Name = "pnSearch";
+            this.pnSearch.Size = new System.Drawing.Size(1194, 48);
+            this.pnSearch.TabIndex = 39;
+            // 
+            // ecSearch
+            // 
+            this.ecSearch.CornerRadius = 20;
+            this.ecSearch.TargetControl = this.pnSearch;
+            // 
+            // ecBtnAdd
+            // 
+            this.ecBtnAdd.CornerRadius = 15;
+            this.ecBtnAdd.TargetControl = this.btnThemSP;
             // 
             // FormDsSanPham
             // 
@@ -244,7 +246,6 @@ namespace TechShop
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnThemSP);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
@@ -257,7 +258,7 @@ namespace TechShop
             this.Controls.Add(this.label8);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.pnDsSp);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDsSanPham";
             this.Text = "`";
@@ -283,10 +284,11 @@ namespace TechShop
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnThemSP;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnSearch;
+        private ElipseControl ecSearch;
+        private ElipseControl ecBtnAdd;
     }
 }

@@ -29,11 +29,13 @@ namespace TechShop
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerItem));
             this.lbID = new System.Windows.Forms.Label();
             this.lbPhoneNum = new System.Windows.Forms.Label();
             this.lbAge = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnModify = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbID
@@ -85,10 +87,24 @@ namespace TechShop
             this.checkBox1.TabIndex = 50;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // btnModify
+            // 
+            this.btnModify.BackColor = System.Drawing.Color.Transparent;
+            this.btnModify.FlatAppearance.BorderSize = 0;
+            this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModify.Image = ((System.Drawing.Image)(resources.GetObject("btnModify.Image")));
+            this.btnModify.Location = new System.Drawing.Point(1029, 0);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(79, 60);
+            this.btnModify.TabIndex = 55;
+            this.btnModify.UseVisualStyleBackColor = false;
+            // 
             // CustomerItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnModify);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.lbPhoneNum);
             this.Controls.Add(this.lbAge);
@@ -108,5 +124,6 @@ namespace TechShop
         public System.Windows.Forms.Label lbAge;
         public System.Windows.Forms.Label lbName;
         public System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.Button btnModify;
     }
 }

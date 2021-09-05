@@ -45,6 +45,8 @@ namespace TechShop
                     item.lbAge.Text = i.age.ToString();
                     item.lbID.Text = i.customer_id.ToString();
                     item.lbPhoneNum.Text = i.phone_number.ToString();
+                    item.btnModify.Text = i.customer_id.ToString();
+                    item.btnModify.Click += btnModify_Click;
 
                     item.Visible = true;
                     item.Location = new System.Drawing.Point(0, x);
@@ -57,6 +59,22 @@ namespace TechShop
             {
                 MessageBox.Show("Không lấy được nội dung. Lỗi rồi!!!");
             }
+        }
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            FormSuaKH form = new FormSuaKH(((Button)sender).Text)
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
+            };
+            form.FormBorderStyle = FormBorderStyle.None;
+            this.Controls.Add(form);
+            form.Show();
+
+            form.btnReturn.Click += btnReturn_Click;
+            form.btnHuy.Click += btnReturn_Click;
         }
         private void btnReturn_Click(object sender, EventArgs e)
         {

@@ -112,11 +112,29 @@
     <Compile Include="FormDsSanPham.Designer.cs">
       <DependentUpon>FormDsSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormParent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormParent.Designer.cs">
       <DependentUpon>FormParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuaKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuaKH.Designer.cs">
+      <DependentUpon>FormSuaKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuaSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuaSP.Designer.cs">
+      <DependentUpon>FormSuaSP.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThemKH.cs">
       <SubType>Form</SubType>
@@ -184,8 +202,17 @@
     <EmbeddedResource Include="FormDsSanPham.resx">
       <DependentUpon>FormDsSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormParent.resx">
       <DependentUpon>FormParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaKH.resx">
+      <DependentUpon>FormSuaKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaSP.resx">
+      <DependentUpon>FormSuaSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemKH.resx">
       <DependentUpon>FormThemKH.cs</DependentUpon>

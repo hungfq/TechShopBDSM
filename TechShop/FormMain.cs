@@ -17,6 +17,7 @@ namespace TechShop
         FormDashboard frmDashboard = new FormDashboard();
         FormBanHang frmBanHang = new FormBanHang();
         FormDonHang frmDonHang = new FormDonHang();
+        FormLogin frmLogin = new FormLogin();
         public FormMain()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace TechShop
             this.IsMdiContainer = true;
             //this.WindowState = FormWindowState.Maximized;
             sidePanel.Dispose();
-            btnDashboard.PerformClick();
+            btnSignOut.PerformClick();
 
         }
         private void OpenChildForm(Form childForm)
@@ -101,12 +102,15 @@ namespace TechShop
             resetBtnBackColor();
             hideSubmenu();
             setBtnBackColor(btnSetting);
+            pnSettingSubMenu.Visible = true;
         }
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {
-            //sidePanel.Height = btnSignOut.Height;
-            //sidePanel.Top = btnSignOut.Top;
+            resetBtnBackColor();
+            hideSubmenu();
+            OpenChildForm(frmLogin);
+            frmLogin.txtUsername.Focus();
         }
         private void setBtnBackColor(Button a)
         {
@@ -122,6 +126,7 @@ namespace TechShop
         private void hideSubmenu()
         {
             pnBaoCaoSubmenu.Visible = false;
+            pnSettingSubMenu.Visible = false;
         }
     }     
 }

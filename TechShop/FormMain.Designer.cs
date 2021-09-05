@@ -48,15 +48,20 @@ namespace TechShop
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.pnSettingSubMenu = new System.Windows.Forms.Panel();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.btnAccount = new System.Windows.Forms.Button();
             this.pnCtrl.SuspendLayout();
             this.pnBaoCaoSubmenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnSettingSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnCtrl
             // 
             this.pnCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.pnCtrl.Controls.Add(this.pnSettingSubMenu);
             this.pnCtrl.Controls.Add(this.pnBaoCaoSubmenu);
             this.pnCtrl.Controls.Add(this.btnBaoCao);
             this.pnCtrl.Controls.Add(this.btnKhachHang);
@@ -324,6 +329,51 @@ namespace TechShop
             this.pnMain.Size = new System.Drawing.Size(1594, 993);
             this.pnMain.TabIndex = 1;
             // 
+            // pnSettingSubMenu
+            // 
+            this.pnSettingSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(55)))));
+            this.pnSettingSubMenu.Controls.Add(this.btnUser);
+            this.pnSettingSubMenu.Controls.Add(this.btnAccount);
+            this.pnSettingSubMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnSettingSubMenu.Location = new System.Drawing.Point(0, 764);
+            this.pnSettingSubMenu.Name = "pnSettingSubMenu";
+            this.pnSettingSubMenu.Size = new System.Drawing.Size(308, 117);
+            this.pnSettingSubMenu.TabIndex = 18;
+            // 
+            // btnUser
+            // 
+            this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.ForeColor = System.Drawing.Color.White;
+            this.btnUser.Location = new System.Drawing.Point(0, 56);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
+            this.btnUser.Size = new System.Drawing.Size(308, 56);
+            this.btnUser.TabIndex = 15;
+            this.btnUser.Text = "User";
+            this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUser.UseVisualStyleBackColor = true;
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAccount.FlatAppearance.BorderSize = 0;
+            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccount.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.ForeColor = System.Drawing.Color.White;
+            this.btnAccount.Location = new System.Drawing.Point(0, 0);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
+            this.btnAccount.Size = new System.Drawing.Size(308, 56);
+            this.btnAccount.TabIndex = 14;
+            this.btnAccount.Text = "Tài khoản";
+            this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAccount.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -343,6 +393,7 @@ namespace TechShop
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnSettingSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -367,6 +418,9 @@ namespace TechShop
         private System.Windows.Forms.Button btnBaoCaoKhachHang;
         private System.Windows.Forms.Button btnBaoCaoTaiChinh;
         public System.Windows.Forms.Panel pnMain;
+        private System.Windows.Forms.Panel pnSettingSubMenu;
+        private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.Button btnAccount;
     }
 }
 

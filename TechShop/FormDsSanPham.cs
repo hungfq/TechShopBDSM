@@ -48,6 +48,8 @@ namespace TechShop
                     item.lbImage.Text = i.image;
                     item.lbPrice.Text = i.price.ToString();
                     item.lbInsuarence.Text = i.insuarence_id.ToString();
+                    item.btnModify.Text = i.product_id.ToString();
+                    item.btnModify.Click += btnModify_Click;
 
                     item.Visible = true;
                     item.Location = new System.Drawing.Point(0, x);
@@ -59,6 +61,7 @@ namespace TechShop
             catch (SqlException)
             {
                 MessageBox.Show("Không lấy được nội dung. Lỗi rồi!!!");
+                this.Close();
             }
         }
         private void btnReturn_Click(object sender, EventArgs e)
@@ -68,8 +71,28 @@ namespace TechShop
             dbProduct = new DbProduct();
             LoadData();
         }
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            // dựng form
+            this.Controls.Clear();
+            FormSuaSP formSuaSP = new FormSuaSP(((Button)sender).Text)
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
+            };
+            formSuaSP.FormBorderStyle = FormBorderStyle.None;
+            this.Controls.Add(formSuaSP);
+            formSuaSP.Show();
+            //nav
+            formSuaSP.btnReturn.Click += btnReturn_Click;
+            formSuaSP.btnCancel.Click += btnReturn_Click;
+            
+
+        }
         private void btnThemSP_Click(object sender, EventArgs e)
         {
+            // dựng form
             this.Controls.Clear();
             FormThemSP formThemSP = new FormThemSP()
             {
@@ -80,9 +103,10 @@ namespace TechShop
             formThemSP.FormBorderStyle = FormBorderStyle.None;
             this.Controls.Add(formThemSP);
             formThemSP.Show();
-
+            // nav
             formThemSP.btnReturn.Click += btnReturn_Click;
             formThemSP.btnExit.Click += btnReturn_Click;
+            
         }
     }
 }

@@ -43,6 +43,7 @@ namespace TechShop
             this.pnDsSp = new System.Windows.Forms.Panel();
             this.pnSearch = new System.Windows.Forms.Panel();
             this.ecPnSearch = new TechShop.ElipseControl();
+            this.ecBtnAdd = new TechShop.ElipseControl();
             this.panel1.SuspendLayout();
             this.pnSearch.SuspendLayout();
             this.SuspendLayout();
@@ -176,6 +177,11 @@ namespace TechShop
             this.ecPnSearch.CornerRadius = 20;
             this.ecPnSearch.TargetControl = this.pnSearch;
             // 
+            // ecBtnAdd
+            // 
+            this.ecBtnAdd.CornerRadius = 20;
+            this.ecBtnAdd.TargetControl = this.btnThemSP;
+            // 
             // FormDsKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -217,5 +223,6 @@ namespace TechShop
         private System.Windows.Forms.Panel pnDsSp;
         private System.Windows.Forms.Panel pnSearch;
         private ElipseControl ecPnSearch;
+        private ElipseControl ecBtnAdd;
     }
 }
