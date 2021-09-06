@@ -28,10 +28,8 @@ namespace TechShop
                 pbImage.Image = new Bitmap(open.FileName);
                 // image file path  
                 txtImgPath.Text = open.FileName;
+                txtImgName.Text = Path.GetFileName(open.FileName);
 
-                File.Copy(txtImgPath.Text, 
-                    Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName,
-                    Path.GetFileName(txtImgPath.Text)),true);
             }
         }
 
@@ -39,13 +37,15 @@ namespace TechShop
         {
             try
             {
-                File.Copy(txtImgPath.Text,
-                        Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName,
-                        Path.GetFileName(txtImgPath.Text)), true);
+                string p1 = txtImgPath.Text;
+                string p2 = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\TechShop\\ImageStorage\\" + txtImgName.Text;
+                File.Copy(p1,p2, true);
                 DialogResult result = MessageBox.Show("Save image successfully", "", MessageBoxButtons.OK);
             }
-            catch (Exception)
-            { }
+            catch (Exception ee)
+            {
+                DialogResult result = MessageBox.Show(ee.ToString(), "", MessageBoxButtons.OK);
+            }
         }
     }
 }

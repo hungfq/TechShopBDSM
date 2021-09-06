@@ -51,6 +51,7 @@ namespace TechShop
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtImgPath = new System.Windows.Forms.TextBox();
             this.btnSaveImg = new System.Windows.Forms.Button();
+            this.txtImgName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -254,6 +255,7 @@ namespace TechShop
             this.pbImage.Location = new System.Drawing.Point(12, 367);
             this.pbImage.Name = "pbImage";
             this.pbImage.Size = new System.Drawing.Size(814, 421);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImage.TabIndex = 13;
             this.pbImage.TabStop = false;
             // 
@@ -274,10 +276,11 @@ namespace TechShop
             // txtImgPath
             // 
             this.txtImgPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImgPath.Location = new System.Drawing.Point(12, 800);
+            this.txtImgPath.Location = new System.Drawing.Point(1172, 799);
             this.txtImgPath.Name = "txtImgPath";
-            this.txtImgPath.Size = new System.Drawing.Size(444, 28);
+            this.txtImgPath.Size = new System.Drawing.Size(10, 28);
             this.txtImgPath.TabIndex = 17;
+            this.txtImgPath.Visible = false;
             // 
             // btnSaveImg
             // 
@@ -294,12 +297,21 @@ namespace TechShop
             this.btnSaveImg.UseVisualStyleBackColor = false;
             this.btnSaveImg.Click += new System.EventHandler(this.btnSaveImg_Click);
             // 
+            // txtImgName
+            // 
+            this.txtImgName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImgName.Location = new System.Drawing.Point(12, 799);
+            this.txtImgName.Name = "txtImgName";
+            this.txtImgName.Size = new System.Drawing.Size(444, 28);
+            this.txtImgName.TabIndex = 18;
+            // 
             // FormThemSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1218, 844);
+            this.Controls.Add(this.txtImgName);
             this.Controls.Add(this.btnSaveImg);
             this.Controls.Add(this.txtImgPath);
             this.Controls.Add(this.btnBrowse);
@@ -344,5 +356,6 @@ namespace TechShop
         public System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.TextBox txtImgPath;
         public System.Windows.Forms.Button btnSaveImg;
+        private System.Windows.Forms.TextBox txtImgName;
     }
 }
