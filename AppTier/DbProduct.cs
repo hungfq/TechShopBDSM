@@ -18,7 +18,7 @@ namespace AppTier
 			db = new DAL();
 		}
         
-        public DataSet getProduct(string id)
+        public DataSet getProductById(string id)
         {
             return db.ExecuteQueryDataSet("select * from products where product_id="+id, CommandType.Text, null);
         }

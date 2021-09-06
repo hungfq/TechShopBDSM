@@ -41,8 +41,8 @@ namespace TechShop
             this.label8 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.cbBrand = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnThemSP = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -117,9 +117,9 @@ namespace TechShop
             this.label6.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(1016, 194);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 26);
+            this.label6.Size = new System.Drawing.Size(69, 26);
             this.label6.TabIndex = 27;
-            this.label6.Text = "URL Image";
+            this.label6.Text = "Image";
             // 
             // label7
             // 
@@ -159,27 +159,27 @@ namespace TechShop
             this.textBox1.Size = new System.Drawing.Size(710, 31);
             this.textBox1.TabIndex = 32;
             // 
-            // comboBox1
+            // cbCategory
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(837, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(184, 30);
-            this.comboBox1.TabIndex = 33;
-            this.comboBox1.Text = "  Loại sản phẩm";
+            this.cbCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(837, 136);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(184, 30);
+            this.cbCategory.TabIndex = 33;
+            this.cbCategory.Text = "  Loại sản phẩm";
             // 
-            // comboBox2
+            // cbBrand
             // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1027, 136);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(155, 30);
-            this.comboBox2.TabIndex = 34;
-            this.comboBox2.Text = "  Nhãn hiệu";
+            this.cbBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBrand.FormattingEnabled = true;
+            this.cbBrand.Location = new System.Drawing.Point(1027, 136);
+            this.cbBrand.Name = "cbBrand";
+            this.cbBrand.Size = new System.Drawing.Size(155, 30);
+            this.cbBrand.TabIndex = 34;
+            this.cbBrand.Text = "  Nhãn hiệu";
             // 
             // btnSearch
             // 
@@ -246,8 +246,8 @@ namespace TechShop
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnThemSP);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbBrand);
+            this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -282,8 +282,8 @@ namespace TechShop
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.ComboBox cbBrand;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnThemSP;
         private System.Windows.Forms.Panel panel1;

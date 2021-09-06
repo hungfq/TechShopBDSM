@@ -33,7 +33,7 @@ namespace TechShop
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbCustomer = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -81,16 +81,16 @@ namespace TechShop
             this.btnSearch.TabIndex = 40;
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // cbCustomer
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(843, 6);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(348, 35);
-            this.comboBox1.TabIndex = 51;
-            this.comboBox1.Text = "  Khách hàng";
+            this.cbCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCustomer.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCustomer.FormattingEnabled = true;
+            this.cbCustomer.Location = new System.Drawing.Point(843, 6);
+            this.cbCustomer.Name = "cbCustomer";
+            this.cbCustomer.Size = new System.Drawing.Size(348, 35);
+            this.cbCustomer.TabIndex = 51;
+            this.cbCustomer.Text = "  Khách hàng";
             // 
             // textBox1
             // 
@@ -172,7 +172,7 @@ namespace TechShop
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cbCustomer);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Location = new System.Drawing.Point(11, 65);
             this.panel2.Name = "panel2";
@@ -210,7 +210,7 @@ namespace TechShop
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbCustomer;
         private System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label3;

@@ -31,7 +31,7 @@ namespace TechShop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThemSP));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbIsurance = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,9 +43,9 @@ namespace TechShop
             this.btnExit = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbBrand = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pbImage = new System.Windows.Forms.PictureBox();
             this.btnBrowse = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@ namespace TechShop
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbIsurance);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label6);
@@ -73,16 +73,16 @@ namespace TechShop
             this.panel1.Size = new System.Drawing.Size(814, 285);
             this.panel1.TabIndex = 0;
             // 
-            // comboBox1
+            // cbIsurance
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(430, 203);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(344, 30);
-            this.comboBox1.TabIndex = 16;
-            this.comboBox1.Text = "Chọn thời gian bảo hành";
+            this.cbIsurance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbIsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbIsurance.FormattingEnabled = true;
+            this.cbIsurance.Location = new System.Drawing.Point(430, 203);
+            this.cbIsurance.Name = "cbIsurance";
+            this.cbIsurance.Size = new System.Drawing.Size(344, 30);
+            this.cbIsurance.TabIndex = 16;
+            this.cbIsurance.Text = "Chọn thời gian bảo hành";
             // 
             // label7
             // 
@@ -198,25 +198,25 @@ namespace TechShop
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.comboBox3);
+            this.panel3.Controls.Add(this.cbBrand);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.comboBox4);
+            this.panel3.Controls.Add(this.cbCategory);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Location = new System.Drawing.Point(841, 67);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(365, 285);
             this.panel3.TabIndex = 12;
             // 
-            // comboBox3
+            // cbBrand
             // 
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(32, 203);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(286, 30);
-            this.comboBox3.TabIndex = 5;
-            this.comboBox3.Text = "Chọn nhãn hiệu";
+            this.cbBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBrand.FormattingEnabled = true;
+            this.cbBrand.Location = new System.Drawing.Point(32, 203);
+            this.cbBrand.Name = "cbBrand";
+            this.cbBrand.Size = new System.Drawing.Size(286, 30);
+            this.cbBrand.TabIndex = 5;
+            this.cbBrand.Text = "Chọn nhãn hiệu";
             // 
             // label10
             // 
@@ -228,16 +228,16 @@ namespace TechShop
             this.label10.TabIndex = 15;
             this.label10.Text = "Nhãn hiệu:";
             // 
-            // comboBox4
+            // cbCategory
             // 
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(32, 94);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(286, 30);
-            this.comboBox4.TabIndex = 4;
-            this.comboBox4.Text = "Chọn loại sản phẩm";
+            this.cbCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(32, 94);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(286, 30);
+            this.cbCategory.TabIndex = 4;
+            this.cbCategory.Text = "Chọn loại sản phẩm";
             // 
             // label11
             // 
@@ -344,15 +344,15 @@ namespace TechShop
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbBrand;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pbImage;
         public System.Windows.Forms.Button btnReturn;
         public System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbIsurance;
         public System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.TextBox txtImgPath;
         public System.Windows.Forms.Button btnSaveImg;

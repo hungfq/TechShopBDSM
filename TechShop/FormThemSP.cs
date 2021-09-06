@@ -8,14 +8,60 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using AppTier;
+using System.Data.SqlClient;
 
 namespace TechShop
 {
     public partial class FormThemSP : Form
     {
+        DbCategory dbCategory = new DbCategory();
+        DataTable dtCategory = new DataTable();
+        DbBrand dbBrand = new DbBrand();
+        DataTable dtBrand = new DataTable();
+        DbInsurance dbInsurance = new DbInsurance();
+        DataTable dtInsurance = new DataTable();
+
         public FormThemSP()
         {
             InitializeComponent();
+            LoadData();
+        }
+        public void LoadData()
+        {
+            try
+            {
+                // Vận chuyển dữ liệu vào DataTable dtKhachHang 
+                dtBrand.Clear();
+                dtBrand = dbBrand.getAllBrand().Tables[0];
+                dtCategory.Clear();
+                dtCategory = dbCategory.getAllCategory().Tables[0];
+                dtInsurance.Clear();
+                dtInsurance = dbInsurance.getAllInsurance().Tables[0];
+
+                cbBrand.DisplayMember = "name";
+                cbBrand.ValueMember = "brand_id";
+                cbBrand.DataSource = dtBrand;
+                cbBrand.SelectedItem = null;
+                cbBrand.Text = "Chọn nhãn hiệu";
+
+                cbCategory.DisplayMember = "name";
+                cbCategory.ValueMember = "category_id";
+                cbCategory.DataSource = dtCategory;
+                cbCategory.SelectedItem = null;
+                cbCategory.Text = "Chọn loại sản phẩm";
+
+                cbIsurance.DisplayMember = "time";
+                cbIsurance.ValueMember = "insurance_id";
+                cbIsurance.DataSource = dtInsurance;
+                cbIsurance.SelectedItem = null;
+                cbIsurance.Text = "Chọn thời gian bảo hành";
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Không lấy được nội dung. Lỗi rồi!!!");
+                this.Close();
+            }
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)

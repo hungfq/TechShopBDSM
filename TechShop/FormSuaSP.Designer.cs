@@ -30,19 +30,12 @@ namespace TechShop
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSuaSP));
-            this.btnSaveImg = new System.Windows.Forms.Button();
-            this.btnBrowse = new System.Windows.Forms.Button();
-            this.pbImage = new System.Windows.Forms.PictureBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtImgPath = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,59 +43,21 @@ namespace TechShop
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
+            this.txtImgName = new System.Windows.Forms.TextBox();
+            this.btnSaveImg = new System.Windows.Forms.Button();
+            this.txtImgPath = new System.Windows.Forms.TextBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.pbImage = new System.Windows.Forms.PictureBox();
+            this.cbBrand = new System.Windows.Forms.ComboBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.cbIsurance = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSaveImg
-            // 
-            this.btnSaveImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(255)))));
-            this.btnSaveImg.FlatAppearance.BorderSize = 0;
-            this.btnSaveImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveImg.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveImg.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSaveImg.Location = new System.Drawing.Point(660, 800);
-            this.btnSaveImg.Name = "btnSaveImg";
-            this.btnSaveImg.Size = new System.Drawing.Size(166, 38);
-            this.btnSaveImg.TabIndex = 20;
-            this.btnSaveImg.Text = "Save image";
-            this.btnSaveImg.UseVisualStyleBackColor = false;
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.BackColor = System.Drawing.Color.White;
-            this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowse.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(255)))));
-            this.btnBrowse.Location = new System.Drawing.Point(485, 800);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(155, 38);
-            this.btnBrowse.TabIndex = 21;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = false;
-            // 
-            // pbImage
-            // 
-            this.pbImage.BackColor = System.Drawing.Color.White;
-            this.pbImage.Location = new System.Drawing.Point(12, 373);
-            this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(814, 421);
-            this.pbImage.TabIndex = 23;
-            this.pbImage.TabStop = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(32, 203);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(286, 30);
-            this.comboBox3.TabIndex = 5;
-            this.comboBox3.Text = "Chọn nhãn hiệu";
             // 
             // label10
             // 
@@ -114,17 +69,6 @@ namespace TechShop
             this.label10.TabIndex = 15;
             this.label10.Text = "Nhãn hiệu:";
             // 
-            // comboBox4
-            // 
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(32, 94);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(286, 30);
-            this.comboBox4.TabIndex = 4;
-            this.comboBox4.Text = "Chọn loại sản phẩm";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -135,20 +79,12 @@ namespace TechShop
             this.label11.TabIndex = 14;
             this.label11.Text = "Loại sản phẩm:";
             // 
-            // txtImgPath
-            // 
-            this.txtImgPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImgPath.Location = new System.Drawing.Point(12, 806);
-            this.txtImgPath.Name = "txtImgPath";
-            this.txtImgPath.Size = new System.Drawing.Size(444, 28);
-            this.txtImgPath.TabIndex = 24;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.comboBox3);
+            this.panel3.Controls.Add(this.cbBrand);
+            this.panel3.Controls.Add(this.cbCategory);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.comboBox4);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Location = new System.Drawing.Point(841, 73);
             this.panel3.Name = "panel3";
@@ -197,17 +133,6 @@ namespace TechShop
             this.btnReturn.Text = "Quay lại danh sách sản phẩm";
             this.btnReturn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReturn.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(430, 203);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(344, 30);
-            this.comboBox1.TabIndex = 16;
-            this.comboBox1.Text = "Chọn thời gian bảo hành";
             // 
             // label7
             // 
@@ -268,6 +193,7 @@ namespace TechShop
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnReturn);
@@ -277,10 +203,23 @@ namespace TechShop
             this.panel2.Size = new System.Drawing.Size(1218, 52);
             this.panel2.TabIndex = 19;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(631, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(195, 36);
+            this.button1.TabIndex = 58;
+            this.button1.Text = "Xóa Sản phẩm";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbIsurance);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtPrice);
             this.panel1.Controls.Add(this.label6);
@@ -292,47 +231,129 @@ namespace TechShop
             this.panel1.Size = new System.Drawing.Size(814, 285);
             this.panel1.TabIndex = 18;
             // 
+            // txtImgName
+            // 
+            this.txtImgName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImgName.Location = new System.Drawing.Point(12, 804);
+            this.txtImgName.Name = "txtImgName";
+            this.txtImgName.Size = new System.Drawing.Size(444, 28);
+            this.txtImgName.TabIndex = 23;
+            // 
+            // btnSaveImg
+            // 
+            this.btnSaveImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(255)))));
+            this.btnSaveImg.FlatAppearance.BorderSize = 0;
+            this.btnSaveImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveImg.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveImg.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSaveImg.Location = new System.Drawing.Point(660, 799);
+            this.btnSaveImg.Name = "btnSaveImg";
+            this.btnSaveImg.Size = new System.Drawing.Size(166, 38);
+            this.btnSaveImg.TabIndex = 19;
+            this.btnSaveImg.Text = "Save image";
+            this.btnSaveImg.UseVisualStyleBackColor = false;
+            this.btnSaveImg.Click += new System.EventHandler(this.btnSaveImg_Click);
+            // 
+            // txtImgPath
+            // 
+            this.txtImgPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImgPath.Location = new System.Drawing.Point(1172, 804);
+            this.txtImgPath.Name = "txtImgPath";
+            this.txtImgPath.Size = new System.Drawing.Size(10, 28);
+            this.txtImgPath.TabIndex = 22;
+            this.txtImgPath.Visible = false;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.BackColor = System.Drawing.Color.White;
+            this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowse.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(255)))));
+            this.btnBrowse.Location = new System.Drawing.Point(485, 799);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(155, 38);
+            this.btnBrowse.TabIndex = 20;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = false;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // pbImage
+            // 
+            this.pbImage.BackColor = System.Drawing.Color.White;
+            this.pbImage.Location = new System.Drawing.Point(12, 372);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(814, 421);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImage.TabIndex = 21;
+            this.pbImage.TabStop = false;
+            // 
+            // cbBrand
+            // 
+            this.cbBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBrand.FormattingEnabled = true;
+            this.cbBrand.Location = new System.Drawing.Point(32, 203);
+            this.cbBrand.Name = "cbBrand";
+            this.cbBrand.Size = new System.Drawing.Size(286, 30);
+            this.cbBrand.TabIndex = 25;
+            this.cbBrand.Text = "Chọn nhãn hiệu";
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(32, 94);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(286, 30);
+            this.cbCategory.TabIndex = 24;
+            this.cbCategory.Text = "Chọn loại sản phẩm";
+            // 
+            // cbIsurance
+            // 
+            this.cbIsurance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbIsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbIsurance.FormattingEnabled = true;
+            this.cbIsurance.Location = new System.Drawing.Point(430, 203);
+            this.cbIsurance.Name = "cbIsurance";
+            this.cbIsurance.Size = new System.Drawing.Size(344, 30);
+            this.cbIsurance.TabIndex = 26;
+            this.cbIsurance.Text = "Chọn thời gian bảo hành";
+            // 
             // FormSuaSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1218, 844);
+            this.Controls.Add(this.txtImgName);
             this.Controls.Add(this.btnSaveImg);
-            this.Controls.Add(this.btnBrowse);
-            this.Controls.Add(this.pbImage);
-            this.Controls.Add(this.txtImgPath);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.txtImgPath);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pbImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSuaSP";
             this.Text = "FormSuaSP";
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        public System.Windows.Forms.Button btnSaveImg;
-        public System.Windows.Forms.Button btnBrowse;
-        private System.Windows.Forms.PictureBox pbImage;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtImgPath;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Button btnCancel;
         public System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label6;
@@ -341,5 +362,14 @@ namespace TechShop
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtImgName;
+        public System.Windows.Forms.Button btnSaveImg;
+        private System.Windows.Forms.TextBox txtImgPath;
+        public System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.PictureBox pbImage;
+        public System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbBrand;
+        private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.ComboBox cbIsurance;
     }
 }

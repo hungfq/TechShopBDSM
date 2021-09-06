@@ -17,6 +17,7 @@ namespace AppTier
         {
             db = new DAL();
         }
+
         public bool insertUser(ref string err, string name, string phone_number, int role_id, string username, string password)
         {
             return db.MyExecuteNonQuery("sp_InsertUser", CommandType.StoredProcedure, ref err,  new SqlParameter("@phone_number", phone_number), new SqlParameter("@role_id", role_id), new SqlParameter("@username", username), new SqlParameter("@phone_number", password));

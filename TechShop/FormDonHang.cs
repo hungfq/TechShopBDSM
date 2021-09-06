@@ -14,8 +14,10 @@ namespace TechShop
 {
     public partial class FormDonHang : Form
     {
-        DbOrder dbOrder;
-        DataTable dtOrder = null;
+        DbCustomer dbCustomer = new DbCustomer();
+        DataTable dtCustomer = new DataTable();
+        DbOrder dbOrder = new DbOrder();
+        DataTable dtOrder = new DataTable();
         public FormDonHang()
         {
             InitializeComponent();
@@ -34,10 +36,16 @@ namespace TechShop
         {
             try
             {
-                // Vận chuyển dữ liệu vào DataTable dtKhachHang 
-                dtOrder = new DataTable();
+                dtCustomer.Clear();
+                dtCustomer = dbCustomer.getAllCustomer().Tables[0]; 
                 dtOrder.Clear();
                 dtOrder = dbOrder.getAllOrder().Tables[0];
+
+                cbCustomer.DisplayMember = "name";
+                cbCustomer.ValueMember = "customer_id";
+                cbCustomer.DataSource = dtCustomer;
+                cbCustomer.SelectedItem = null;
+                cbCustomer.Text = "Khách hàng";
 
                 List<Order> orderDetails = new List<Order>();
                 orderDetails = Model.ConvertDataTable<Order>(dtOrder);

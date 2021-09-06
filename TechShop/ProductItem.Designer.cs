@@ -99,7 +99,6 @@ namespace TechShop
             this.lbInsuarence.Size = new System.Drawing.Size(97, 23);
             this.lbInsuarence.TabIndex = 6;
             this.lbInsuarence.Text = "Insuarence";
-            this.lbInsuarence.Click += new System.EventHandler(this.lbInsuarence_Click);
             // 
             // lbID
             // 
@@ -114,12 +113,15 @@ namespace TechShop
             // lbImage
             // 
             this.lbImage.AutoSize = true;
-            this.lbImage.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbImage.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImage.ForeColor = System.Drawing.Color.DarkBlue;
             this.lbImage.Location = new System.Drawing.Point(1009, 19);
             this.lbImage.Name = "lbImage";
             this.lbImage.Size = new System.Drawing.Size(58, 23);
             this.lbImage.TabIndex = 3;
             this.lbImage.Text = "image";
+            this.lbImage.Click += new System.EventHandler(this.lbImage_Click);
             // 
             // btnModify
             // 

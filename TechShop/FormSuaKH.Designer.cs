@@ -42,6 +42,7 @@ namespace TechShop
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtPhoneNum = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -104,7 +105,7 @@ namespace TechShop
             // txtAge
             // 
             this.txtAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.Location = new System.Drawing.Point(901, 97);
+            this.txtAge.Location = new System.Drawing.Point(930, 97);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(218, 28);
             this.txtAge.TabIndex = 2;
@@ -113,7 +114,7 @@ namespace TechShop
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(896, 57);
+            this.label6.Location = new System.Drawing.Point(925, 57);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 26);
             this.label6.TabIndex = 12;
@@ -150,6 +151,7 @@ namespace TechShop
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtPhoneNum);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtAge);
@@ -179,6 +181,19 @@ namespace TechShop
             this.label2.Size = new System.Drawing.Size(134, 26);
             this.label2.TabIndex = 14;
             this.label2.Text = "Số điện thoại:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(930, 221);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(218, 38);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "Xóa Khách hàng";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // FormSuaKH
             // 
@@ -211,5 +226,6 @@ namespace TechShop
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtPhoneNum;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Button button1;
     }
 }

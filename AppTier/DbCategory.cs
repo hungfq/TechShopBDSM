@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using DataTier;
 namespace AppTier
 {
-    class DbCategory
+    public class DbCategory
     {
 		DAL db;
 
@@ -16,6 +16,14 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
+        public DataSet getCategoryByID(string id)
+        {
+            return db.ExecuteQueryDataSet("select * from categories where category_id=" + id, CommandType.Text, null);
+        }
+        public DataSet getAllCategory()
+        {
+            return db.ExecuteQueryDataSet("select * from categories", CommandType.Text, null);
+        }
         public bool insertCategory(ref string err, string name)
         {
             return db.MyExecuteNonQuery("sp_InsertCategory", CommandType.StoredProcedure, ref err, new SqlParameter("@name", name));

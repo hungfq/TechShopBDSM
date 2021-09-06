@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,12 @@ namespace TechShop
 {
     public partial class FormSuaSP : Form
     {
+        DbCategory dbCategory = new DbCategory();
+        DataTable dtCategory = new DataTable();
+        DbBrand dbBrand = new DbBrand();
+        DataTable dtBrand = new DataTable();
+        DbInsurance dbInsurance = new DbInsurance();
+        DataTable dtInsurance = new DataTable();
         DbProduct dbProduct;
         DataTable dtProduct;
         List<Product> productList = new List<Product>();
@@ -31,18 +38,40 @@ namespace TechShop
             {
                 dtProduct = new DataTable();
                 dtProduct.Clear();
-                dtProduct = dbProduct.getProduct(oddID.ToString()).Tables[0];
+                dtProduct = dbProduct.getProductById(oddID.ToString()).Tables[0];
 
                 productList = Model.ConvertDataTable<Product>(dtProduct);
 
                 txtName.Text = productList[0].name;
                 txtPrice.Text = productList[0].price.ToString();
-                txtImgPath.Text = productList[0].image;
+                txtImgName.Text = productList[0].image;
+                pbImage.Image = Image.FromFile(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\TechShop\\ImageStorage\\" + txtImgName.Text);
 
+                dtBrand.Clear();
+                dtBrand = dbBrand.getAllBrand().Tables[0];
+                dtCategory.Clear();
+                dtCategory = dbCategory.getAllCategory().Tables[0];
+                dtInsurance.Clear();
+                dtInsurance = dbInsurance.getAllInsurance().Tables[0];
+
+                cbBrand.DisplayMember = "name";
+                cbBrand.ValueMember = "brand_id";
+                cbBrand.DataSource = dtBrand;
+                cbBrand.SelectedValue = productList[0].brand_id;
+
+                cbCategory.DisplayMember = "name";
+                cbCategory.ValueMember = "category_id";
+                cbCategory.DataSource = dtCategory;
+                cbCategory.SelectedValue = productList[0].category_id;
+
+                cbIsurance.DisplayMember = "time";
+                cbIsurance.ValueMember = "insurance_id";
+                cbIsurance.DataSource = dtInsurance;
+                cbIsurance.SelectedValue = productList[0].insuarence_id;
             }
-            catch (SqlException)
+            catch (Exception)
             {
-                MessageBox.Show("Không lấy được nội dung. Lỗi rồi!!!");
+                pbImage.Image = null;
             }
         }
         private void btnReturn_Click(object sender, EventArgs e)
@@ -53,5 +82,34 @@ namespace TechShop
             LoadData();
         }
 
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                pbImage.Image = new Bitmap(open.FileName);
+                // image file path  
+                txtImgPath.Text = open.FileName;
+                txtImgName.Text = Path.GetFileName(open.FileName);
+                
+            }
+        }
+
+        private void btnSaveImg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string p1 = txtImgPath.Text;
+                string p2 = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\TechShop\\ImageStorage\\" + txtImgName.Text;
+                File.Copy(p1, p2, true);
+                DialogResult result = MessageBox.Show("Save image successfully", "", MessageBoxButtons.OK);
+            }
+            catch (Exception ee)
+            {
+                DialogResult result = MessageBox.Show(ee.ToString(), "", MessageBoxButtons.OK);
+            }
+        }
     }
 }

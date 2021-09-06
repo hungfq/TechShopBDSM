@@ -14,8 +14,14 @@ namespace TechShop
 {
     public partial class FormBanHang : Form
     {
+        DbCustomer dbCustomer = new DbCustomer();
+        DataTable dtCustomer = new DataTable();
+        DbCategory dbCategory = new DbCategory();
+        DataTable dtCategory = new DataTable();
+        DbBrand dbBrand = new DbBrand();
+        DataTable dtBrand = new DataTable();
         DbProduct dbProduct;
-        DataTable dtProduct = null;
+        DataTable dtProduct = new DataTable();
         List<CartItem> cartListItem = new List<CartItem>();
         int cart_y = 0;
         public FormBanHang()
@@ -28,10 +34,32 @@ namespace TechShop
         {
             try
             {
-                // Vận chuyển dữ liệu vào DataTable dtKhachHang 
-                dtProduct = new DataTable();
+                dtCustomer.Clear();
+                dtCustomer = dbCustomer.getAllCustomer().Tables[0];
+                dtBrand.Clear();
+                dtBrand = dbBrand.getAllBrand().Tables[0];
+                dtCategory.Clear();
+                dtCategory = dbCategory.getAllCategory().Tables[0];
                 dtProduct.Clear();
                 dtProduct = dbProduct.getAllProduct().Tables[0];
+
+                cbBrand.DisplayMember = "name";
+                cbBrand.ValueMember = "brand_id";
+                cbBrand.DataSource = dtBrand;
+                cbBrand.SelectedItem = null;
+                cbBrand.Text = "Chọn nhãn hiệu";
+
+                cbCategory.DisplayMember = "name";
+                cbCategory.ValueMember = "category_id";
+                cbCategory.DataSource = dtCategory;
+                cbCategory.SelectedItem = null;
+                cbCategory.Text = "Chọn loại sản phẩm";
+
+                cbCustomer.DisplayMember = "name";
+                cbCustomer.ValueMember = "customer_id";
+                cbCustomer.DataSource = dtCustomer;
+                cbCustomer.SelectedItem = null;
+                cbCustomer.Text = "Khách hàng";
 
                 List<Product> productDetails = new List<Product>();
                 productDetails = Model.ConvertDataTable<Product>(dtProduct);
@@ -90,7 +118,7 @@ namespace TechShop
             int id = Int32.Parse(obj.Text);
 
             DataTable dt = new DataTable();
-            dt = dbProduct.getProduct(id.ToString()).Tables[0];
+            dt = dbProduct.getProductById(id.ToString()).Tables[0];
             List<Product> pdDetails = new List<Product>();
             pdDetails = Model.ConvertDataTable<Product>(dt);
             // add item to cart

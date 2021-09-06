@@ -55,7 +55,7 @@ namespace TechShop
                     item.lbOrderID.Text = i.order_id.ToString();
                     //DataSet
                     
-                    dt1 = dbProduct.getProduct(i.product_id.ToString()).Tables[0];
+                    dt1 = dbProduct.getProductById(i.product_id.ToString()).Tables[0];
                     pdDetails = Model.ConvertDataTable<Product>(dt1);
                     // add item to cart
                     item.lbProductName.Text = pdDetails[0].name;

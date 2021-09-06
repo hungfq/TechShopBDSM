@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +18,18 @@ namespace TechShop
             InitializeComponent();
         }
 
-        private void lbInsuarence_Click(object sender, EventArgs e)
-        {
 
+        private void lbImage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string name = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\TechShop\\ImageStorage\\" + lbImage.Text;
+                System.Diagnostics.Process.Start(name);
+            }
+            catch (Exception ee)
+            {
+                DialogResult result = MessageBox.Show(ee.ToString(), "", MessageBoxButtons.OK);
+            }
         }
     }
 }

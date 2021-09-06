@@ -17,7 +17,7 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
-        public DataSet getCustomer(string id)
+        public DataSet getCustomerById(string id)
         {
             return db.ExecuteQueryDataSet("select * from customers where customer_id=" + id, CommandType.Text, null);
         }

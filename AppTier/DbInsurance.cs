@@ -16,17 +16,25 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
+        public DataSet getInsuranceByID(string id)
+        {
+            return db.ExecuteQueryDataSet("select * from insurances where insurance_id=" + id, CommandType.Text, null);
+        }
+        public DataSet getAllInsurance()
+        {
+            return db.ExecuteQueryDataSet("select * from insurances", CommandType.Text, null);
+        }
         public bool insertInsurance(ref string err, string time)
         {
-            return db.MyExecuteNonQuery("sp_InsertRole", CommandType.StoredProcedure, ref err, new SqlParameter("@time", time));
+            return db.MyExecuteNonQuery("sp_InsertInsurance", CommandType.StoredProcedure, ref err, new SqlParameter("@time", time));
         }
         public bool updateInsurance(ref string err, int insurance_id, string time)
         {
-            return db.MyExecuteNonQuery("sp_UpdateRole", CommandType.StoredProcedure, ref err, new SqlParameter("@insurance_id", insurance_id), new SqlParameter("@time ", time));
+            return db.MyExecuteNonQuery("sp_UpdateInsurance", CommandType.StoredProcedure, ref err, new SqlParameter("@insurance_id", insurance_id), new SqlParameter("@time ", time));
         }
         public bool deleteInsurance(ref string err, string insurance_id)
         {
-            return db.MyExecuteNonQuery("sp_DeleteRole", CommandType.StoredProcedure, ref err, new SqlParameter("@insurance_id", insurance_id));
+            return db.MyExecuteNonQuery("sp_DeleteInsurance", CommandType.StoredProcedure, ref err, new SqlParameter("@insurance_id", insurance_id));
         }
     }
 }

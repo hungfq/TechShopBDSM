@@ -15,8 +15,12 @@ namespace TechShop
 {
     public partial class FormDsSanPham : Form
     {
+        DbCategory dbCategory = new DbCategory();
+        DataTable dtCategory = new DataTable();
+        DbBrand dbBrand = new DbBrand();
+        DataTable dtBrand = new DataTable();
         DbProduct dbProduct;
-        DataTable dtProduct = null;
+        DataTable dtProduct = new DataTable();
         public FormDsSanPham()
         {
             InitializeComponent();
@@ -28,11 +32,24 @@ namespace TechShop
         {
             try
             {
-                // Vận chuyển dữ liệu vào DataTable dtKhachHang 
-                dtProduct = new DataTable();
+                dtBrand.Clear();
+                dtBrand = dbBrand.getAllBrand().Tables[0];
+                dtCategory.Clear();
+                dtCategory = dbCategory.getAllCategory().Tables[0];
                 dtProduct.Clear();
                 dtProduct = dbProduct.getAllProduct().Tables[0];
 
+                cbBrand.DisplayMember = "name";
+                cbBrand.ValueMember = "brand_id";
+                cbBrand.DataSource = dtBrand;
+                cbBrand.SelectedItem = null;
+                cbBrand.Text = "Nhãn hiệu";
+
+                cbCategory.DisplayMember = "name";
+                cbCategory.ValueMember = "category_id";
+                cbCategory.DataSource = dtCategory;
+                cbCategory.SelectedItem = null;
+                cbCategory.Text = "Loại sản phẩm";
 
                 List<Product> productDetails = new List<Product>();
                 productDetails = Model.ConvertDataTable<Product>(dtProduct);

@@ -9,7 +9,7 @@ using DataTier;
 
 namespace AppTier
 {
-    class DbBrand
+   public class DbBrand
     {
 		DAL db;
 
@@ -17,6 +17,14 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
+        public DataSet getBrandByID(string id)
+        {
+            return db.ExecuteQueryDataSet("select * from brands where brand_id=" + id, CommandType.Text, null);
+        }
+        public DataSet getAllBrand()
+        {
+            return db.ExecuteQueryDataSet("select * from brands", CommandType.Text, null);
+        }
         public bool insertBrand(ref string err, string name)
         {
             return db.MyExecuteNonQuery("sp_InsertBrand", CommandType.StoredProcedure, ref err, new SqlParameter("@name", name));
