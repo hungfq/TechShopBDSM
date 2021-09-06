@@ -15,6 +15,8 @@ namespace TechShop
 {
     public partial class FormDsKhachHang : Form
     {
+        List<CustomerItem> cusItem;
+        List<Customer> customer;
         DbCustomer dbCustomer;
         DataTable dtCustomer = null;
         public FormDsKhachHang()
@@ -26,6 +28,8 @@ namespace TechShop
         
         public void LoadData()
         {
+            cusItem = new List<CustomerItem>();
+            customer = new List<Customer>();
             try
             {
                 // Vận chuyển dữ liệu vào DataTable dtKhachHang 
@@ -34,11 +38,11 @@ namespace TechShop
                 dtCustomer = dbCustomer.getAllCustomer().Tables[0];
 
 
-                List<Customer> customerDetails = new List<Customer>();
-                customerDetails = Model.ConvertDataTable<Customer>(dtCustomer);
-                List<CustomerItem> cusItem = new List<CustomerItem>();
+                
+                customer = Model.ConvertDataTable<Customer>(dtCustomer);
+                
                 int x = 0;
-                foreach (Customer i in customerDetails)
+                foreach (Customer i in customer)
                 {
                     CustomerItem item = new CustomerItem();
                     item.lbName.Text = i.name;
@@ -99,5 +103,14 @@ namespace TechShop
             formThemKH.btnReturn.Click += btnReturn_Click;
             formThemKH.btnExit.Click += btnReturn_Click;
         }
+
+        private void ckAll_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach (CustomerItem i in pnDsSp.Controls)
+            {
+                i.ck.Checked = ckAll.Checked;
+            }
+        }
+
     }
 }

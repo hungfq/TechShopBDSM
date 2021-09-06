@@ -83,9 +83,9 @@ namespace TechShop
             this.pnSearch.BackColor = System.Drawing.Color.White;
             this.pnSearch.Controls.Add(this.textBox1);
             this.pnSearch.Controls.Add(this.btnSearch);
-            this.pnSearch.Location = new System.Drawing.Point(27, 33);
+            this.pnSearch.Location = new System.Drawing.Point(12, 33);
             this.pnSearch.Name = "pnSearch";
-            this.pnSearch.Size = new System.Drawing.Size(722, 46);
+            this.pnSearch.Size = new System.Drawing.Size(737, 46);
             this.pnSearch.TabIndex = 58;
             // 
             // cbCategory
@@ -117,7 +117,7 @@ namespace TechShop
             this.cbCustomer.FormattingEnabled = true;
             this.cbCustomer.Location = new System.Drawing.Point(773, 347);
             this.cbCustomer.Name = "cbCustomer";
-            this.cbCustomer.Size = new System.Drawing.Size(415, 35);
+            this.cbCustomer.Size = new System.Drawing.Size(439, 35);
             this.cbCustomer.TabIndex = 60;
             this.cbCustomer.Text = "  Khách hàng";
             // 
@@ -125,9 +125,9 @@ namespace TechShop
             // 
             this.pnListItem.AutoScroll = true;
             this.pnListItem.BackColor = System.Drawing.Color.White;
-            this.pnListItem.Location = new System.Drawing.Point(27, 154);
+            this.pnListItem.Location = new System.Drawing.Point(12, 154);
             this.pnListItem.Name = "pnListItem";
-            this.pnListItem.Size = new System.Drawing.Size(722, 662);
+            this.pnListItem.Size = new System.Drawing.Size(737, 678);
             this.pnListItem.TabIndex = 59;
             // 
             // panel3
@@ -143,7 +143,7 @@ namespace TechShop
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(773, 404);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(415, 236);
+            this.panel3.Size = new System.Drawing.Size(439, 236);
             this.panel3.TabIndex = 60;
             // 
             // label5
@@ -151,7 +151,7 @@ namespace TechShop
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Open Sans Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(235, 180);
+            this.label5.Location = new System.Drawing.Point(259, 180);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(161, 38);
             this.label5.TabIndex = 60;
@@ -172,7 +172,7 @@ namespace TechShop
             // 
             this.txtTienKhachDua.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTienKhachDua.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTienKhachDua.Location = new System.Drawing.Point(195, 116);
+            this.txtTienKhachDua.Location = new System.Drawing.Point(219, 116);
             this.txtTienKhachDua.Name = "txtTienKhachDua";
             this.txtTienKhachDua.Size = new System.Drawing.Size(191, 39);
             this.txtTienKhachDua.TabIndex = 58;
@@ -212,7 +212,7 @@ namespace TechShop
             this.lbTotalMoney.AutoSize = true;
             this.lbTotalMoney.Font = new System.Drawing.Font("Open Sans Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotalMoney.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbTotalMoney.Location = new System.Drawing.Point(206, 12);
+            this.lbTotalMoney.Location = new System.Drawing.Point(230, 12);
             this.lbTotalMoney.Name = "lbTotalMoney";
             this.lbTotalMoney.Size = new System.Drawing.Size(190, 45);
             this.lbTotalMoney.TabIndex = 2;
@@ -238,7 +238,7 @@ namespace TechShop
             this.btnThanhToan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnThanhToan.Location = new System.Drawing.Point(890, 657);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(298, 159);
+            this.btnThanhToan.Size = new System.Drawing.Size(322, 175);
             this.btnThanhToan.TabIndex = 61;
             this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.UseVisualStyleBackColor = false;
@@ -252,7 +252,7 @@ namespace TechShop
             this.btnHuy.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.btnHuy.Location = new System.Drawing.Point(773, 657);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(105, 159);
+            this.btnHuy.Size = new System.Drawing.Size(105, 175);
             this.btnHuy.TabIndex = 62;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = false;
@@ -264,7 +264,7 @@ namespace TechShop
             this.pnCart.BackColor = System.Drawing.Color.White;
             this.pnCart.Location = new System.Drawing.Point(773, 33);
             this.pnCart.Name = "pnCart";
-            this.pnCart.Size = new System.Drawing.Size(415, 291);
+            this.pnCart.Size = new System.Drawing.Size(439, 291);
             this.pnCart.TabIndex = 60;
             // 
             // ecThToan
@@ -287,7 +287,7 @@ namespace TechShop
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.ClientSize = new System.Drawing.Size(1221, 844);
+            this.ClientSize = new System.Drawing.Size(1234, 844);
             this.Controls.Add(this.pnCart);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnThanhToan);

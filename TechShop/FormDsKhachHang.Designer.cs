@@ -39,7 +39,7 @@ namespace TechShop
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ckAll = new System.Windows.Forms.CheckBox();
             this.pnDsSp = new System.Windows.Forms.Panel();
             this.pnSearch = new System.Windows.Forms.Panel();
             this.ecPnSearch = new TechShop.ElipseControl();
@@ -145,14 +145,15 @@ namespace TechShop
             this.label8.TabIndex = 43;
             this.label8.Text = "Tên";
             // 
-            // checkBox1
+            // ckAll
             // 
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(41, 204);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(18, 18);
-            this.checkBox1.TabIndex = 42;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckAll.Location = new System.Drawing.Point(41, 204);
+            this.ckAll.Name = "ckAll";
+            this.ckAll.Size = new System.Drawing.Size(18, 18);
+            this.ckAll.TabIndex = 42;
+            this.ckAll.UseVisualStyleBackColor = true;
+            this.ckAll.CheckedChanged += new System.EventHandler(this.ckAll_CheckedChanged);
             // 
             // pnDsSp
             // 
@@ -194,7 +195,7 @@ namespace TechShop
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.ckAll);
             this.Controls.Add(this.pnDsSp);
             this.Controls.Add(this.pnSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -219,7 +220,7 @@ namespace TechShop
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label8;
-        public System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.CheckBox ckAll;
         private System.Windows.Forms.Panel pnDsSp;
         private System.Windows.Forms.Panel pnSearch;
         private ElipseControl ecPnSearch;

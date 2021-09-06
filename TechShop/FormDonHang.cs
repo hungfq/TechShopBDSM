@@ -115,11 +115,17 @@ namespace TechShop
             formThemSP.btnExit.Click += btnReturn_Click;
         }
 
-       
-
         private void lbName_Click(object sender, EventArgs e)
         {
             ReLoad();
+        }
+
+        private void ckAll_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach (OrderItem i in pnDsOrder.Controls)
+            {
+                i.ck.Checked = ckAll.Checked;
+            }
         }
     }
 }

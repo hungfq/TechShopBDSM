@@ -125,5 +125,13 @@ namespace TechShop
             formThemSP.btnExit.Click += btnReturn_Click;
             
         }
+
+        private void ckAll_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach (ProductItem i in pnDsSp.Controls)
+            {
+                i.ck.Checked = ckAll.Checked;
+            }
+        }
     }
 }

@@ -39,7 +39,7 @@ namespace TechShop
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ckAll = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.cbBrand = new System.Windows.Forms.ComboBox();
@@ -141,14 +141,15 @@ namespace TechShop
             this.label8.TabIndex = 25;
             this.label8.Text = "Sản phẩm";
             // 
-            // checkBox1
+            // ckAll
             // 
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(41, 198);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(18, 18);
-            this.checkBox1.TabIndex = 24;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckAll.Location = new System.Drawing.Point(41, 198);
+            this.ckAll.Name = "ckAll";
+            this.ckAll.Size = new System.Drawing.Size(18, 18);
+            this.ckAll.TabIndex = 24;
+            this.ckAll.UseVisualStyleBackColor = true;
+            this.ckAll.CheckedChanged += new System.EventHandler(this.ckAll_CheckedChanged);
             // 
             // textBox1
             // 
@@ -256,7 +257,7 @@ namespace TechShop
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.ckAll);
             this.Controls.Add(this.pnDsSp);
             this.Controls.Add(this.pnSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -280,7 +281,7 @@ namespace TechShop
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label8;
-        public System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.CheckBox ckAll;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.ComboBox cbBrand;

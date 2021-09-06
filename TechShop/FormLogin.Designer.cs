@@ -30,17 +30,17 @@ namespace TechShop
         private void InitializeComponent()
         {
             this.pnHome = new System.Windows.Forms.Panel();
+            this.pnUsername = new System.Windows.Forms.Panel();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnPassword = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.pnBackground = new System.Windows.Forms.Panel();
             this.Main = new TechShop.ElipseControl();
-            this.pnUsername = new System.Windows.Forms.Panel();
-            this.pnPassword = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
             this.ecSubmit = new TechShop.ElipseControl();
             this.ecUsername = new TechShop.ElipseControl();
             this.ecPassword = new TechShop.ElipseControl();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.pnHome.SuspendLayout();
             this.pnUsername.SuspendLayout();
             this.pnPassword.SuspendLayout();
@@ -58,19 +58,6 @@ namespace TechShop
             this.pnHome.Size = new System.Drawing.Size(606, 404);
             this.pnHome.TabIndex = 0;
             // 
-            // pnBackground
-            // 
-            this.pnBackground.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnBackground.Location = new System.Drawing.Point(0, 0);
-            this.pnBackground.Name = "pnBackground";
-            this.pnBackground.Size = new System.Drawing.Size(1221, 844);
-            this.pnBackground.TabIndex = 1;
-            // 
-            // Main
-            // 
-            this.Main.CornerRadius = 45;
-            this.Main.TargetControl = this.pnHome;
-            // 
             // pnUsername
             // 
             this.pnUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
@@ -81,26 +68,17 @@ namespace TechShop
             this.pnUsername.Size = new System.Drawing.Size(547, 53);
             this.pnUsername.TabIndex = 0;
             // 
-            // pnPassword
+            // txtUsername
             // 
-            this.pnPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
-            this.pnPassword.Controls.Add(this.txtPassword);
-            this.pnPassword.Font = new System.Drawing.Font("Open Sans", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnPassword.Location = new System.Drawing.Point(26, 198);
-            this.pnPassword.Name = "pnPassword";
-            this.pnPassword.Size = new System.Drawing.Size(547, 53);
-            this.pnPassword.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(245, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 46);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Login";
+            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(21, 10);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(500, 32);
+            this.txtUsername.TabIndex = 0;
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // btnSubmit
             // 
@@ -116,6 +94,52 @@ namespace TechShop
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(245, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 45);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Login";
+            // 
+            // pnPassword
+            // 
+            this.pnPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
+            this.pnPassword.Controls.Add(this.txtPassword);
+            this.pnPassword.Font = new System.Drawing.Font("Open Sans", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnPassword.Location = new System.Drawing.Point(26, 198);
+            this.pnPassword.Name = "pnPassword";
+            this.pnPassword.Size = new System.Drawing.Size(547, 53);
+            this.pnPassword.TabIndex = 1;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(21, 10);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(500, 32);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
+            // 
+            // pnBackground
+            // 
+            this.pnBackground.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnBackground.Location = new System.Drawing.Point(0, 0);
+            this.pnBackground.Name = "pnBackground";
+            this.pnBackground.Size = new System.Drawing.Size(1221, 844);
+            this.pnBackground.TabIndex = 1;
+            // 
+            // Main
+            // 
+            this.Main.CornerRadius = 45;
+            this.Main.TargetControl = this.pnHome;
+            // 
             // ecSubmit
             // 
             this.ecSubmit.CornerRadius = 45;
@@ -130,28 +154,6 @@ namespace TechShop
             // 
             this.ecPassword.CornerRadius = 45;
             this.ecPassword.TargetControl = this.pnPassword;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(21, 9);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.PasswordChar = '*';
-            this.txtUsername.Size = new System.Drawing.Size(500, 32);
-            this.txtUsername.TabIndex = 0;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(252)))));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(21, 10);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(500, 32);
-            this.txtPassword.TabIndex = 1;
             // 
             // FormLogin
             // 

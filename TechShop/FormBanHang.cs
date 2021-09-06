@@ -143,6 +143,7 @@ namespace TechShop
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            cartListItem = new List<CartItem>();
             this.Controls.Clear();
             InitializeComponent();
             dbProduct = new DbProduct();

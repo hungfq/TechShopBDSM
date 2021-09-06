@@ -34,7 +34,7 @@ namespace TechShop
             this.lbPhoneNum = new System.Windows.Forms.Label();
             this.lbAge = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ck = new System.Windows.Forms.CheckBox();
             this.btnModify = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -78,14 +78,14 @@ namespace TechShop
             this.lbName.TabIndex = 51;
             this.lbName.Text = "Tên";
             // 
-            // checkBox1
+            // ck
             // 
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(31, 20);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(18, 18);
-            this.checkBox1.TabIndex = 50;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ck.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ck.Location = new System.Drawing.Point(31, 20);
+            this.ck.Name = "ck";
+            this.ck.Size = new System.Drawing.Size(18, 18);
+            this.ck.TabIndex = 50;
+            this.ck.UseVisualStyleBackColor = true;
             // 
             // btnModify
             // 
@@ -109,7 +109,7 @@ namespace TechShop
             this.Controls.Add(this.lbPhoneNum);
             this.Controls.Add(this.lbAge);
             this.Controls.Add(this.lbName);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.ck);
             this.Name = "CustomerItem";
             this.Size = new System.Drawing.Size(1108, 60);
             this.ResumeLayout(false);
@@ -123,7 +123,7 @@ namespace TechShop
         public System.Windows.Forms.Label lbPhoneNum;
         public System.Windows.Forms.Label lbAge;
         public System.Windows.Forms.Label lbName;
-        public System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.CheckBox ck;
         public System.Windows.Forms.Button btnModify;
     }
 }

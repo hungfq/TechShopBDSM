@@ -118,12 +118,6 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormParent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormParent.Designer.cs">
-      <DependentUpon>FormParent.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormSuaKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,9 +198,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormParent.resx">
-      <DependentUpon>FormParent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSuaKH.resx">
       <DependentUpon>FormSuaKH.cs</DependentUpon>

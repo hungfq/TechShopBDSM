@@ -40,7 +40,7 @@ namespace TechShop
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ckAll = new System.Windows.Forms.CheckBox();
             this.pnDsOrder = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -151,14 +151,15 @@ namespace TechShop
             this.label8.TabIndex = 43;
             this.label8.Text = "Khách hàng";
             // 
-            // checkBox1
+            // ckAll
             // 
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(41, 136);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(18, 18);
-            this.checkBox1.TabIndex = 42;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckAll.Location = new System.Drawing.Point(41, 136);
+            this.ckAll.Name = "ckAll";
+            this.ckAll.Size = new System.Drawing.Size(18, 18);
+            this.ckAll.TabIndex = 42;
+            this.ckAll.UseVisualStyleBackColor = true;
+            this.ckAll.CheckedChanged += new System.EventHandler(this.ckAll_CheckedChanged);
             // 
             // pnDsOrder
             // 
@@ -191,7 +192,7 @@ namespace TechShop
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.ckAll);
             this.Controls.Add(this.pnDsOrder);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -217,7 +218,7 @@ namespace TechShop
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label8;
-        public System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.CheckBox ckAll;
         private System.Windows.Forms.Panel pnDsOrder;
         private System.Windows.Forms.Panel panel2;
     }
