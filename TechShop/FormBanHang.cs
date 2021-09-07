@@ -94,13 +94,14 @@ namespace TechShop
         private void quantity_valueChange(object sender, EventArgs e)
         {
             UpdateTxtTotalMoney();
+            UpdateTienThua();
         }
         private void UpdateTxtTotalMoney()
         {
             int sum = 0;
-            foreach(CartItem i in cartListItem)
+            foreach (CartItem i in cartListItem)
             {
-                sum += Int32.Parse(i.lbPrice.Text)* Int32.Parse(i.quantity.Value.ToString());
+                sum += Int32.Parse(i.lbPrice.Text) * Int32.Parse(i.quantity.Value.ToString());
             }
             lbTotalMoney.Text = sum.ToString();
         }
@@ -110,6 +111,7 @@ namespace TechShop
             cartListItem.Remove((CartItem)obj.Parent);
             obj.Parent.Parent.Controls.Remove(obj.Parent);
             UpdateTxtTotalMoney();
+            UpdateTienThua();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -122,7 +124,7 @@ namespace TechShop
             List<Product> pdDetails = new List<Product>();
             pdDetails = Model.ConvertDataTable<Product>(dt);
             // add item to cart
-            
+
             item.lbID.Text = obj.Text;
             item.lbName.Text = pdDetails[0].name;
             item.lbPrice.Text = pdDetails[0].price.ToString();
@@ -139,6 +141,7 @@ namespace TechShop
             obj.Parent.Parent.Controls.Remove(obj.Parent);
 
             UpdateTxtTotalMoney();
+            UpdateTienThua();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -150,5 +153,34 @@ namespace TechShop
             LoadData();
         }
 
+        private void txtTienKhachDua_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                   (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+        void UpdateTienThua()
+        {
+            try
+            {
+                lbTienThua.Text = (Int32.Parse(txtTienKhachDua.Text) - Int32.Parse(lbTotalMoney.Text)).ToString();
+            }
+            catch (Exception)
+            {
+                lbTienThua.Text = "0";
+            }
+        }
+        private void txtTienKhachDua_TextChanged(object sender, EventArgs e)
+        {
+            UpdateTienThua();
+        }
     }
 }

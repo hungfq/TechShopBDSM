@@ -38,7 +38,7 @@ namespace TechShop
             this.cbCustomer = new System.Windows.Forms.ComboBox();
             this.pnListItem = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbTienThua = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTienKhachDua = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -133,7 +133,7 @@ namespace TechShop
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.lbTienThua);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.txtTienKhachDua);
             this.panel3.Controls.Add(this.label3);
@@ -146,17 +146,17 @@ namespace TechShop
             this.panel3.Size = new System.Drawing.Size(439, 236);
             this.panel3.TabIndex = 60;
             // 
-            // label5
+            // lbTienThua
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Open Sans Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(259, 180);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 38);
-            this.label5.TabIndex = 60;
-            this.label5.Text = "00.000.000";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbTienThua.AutoSize = true;
+            this.lbTienThua.Font = new System.Drawing.Font("Open Sans Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTienThua.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lbTienThua.Location = new System.Drawing.Point(257, 178);
+            this.lbTienThua.Name = "lbTienThua";
+            this.lbTienThua.Size = new System.Drawing.Size(161, 38);
+            this.lbTienThua.TabIndex = 60;
+            this.lbTienThua.Text = "000000000";
+            this.lbTienThua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
@@ -172,10 +172,13 @@ namespace TechShop
             // 
             this.txtTienKhachDua.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTienKhachDua.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTienKhachDua.Location = new System.Drawing.Point(219, 116);
+            this.txtTienKhachDua.Location = new System.Drawing.Point(238, 115);
             this.txtTienKhachDua.Name = "txtTienKhachDua";
-            this.txtTienKhachDua.Size = new System.Drawing.Size(191, 39);
+            this.txtTienKhachDua.Size = new System.Drawing.Size(171, 39);
             this.txtTienKhachDua.TabIndex = 58;
+            this.txtTienKhachDua.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienKhachDua.TextChanged += new System.EventHandler(this.txtTienKhachDua_TextChanged);
+            this.txtTienKhachDua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienKhachDua_KeyPress);
             // 
             // label3
             // 
@@ -212,12 +215,12 @@ namespace TechShop
             this.lbTotalMoney.AutoSize = true;
             this.lbTotalMoney.Font = new System.Drawing.Font("Open Sans Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotalMoney.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbTotalMoney.Location = new System.Drawing.Point(230, 12);
+            this.lbTotalMoney.Location = new System.Drawing.Point(226, 10);
             this.lbTotalMoney.Name = "lbTotalMoney";
-            this.lbTotalMoney.Size = new System.Drawing.Size(190, 45);
+            this.lbTotalMoney.Size = new System.Drawing.Size(191, 45);
             this.lbTotalMoney.TabIndex = 2;
-            this.lbTotalMoney.Text = "00.000.000";
-            this.lbTotalMoney.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbTotalMoney.Text = "000000000";
+            this.lbTotalMoney.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -326,7 +329,7 @@ namespace TechShop
         private System.Windows.Forms.TextBox txtTienKhachDua;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbTienThua;
         private System.Windows.Forms.Panel pnCart;
         private ElipseControl ecThToan;
         private ElipseControl ecHuy;
