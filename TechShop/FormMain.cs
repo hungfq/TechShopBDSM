@@ -35,9 +35,6 @@ namespace TechShop
             sidePanel.Dispose();
             btnSignOut.PerformClick();
             frmLogin.btnSubmit.Click += btnSubmit_click;
-
-
-            int a = dbOrder.getLastOrder();
         }
         private void role_none()
         {
@@ -74,6 +71,7 @@ namespace TechShop
             hideSubmenu();
             setBtnBackColor(btnDashboard);
             OpenChildForm(frmDashboard);
+            frmDashboard.LoadData();
         }
 
         private void btnBanHang_Click(object sender, EventArgs e)
@@ -140,7 +138,7 @@ namespace TechShop
             role_none();
             OpenChildForm(frmLogin);
             frmLogin.txtUsername.Focus();
-
+            txtName.Text = "username";
             
         }
         private void btnSubmit_click(object sender, EventArgs e)

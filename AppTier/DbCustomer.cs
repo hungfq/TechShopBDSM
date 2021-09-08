@@ -30,11 +30,11 @@ namespace AppTier
         {
             return db.MyExecuteNonQuery("sp_InsertCustomer", CommandType.StoredProcedure, ref err, new SqlParameter("@phone_number", phone_number), new SqlParameter("@name", name), new SqlParameter("@age", age));
         }
-        public bool updateCustomer(ref string err, string customer_id, string name, int  age,  string phone_number)
+        public bool updateCustomer(ref string err, int customer_id, string name, int  age,  string phone_number)
         {
             return db.MyExecuteNonQuery("sp_UpdateCustomer", CommandType.StoredProcedure, ref err, new SqlParameter("@customer_id",customer_id), new SqlParameter("@phone_number", phone_number), new SqlParameter("@name", name), new SqlParameter("@age", age));
         }
-        public bool deleteCustomer(ref string err, string customer_id)
+        public bool deleteCustomer(ref string err, int customer_id)
         {
             return db.MyExecuteNonQuery("sp_DeleteCustomer", CommandType.StoredProcedure, ref err, new SqlParameter("@customer_id ", customer_id));
         }

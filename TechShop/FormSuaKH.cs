@@ -37,7 +37,7 @@ namespace TechShop
 
                 txtName.Text = customerList[0].name;
                 txtAge.Text = customerList[0].age.ToString();
-                txtPhoneNum.Text = customerList[0].phone_number;
+                txtSDT.Text = customerList[0].phone_number;
 
             }
             catch (SqlException)
@@ -51,6 +51,24 @@ namespace TechShop
             InitializeComponent();
             dbCustomer = new DbCustomer();
             LoadData();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string err = "";
+            try
+            {
+                bool status = dbCustomer.updateCustomer(ref err, Int32.Parse(oddID),
+                    txtName.Text, Int32.Parse(txtAge.Text),txtSDT.Text);
+                if (status)
+                    MessageBox.Show("Sua khach hang thanh cong");
+                else
+                    MessageBox.Show(err);
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
         }
     }
 }

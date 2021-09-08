@@ -27,6 +27,11 @@ namespace AppTier
             return db.ExecuteQueryDataSet("EXECUTE sp_GetIncome @sold_date=" + "'"+sold_date+"';", CommandType.Text, null);
             
         }
+        public DataSet CountTotalbyYear(string year)
+        {
+            return db.ExecuteQueryDataSet("EXECUTE sp_countTotalbyYear @year=" + "'" + year + "';", CommandType.Text, null);
+
+        }
         //public int getLastOrder()
         //{
         //    int ddd;
@@ -50,6 +55,10 @@ namespace AppTier
         public bool deleteOrder(ref string err, int order_id)
         {
             return db.MyExecuteNonQuery("sp_DeleteOrder", CommandType.StoredProcedure, ref err, new SqlParameter("@order_id  ", order_id));
+        }
+        public bool deleteAllOfOrder(ref string err, int order_id)
+        {
+            return db.MyExecuteNonQuery("sp_deleteAllOD", CommandType.StoredProcedure, ref err, new SqlParameter("@order_id  ", order_id));
         }
     }
    

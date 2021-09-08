@@ -111,6 +111,5 @@ namespace TechShop
                 i.ck.Checked = ckAll.Checked;
             }
         }
-
     }
 }

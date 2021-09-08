@@ -33,7 +33,7 @@ namespace TechShop
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbIsurance = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@ namespace TechShop
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.cbIsurance);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtPrice);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label1);
@@ -94,13 +94,13 @@ namespace TechShop
             this.label7.TabIndex = 13;
             this.label7.Text = "Thời gian bảo hành:";
             // 
-            // textBox2
+            // txtPrice
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(24, 203);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(344, 28);
-            this.textBox2.TabIndex = 2;
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(24, 203);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(344, 28);
+            this.txtPrice.TabIndex = 2;
             // 
             // label6
             // 
@@ -165,6 +165,7 @@ namespace TechShop
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnExit
             // 
@@ -340,7 +341,7 @@ namespace TechShop
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Panel panel3;

@@ -37,7 +37,7 @@ namespace TechShop
             this.pnHome = new System.Windows.Forms.Panel();
             this.btnReturn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,7 +109,7 @@ namespace TechShop
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.btnHuy);
+            this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnReturn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -117,18 +117,19 @@ namespace TechShop
             this.panel2.Size = new System.Drawing.Size(1221, 52);
             this.panel2.TabIndex = 55;
             // 
-            // btnHuy
+            // btnXoa
             // 
-            this.btnHuy.BackColor = System.Drawing.Color.White;
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuy.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ForeColor = System.Drawing.Color.Red;
-            this.btnHuy.Location = new System.Drawing.Point(1031, 7);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(176, 38);
-            this.btnHuy.TabIndex = 56;
-            this.btnHuy.Text = "Xóa đơn hàng";
-            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnXoa.BackColor = System.Drawing.Color.White;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.Red;
+            this.btnXoa.Location = new System.Drawing.Point(1031, 7);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(176, 38);
+            this.btnXoa.TabIndex = 56;
+            this.btnXoa.Text = "Xóa đơn hàng";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // FormDonHang_ChiTiet
             // 
@@ -159,6 +160,6 @@ namespace TechShop
         private System.Windows.Forms.Panel pnHome;
         public System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Button btnHuy;
+        public System.Windows.Forms.Button btnXoa;
     }
 }

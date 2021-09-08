@@ -15,6 +15,7 @@ namespace TechShop
     public partial class FormDonHang_ChiTiet : Form
     {
         DbOrderDetail dbOrderDetail;
+        DbOrder dbOrder = new DbOrder();
         DataTable dtOrderDetail = null;
         DbProduct dbProduct = new DbProduct();
         DataTable dt1 = new DataTable();
@@ -79,6 +80,28 @@ namespace TechShop
             InitializeComponent();
             dbOrderDetail = new DbOrderDetail();
             LoadData();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            
+            string err = "";
+            try
+            {
+                bool status = dbOrder.deleteAllOfOrder(ref err ,oddID);
+                if (status)
+                { 
+                    MessageBox.Show("Xoa don hang thanh cong");
+                    btnReturn.PerformClick();
+                }
+                else
+                    MessageBox.Show(err);
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
+
         }
     }
 }

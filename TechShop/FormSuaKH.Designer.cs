@@ -40,9 +40,9 @@ namespace TechShop
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtPhoneNum = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +60,7 @@ namespace TechShop
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnHuy
             // 
@@ -152,7 +153,7 @@ namespace TechShop
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.txtPhoneNum);
+            this.panel1.Controls.Add(this.txtSDT);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtAge);
             this.panel1.Controls.Add(this.label6);
@@ -163,24 +164,6 @@ namespace TechShop
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1194, 285);
             this.panel1.TabIndex = 16;
-            // 
-            // txtPhoneNum
-            // 
-            this.txtPhoneNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNum.Location = new System.Drawing.Point(24, 196);
-            this.txtPhoneNum.Name = "txtPhoneNum";
-            this.txtPhoneNum.Size = new System.Drawing.Size(431, 28);
-            this.txtPhoneNum.TabIndex = 13;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 157);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 26);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Số điện thoại:";
             // 
             // button1
             // 
@@ -194,6 +177,24 @@ namespace TechShop
             this.button1.TabIndex = 57;
             this.button1.Text = "Xóa Khách hàng";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Location = new System.Drawing.Point(24, 196);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(431, 28);
+            this.txtSDT.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Open Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 26);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Số điện thoại:";
             // 
             // FormSuaKH
             // 
@@ -224,7 +225,7 @@ namespace TechShop
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtPhoneNum;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button button1;
     }

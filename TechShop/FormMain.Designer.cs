@@ -47,9 +47,9 @@ namespace TechShop
             this.btnBanHang = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnMain = new System.Windows.Forms.Panel();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.pnCtrl.SuspendLayout();
             this.pnBaoCaoSubmenu.SuspendLayout();
             this.pnManagerSubMenu.SuspendLayout();
@@ -330,6 +330,20 @@ namespace TechShop
             this.panel2.Size = new System.Drawing.Size(308, 145);
             this.panel2.TabIndex = 0;
             // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtName.Location = new System.Drawing.Point(46, 94);
+            this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
+            this.txtName.Size = new System.Drawing.Size(217, 24);
+            this.txtName.TabIndex = 100;
+            this.txtName.Text = "username";
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -348,19 +362,6 @@ namespace TechShop
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(1594, 993);
             this.pnMain.TabIndex = 1;
-            // 
-            // txtName
-            // 
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtName.Location = new System.Drawing.Point(46, 94);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(217, 24);
-            this.txtName.TabIndex = 2;
-            this.txtName.Text = "name";
-            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormMain
             // 

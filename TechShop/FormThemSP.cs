@@ -93,5 +93,10 @@ namespace TechShop
                 DialogResult result = MessageBox.Show(ee.ToString(), "", MessageBoxButtons.OK);
             }
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
