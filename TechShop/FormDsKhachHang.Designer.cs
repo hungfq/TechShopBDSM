@@ -75,7 +75,7 @@ namespace TechShop
             this.btnThemSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemSP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnThemSP.Location = new System.Drawing.Point(978, 73);
+            this.btnThemSP.Location = new System.Drawing.Point(978, 69);
             this.btnThemSP.Name = "btnThemSP";
             this.btnThemSP.Size = new System.Drawing.Size(227, 48);
             this.btnThemSP.TabIndex = 54;

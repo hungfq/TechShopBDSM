@@ -165,9 +165,9 @@ namespace TechShop
             // 
             this.pnDsOrder.AutoScroll = true;
             this.pnDsOrder.BackColor = System.Drawing.Color.White;
-            this.pnDsOrder.Location = new System.Drawing.Point(13, 180);
+            this.pnDsOrder.Location = new System.Drawing.Point(11, 180);
             this.pnDsOrder.Name = "pnDsOrder";
-            this.pnDsOrder.Size = new System.Drawing.Size(1192, 652);
+            this.pnDsOrder.Size = new System.Drawing.Size(1198, 652);
             this.pnDsOrder.TabIndex = 41;
             // 
             // panel2

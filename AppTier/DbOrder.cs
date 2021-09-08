@@ -17,9 +17,27 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
+
         public DataSet getAllOrder()
         {
             return db.ExecuteQueryDataSet("select * from orders", CommandType.Text, null);
+        }
+        public DataSet Income(string sold_date)
+        {
+            return db.ExecuteQueryDataSet("EXECUTE sp_GetIncome @sold_date=" + "'"+sold_date+"';", CommandType.Text, null);
+            
+        }
+        //public int getLastOrder()
+        //{
+        //    int ddd;
+        //    DataTable dt = new DataTable();
+        //    dt =  db.ExecuteQueryDataSet("select dbo.get_LastOrderId() as id", CommandType.Text, null).Tables[0];
+        //    ddd = Int32.Parse(dt.Rows[0]["id"].ToString());
+        //    return ddd;
+        //}
+        public int getLastOrder()
+        {
+            return Int32.Parse(db.ExecuteScalarValue("select dbo.get_LastOrderId() as id", CommandType.Text, null).ToString());
         }
         public bool insertOrder(ref string err, int customer_id, int seller_id, DateTime sold_date, int total_money)
         {

@@ -68,10 +68,15 @@ namespace TechShop
                     orderItem.Add(item);
                     x += Int32.Parse(item.Height.ToString());
                 }
+
+
+                //dtOrder.Clear();
+                //dtOrder = dbOrder.Income("20210905").Tables[0];
+                //dgv.DataSource = dtOrder;
             }
-            catch (SqlException)
+            catch (SqlException eee)
             {
-                MessageBox.Show("Không lấy được nội dung. Lỗi rồi!!!");
+                MessageBox.Show(eee.ToString());
             }
         }
         private void btnView_Click(object sender, EventArgs e)

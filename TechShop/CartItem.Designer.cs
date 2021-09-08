@@ -30,36 +30,36 @@ namespace TechShop
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CartItem));
-            this.quantity = new System.Windows.Forms.NumericUpDown();
+            this.quantityy = new System.Windows.Forms.NumericUpDown();
             this.lbName = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnRemove = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.quantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityy)).BeginInit();
             this.SuspendLayout();
             // 
-            // quantity
+            // quantityy
             // 
-            this.quantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.quantity.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantity.Location = new System.Drawing.Point(236, 49);
-            this.quantity.Maximum = new decimal(new int[] {
+            this.quantityy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.quantityy.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantityy.Location = new System.Drawing.Point(236, 49);
+            this.quantityy.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.quantity.Minimum = new decimal(new int[] {
+            this.quantityy.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.quantity.Name = "quantity";
-            this.quantity.Size = new System.Drawing.Size(64, 31);
-            this.quantity.TabIndex = 44;
-            this.quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.quantity.Value = new decimal(new int[] {
+            this.quantityy.Name = "quantityy";
+            this.quantityy.Size = new System.Drawing.Size(64, 31);
+            this.quantityy.TabIndex = 44;
+            this.quantityy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.quantityy.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -141,11 +141,11 @@ namespace TechShop
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.lbName);
-            this.Controls.Add(this.quantity);
+            this.Controls.Add(this.quantityy);
             this.Name = "CartItem";
             this.Size = new System.Drawing.Size(402, 87);
             this.Load += new System.EventHandler(this.CartItem_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.quantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +155,7 @@ namespace TechShop
         public System.Windows.Forms.Label lbName;
         public System.Windows.Forms.Label lbPrice;
         public System.Windows.Forms.Label lbID;
-        public System.Windows.Forms.NumericUpDown quantity;
+        public System.Windows.Forms.NumericUpDown quantityy;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnRemove;

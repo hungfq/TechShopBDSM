@@ -48,7 +48,7 @@ namespace TechShop
             // 
             // pnHome
             // 
-            this.pnHome.BackColor = System.Drawing.Color.White;
+            this.pnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.pnHome.Controls.Add(this.pnUsername);
             this.pnHome.Controls.Add(this.btnSubmit);
             this.pnHome.Controls.Add(this.label1);
@@ -129,6 +129,7 @@ namespace TechShop
             // 
             // pnBackground
             // 
+            this.pnBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(71)))));
             this.pnBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnBackground.Location = new System.Drawing.Point(0, 0);
             this.pnBackground.Name = "pnBackground";
@@ -182,7 +183,6 @@ namespace TechShop
         private System.Windows.Forms.Panel pnBackground;
         private ElipseControl Main;
         private System.Windows.Forms.Panel pnUsername;
-        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnPassword;
         private ElipseControl ecSubmit;
@@ -190,5 +190,6 @@ namespace TechShop
         private ElipseControl ecPassword;
         public System.Windows.Forms.TextBox txtUsername;
         public System.Windows.Forms.TextBox txtPassword;
+        public System.Windows.Forms.Button btnSubmit;
     }
 }

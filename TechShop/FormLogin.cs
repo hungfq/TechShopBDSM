@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 
 namespace TechShop
 {
@@ -23,6 +25,14 @@ namespace TechShop
             txtUsername.ForeColor = Color.Gray;
             txtPassword.Text = "Enter your password...";
             txtPassword.ForeColor = Color.Gray;
+            txtPassword.KeyPress += (sndr, ev) =>
+            {
+                if (ev.KeyChar.Equals((char)13))
+                {
+                    btnSubmit.PerformClick();
+                    ev.Handled = true; // suppress default handling
+                }
+            };
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)

@@ -19,6 +19,17 @@ namespace DataTier
             conn = new SqlConnection(ConnStr);
             comm = conn.CreateCommand();
         }
+        public object ExecuteScalarValue(string strSQL, CommandType ct, params SqlParameter[] p)
+        {
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            conn.Open();
+            comm.CommandText = strSQL;
+            comm.CommandType = ct;
+            object result = comm.ExecuteScalar();
+
+            return result;
+        }
         public DataSet ExecuteQueryDataSet(string strSQL, CommandType ct, params SqlParameter[] p)
         {
             if (conn.State == ConnectionState.Open)

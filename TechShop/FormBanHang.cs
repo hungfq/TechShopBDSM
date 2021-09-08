@@ -23,7 +23,10 @@ namespace TechShop
         DbProduct dbProduct;
         DataTable dtProduct = new DataTable();
         List<CartItem> cartListItem = new List<CartItem>();
+        DbOrder dbOrder = new DbOrder();
+        DbOrderDetail dbOrderDetail = new DbOrderDetail();
         int cart_y = 0;
+        public int id = 0;
         public FormBanHang()
         {
             InitializeComponent();
@@ -101,7 +104,7 @@ namespace TechShop
             int sum = 0;
             foreach (CartItem i in cartListItem)
             {
-                sum += Int32.Parse(i.lbPrice.Text) * Int32.Parse(i.quantity.Value.ToString());
+                sum += Int32.Parse(i.lbPrice.Text) * Int32.Parse(i.quantityy.Value.ToString());
             }
             lbTotalMoney.Text = sum.ToString();
         }
@@ -130,7 +133,7 @@ namespace TechShop
             item.lbPrice.Text = pdDetails[0].price.ToString();
 
             item.btnRemove.Click += btnRemove_Click;
-            item.quantity.ValueChanged += quantity_valueChange;
+            item.quantityy.ValueChanged += quantity_valueChange;
             item.Location = new System.Drawing.Point(0, cart_y);
             item.Dock = DockStyle.Top;
             item.BringToFront();
@@ -181,6 +184,39 @@ namespace TechShop
         private void txtTienKhachDua_TextChanged(object sender, EventArgs e)
         {
             UpdateTienThua();
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            string err = "";
+            if (cbCustomer.SelectedItem != null && cartListItem.Count > 0)
+            {
+                try
+                {
+                    bool status = dbOrder.insertOrder(ref err, Int32.Parse(cbCustomer.SelectedValue.ToString()),
+                    id, DateTime.Today, Int32.Parse(lbTotalMoney.Text));
+                    int order_id = dbOrder.getLastOrder();
+
+                    foreach (CartItem ci in pnCart.Controls)
+                    {
+                        dbOrderDetail.insertOrderDetail(ref err, Int32.Parse(ci.lbID.Text), order_id,
+                            Int32.Parse(ci.quantityy.Value.ToString()));
+                    }
+                    if (status)
+                    {
+                        MessageBox.Show("Thanh toan thanh cong");
+                        btnHuy.PerformClick();
+                    }
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show(ee.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui long kiem tra lai","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -16,6 +16,7 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
+
         public DataSet getOrderDetail(string id)
         {
             return db.ExecuteQueryDataSet("select * from orderdetails where order_id=" + id, CommandType.Text, null);

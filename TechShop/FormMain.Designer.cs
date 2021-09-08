@@ -31,29 +31,28 @@ namespace TechShop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.pnCtrl = new System.Windows.Forms.Panel();
-            this.pnSettingSubMenu = new System.Windows.Forms.Panel();
-            this.btnUser = new System.Windows.Forms.Button();
-            this.btnAccount = new System.Windows.Forms.Button();
             this.pnBaoCaoSubmenu = new System.Windows.Forms.Panel();
             this.btnBaoCaoKhachHang = new System.Windows.Forms.Button();
             this.btnBaoCaoTaiChinh = new System.Windows.Forms.Button();
             this.btnBaoCao = new System.Windows.Forms.Button();
+            this.btnDonHang = new System.Windows.Forms.Button();
+            this.pnManagerSubMenu = new System.Windows.Forms.Panel();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.btnAccount = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
-            this.btnDonHang = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
-            this.btnSetting = new System.Windows.Forms.Button();
+            this.btnManager = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnBanHang = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.pnCtrl.SuspendLayout();
-            this.pnSettingSubMenu.SuspendLayout();
             this.pnBaoCaoSubmenu.SuspendLayout();
+            this.pnManagerSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,14 +60,14 @@ namespace TechShop
             // pnCtrl
             // 
             this.pnCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
-            this.pnCtrl.Controls.Add(this.pnSettingSubMenu);
             this.pnCtrl.Controls.Add(this.pnBaoCaoSubmenu);
             this.pnCtrl.Controls.Add(this.btnBaoCao);
+            this.pnCtrl.Controls.Add(this.btnDonHang);
+            this.pnCtrl.Controls.Add(this.pnManagerSubMenu);
             this.pnCtrl.Controls.Add(this.btnKhachHang);
             this.pnCtrl.Controls.Add(this.btnSanPham);
-            this.pnCtrl.Controls.Add(this.btnDonHang);
             this.pnCtrl.Controls.Add(this.sidePanel);
-            this.pnCtrl.Controls.Add(this.btnSetting);
+            this.pnCtrl.Controls.Add(this.btnManager);
             this.pnCtrl.Controls.Add(this.btnSignOut);
             this.pnCtrl.Controls.Add(this.btnBanHang);
             this.pnCtrl.Controls.Add(this.btnDashboard);
@@ -78,51 +77,6 @@ namespace TechShop
             this.pnCtrl.Name = "pnCtrl";
             this.pnCtrl.Size = new System.Drawing.Size(308, 993);
             this.pnCtrl.TabIndex = 0;
-            // 
-            // pnSettingSubMenu
-            // 
-            this.pnSettingSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(55)))));
-            this.pnSettingSubMenu.Controls.Add(this.btnUser);
-            this.pnSettingSubMenu.Controls.Add(this.btnAccount);
-            this.pnSettingSubMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnSettingSubMenu.Location = new System.Drawing.Point(0, 764);
-            this.pnSettingSubMenu.Name = "pnSettingSubMenu";
-            this.pnSettingSubMenu.Size = new System.Drawing.Size(308, 117);
-            this.pnSettingSubMenu.TabIndex = 18;
-            // 
-            // btnUser
-            // 
-            this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUser.FlatAppearance.BorderSize = 0;
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.ForeColor = System.Drawing.Color.White;
-            this.btnUser.Location = new System.Drawing.Point(0, 56);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
-            this.btnUser.Size = new System.Drawing.Size(308, 56);
-            this.btnUser.TabIndex = 15;
-            this.btnUser.Text = "User";
-            this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUser.UseVisualStyleBackColor = true;
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAccount.FlatAppearance.BorderSize = 0;
-            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccount.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccount.ForeColor = System.Drawing.Color.White;
-            this.btnAccount.Location = new System.Drawing.Point(0, 0);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
-            this.btnAccount.Size = new System.Drawing.Size(308, 56);
-            this.btnAccount.TabIndex = 14;
-            this.btnAccount.Text = "Tài khoản";
-            this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAccount.UseVisualStyleBackColor = true;
             // 
             // pnBaoCaoSubmenu
             // 
@@ -187,6 +141,69 @@ namespace TechShop
             this.btnBaoCao.UseVisualStyleBackColor = true;
             this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
             // 
+            // btnDonHang
+            // 
+            this.btnDonHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDonHang.FlatAppearance.BorderSize = 0;
+            this.btnDonHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDonHang.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDonHang.ForeColor = System.Drawing.Color.White;
+            this.btnDonHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.Image")));
+            this.btnDonHang.Location = new System.Drawing.Point(0, 369);
+            this.btnDonHang.Name = "btnDonHang";
+            this.btnDonHang.Size = new System.Drawing.Size(308, 56);
+            this.btnDonHang.TabIndex = 3;
+            this.btnDonHang.Text = "      Đơn hàng   ";
+            this.btnDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDonHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDonHang.UseVisualStyleBackColor = true;
+            this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click);
+            // 
+            // pnManagerSubMenu
+            // 
+            this.pnManagerSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(55)))));
+            this.pnManagerSubMenu.Controls.Add(this.btnUser);
+            this.pnManagerSubMenu.Controls.Add(this.btnAccount);
+            this.pnManagerSubMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnManagerSubMenu.Location = new System.Drawing.Point(0, 764);
+            this.pnManagerSubMenu.Name = "pnManagerSubMenu";
+            this.pnManagerSubMenu.Size = new System.Drawing.Size(308, 117);
+            this.pnManagerSubMenu.TabIndex = 18;
+            // 
+            // btnUser
+            // 
+            this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.ForeColor = System.Drawing.Color.White;
+            this.btnUser.Location = new System.Drawing.Point(0, 56);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
+            this.btnUser.Size = new System.Drawing.Size(308, 56);
+            this.btnUser.TabIndex = 15;
+            this.btnUser.Text = "User";
+            this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUser.UseVisualStyleBackColor = true;
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAccount.FlatAppearance.BorderSize = 0;
+            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccount.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccount.ForeColor = System.Drawing.Color.White;
+            this.btnAccount.Location = new System.Drawing.Point(0, 0);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
+            this.btnAccount.Size = new System.Drawing.Size(308, 56);
+            this.btnAccount.TabIndex = 14;
+            this.btnAccount.Text = "Tài khoản";
+            this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAccount.UseVisualStyleBackColor = true;
+            // 
             // btnKhachHang
             // 
             this.btnKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
@@ -195,7 +212,7 @@ namespace TechShop
             this.btnKhachHang.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.Color.White;
             this.btnKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.Image")));
-            this.btnKhachHang.Location = new System.Drawing.Point(0, 369);
+            this.btnKhachHang.Location = new System.Drawing.Point(0, 313);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(308, 56);
             this.btnKhachHang.TabIndex = 5;
@@ -213,7 +230,7 @@ namespace TechShop
             this.btnSanPham.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSanPham.ForeColor = System.Drawing.Color.White;
             this.btnSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnSanPham.Image")));
-            this.btnSanPham.Location = new System.Drawing.Point(0, 313);
+            this.btnSanPham.Location = new System.Drawing.Point(0, 257);
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.Size = new System.Drawing.Size(308, 56);
             this.btnSanPham.TabIndex = 4;
@@ -223,24 +240,6 @@ namespace TechShop
             this.btnSanPham.UseVisualStyleBackColor = true;
             this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
-            // btnDonHang
-            // 
-            this.btnDonHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDonHang.FlatAppearance.BorderSize = 0;
-            this.btnDonHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDonHang.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDonHang.ForeColor = System.Drawing.Color.White;
-            this.btnDonHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.Image")));
-            this.btnDonHang.Location = new System.Drawing.Point(0, 257);
-            this.btnDonHang.Name = "btnDonHang";
-            this.btnDonHang.Size = new System.Drawing.Size(308, 56);
-            this.btnDonHang.TabIndex = 3;
-            this.btnDonHang.Text = "      Đơn hàng   ";
-            this.btnDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDonHang.UseVisualStyleBackColor = true;
-            this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click);
-            // 
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
@@ -249,23 +248,23 @@ namespace TechShop
             this.sidePanel.Size = new System.Drawing.Size(8, 50);
             this.sidePanel.TabIndex = 7;
             // 
-            // btnSetting
+            // btnManager
             // 
-            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.Location = new System.Drawing.Point(0, 881);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(308, 56);
-            this.btnSetting.TabIndex = 10;
-            this.btnSetting.Text = "      Setting     ";
-            this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSetting.UseVisualStyleBackColor = true;
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            this.btnManager.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnManager.FlatAppearance.BorderSize = 0;
+            this.btnManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManager.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManager.ForeColor = System.Drawing.Color.White;
+            this.btnManager.Image = ((System.Drawing.Image)(resources.GetObject("btnManager.Image")));
+            this.btnManager.Location = new System.Drawing.Point(0, 881);
+            this.btnManager.Name = "btnManager";
+            this.btnManager.Size = new System.Drawing.Size(308, 56);
+            this.btnManager.TabIndex = 10;
+            this.btnManager.Text = "      Quản lý    ";
+            this.btnManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManager.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnManager.UseVisualStyleBackColor = true;
+            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
             // 
             // btnSignOut
             // 
@@ -323,8 +322,7 @@ namespace TechShop
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -332,32 +330,10 @@ namespace TechShop
             this.panel2.Size = new System.Drawing.Size(308, 145);
             this.panel2.TabIndex = 0;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label2.Location = new System.Drawing.Point(52, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Some User Text Here";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(88, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "username";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(109, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(123, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -372,6 +348,19 @@ namespace TechShop
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(1594, 993);
             this.pnMain.TabIndex = 1;
+            // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtName.Location = new System.Drawing.Point(46, 94);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(217, 24);
+            this.txtName.TabIndex = 2;
+            this.txtName.Text = "name";
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormMain
             // 
@@ -388,8 +377,8 @@ namespace TechShop
             this.Text = "TechShop";
             this.Load += new System.EventHandler(this.Main_Load);
             this.pnCtrl.ResumeLayout(false);
-            this.pnSettingSubMenu.ResumeLayout(false);
             this.pnBaoCaoSubmenu.ResumeLayout(false);
+            this.pnManagerSubMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -401,14 +390,12 @@ namespace TechShop
 
         private System.Windows.Forms.Panel pnCtrl;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Button btnBanHang;
         private System.Windows.Forms.Button btnSignOut;
-        private System.Windows.Forms.Button btnSetting;
+        private System.Windows.Forms.Button btnManager;
         private System.Windows.Forms.Button btnDonHang;
         private System.Windows.Forms.Button btnSanPham;
         private System.Windows.Forms.Button btnKhachHang;
@@ -417,9 +404,10 @@ namespace TechShop
         private System.Windows.Forms.Button btnBaoCaoKhachHang;
         private System.Windows.Forms.Button btnBaoCaoTaiChinh;
         public System.Windows.Forms.Panel pnMain;
-        private System.Windows.Forms.Panel pnSettingSubMenu;
+        private System.Windows.Forms.Panel pnManagerSubMenu;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnAccount;
+        private System.Windows.Forms.TextBox txtName;
     }
 }
 

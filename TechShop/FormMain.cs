@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppTier;
 
 namespace TechShop
 {
@@ -18,6 +19,11 @@ namespace TechShop
         FormBanHang frmBanHang = new FormBanHang();
         FormDonHang frmDonHang = new FormDonHang();
         FormLogin frmLogin = new FormLogin();
+        DbOrder dbOrder = new DbOrder();
+        DbUser dbUser = new DbUser();
+        DataTable dtUser = new DataTable();
+        int user_id = -1;
+        string role = "";
         public FormMain()
         {
             InitializeComponent();
@@ -26,21 +32,41 @@ namespace TechShop
         private void Main_Load(object sender, EventArgs e)
         {
             this.IsMdiContainer = true;
-            //this.WindowState = FormWindowState.Maximized;
             sidePanel.Dispose();
             btnSignOut.PerformClick();
+            frmLogin.btnSubmit.Click += btnSubmit_click;
 
+
+            int a = dbOrder.getLastOrder();
         }
-        private void OpenChildForm(Form childForm)
+        private void role_none()
         {
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            this.pnMain.Controls.Add(childForm);
-            this.pnMain.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            btnBanHang.Visible = false;
+            btnDashboard.Visible = false;
+            btnDonHang.Visible = false;
+            btnSanPham.Visible = false;
+            btnKhachHang.Visible = false;
+            btnBaoCao.Visible = false;
+            btnManager.Visible = false;
         }
+        private void role_admin()
+        {
+            btnBanHang.Visible = true;
+            btnDashboard.Visible = true;
+            btnDonHang.Visible = true;
+            btnSanPham.Visible = true;
+            btnKhachHang.Visible = true;
+            btnBaoCao.Visible = true;
+            btnManager.Visible = true;
+        }
+        private void role_user()
+        {
+            btnBanHang.Visible = true;
+            btnDashboard.Visible = true;
+            btnSanPham.Visible = true;
+            btnKhachHang.Visible = true;
+        }
+
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
@@ -56,6 +82,7 @@ namespace TechShop
             hideSubmenu();
             setBtnBackColor(btnBanHang);
             OpenChildForm(frmBanHang);
+            frmBanHang.id = user_id;
         }
 
         private void btnDonHang_Click(object sender, EventArgs e)
@@ -97,20 +124,60 @@ namespace TechShop
         }
 
 
-        private void btnSetting_Click(object sender, EventArgs e)
+        private void btnManager_Click(object sender, EventArgs e)
         {
             resetBtnBackColor();
             hideSubmenu();
-            setBtnBackColor(btnSetting);
-            pnSettingSubMenu.Visible = true;
+            setBtnBackColor(btnManager);
+            pnManagerSubMenu.Visible = true;
         }
-
         private void btnSignOut_Click(object sender, EventArgs e)
         {
+            user_id = -1;
+            role = "";
             resetBtnBackColor();
             hideSubmenu();
+            role_none();
             OpenChildForm(frmLogin);
             frmLogin.txtUsername.Focus();
+
+            
+        }
+        private void btnSubmit_click(object sender, EventArgs e)
+        {
+            //frmLogin.dgv.DataSource = dbUser.checkLogin(frmLogin.txtUsername.Text, frmLogin.txtPassword.Text).Tables[0];
+            string o = dbUser.checkLogin2(frmLogin.txtUsername.Text, frmLogin.txtPassword.Text).ToString();
+            if (Int32.Parse(o) > 0)
+            {
+                dtUser.Clear();
+                try
+                {
+                    dtUser = dbUser.getUserInfo(o).Tables[0];
+                    user_id = Int32.Parse(dtUser.Rows[0]["id"].ToString());
+                    role = dtUser.Rows[0]["r_name"].ToString();
+                    txtName.Text = dtUser.Rows[0]["u_name"].ToString();
+                }
+                catch (Exception ê) {
+                    MessageBox.Show(ê.ToString());
+                }
+                if (role == "admin")
+                {
+                    role_admin();
+                    btnDashboard.PerformClick();
+                }
+                else if (role == "seller")
+                {
+                    role_user();
+                    btnDashboard.PerformClick();
+                }
+            }
+            else
+            {
+                role_none();
+            }
+            frmLogin.txtUsername.Text = null;
+            frmLogin.txtPassword.Text = null;
+            
         }
         private void setBtnBackColor(Button a)
         {
@@ -126,7 +193,17 @@ namespace TechShop
         private void hideSubmenu()
         {
             pnBaoCaoSubmenu.Visible = false;
-            pnSettingSubMenu.Visible = false;
+            pnManagerSubMenu.Visible = false;
+        }
+        private void OpenChildForm(Form childForm)
+        {
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.pnMain.Controls.Add(childForm);
+            this.pnMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }     
 }

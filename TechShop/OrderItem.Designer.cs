@@ -105,7 +105,7 @@ namespace TechShop
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.Image = ((System.Drawing.Image)(resources.GetObject("btnView.Image")));
-            this.btnView.Location = new System.Drawing.Point(1097, 0);
+            this.btnView.Location = new System.Drawing.Point(1088, 0);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(93, 60);
             this.btnView.TabIndex = 41;
@@ -123,7 +123,7 @@ namespace TechShop
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.ck);
             this.Name = "OrderItem";
-            this.Size = new System.Drawing.Size(1190, 60);
+            this.Size = new System.Drawing.Size(1181, 60);
             this.ResumeLayout(false);
             this.PerformLayout();
 
