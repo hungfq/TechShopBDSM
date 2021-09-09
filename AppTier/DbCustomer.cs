@@ -21,11 +21,12 @@ namespace AppTier
         {
             return db.ExecuteQueryDataSet("select * from customers where customer_id=" + id, CommandType.Text, null);
         }
+        
         public DataSet getAllCustomer()
 
-		{
-			return db.ExecuteQueryDataSet("select * from customers", CommandType.Text, null);
-		}
+        {
+            return db.ExecuteQueryDataSet("select * from customers", CommandType.Text, null);
+        }
         public bool insertCustomer(ref string err, string name, int age, string phone_number)
         {
             return db.MyExecuteNonQuery("sp_InsertCustomer", CommandType.StoredProcedure, ref err, new SqlParameter("@phone_number", phone_number), new SqlParameter("@name", name), new SqlParameter("@age", age));

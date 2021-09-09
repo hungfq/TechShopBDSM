@@ -37,7 +37,7 @@ namespace TechShop
                 dtCategory.Clear();
                 dtCategory = dbCategory.getAllCategory().Tables[0];
                 dtProduct.Clear();
-                dtProduct = dbProduct.getAllProduct().Tables[0];
+                dtProduct = dbProduct.getAllProductWithInfo().Tables[0];
 
                 cbBrand.DisplayMember = "name";
                 cbBrand.ValueMember = "brand_id";
@@ -53,25 +53,26 @@ namespace TechShop
 
                 List<Product> productDetails = new List<Product>();
                 productDetails = Model.ConvertDataTable<Product>(dtProduct);
-                List<ProductItem> productIem = new List<ProductItem>();
+                List<ProductItem> productItem = new List<ProductItem>();
                 int x = 0;
-                foreach (Product i in productDetails)
+                foreach (DataRow dr in dtProduct.Rows)
                 {
                     ProductItem item = new ProductItem();
-                    item.lbName.Text = i.name;
-                    item.lbBrand.Text = i.brand_id.ToString();
-                    item.lbCategory.Text = i.category_id.ToString();
-                    item.lbID.Text = i.product_id.ToString();
-                    item.lbImage.Text = i.image;
-                    item.lbPrice.Text = i.price.ToString();
-                    item.lbInsuarence.Text = i.insuarence_id.ToString();
-                    item.btnModify.Text = i.product_id.ToString();
+                    item.lbName.Text = dr["Ten"].ToString();
+                    item.lbBrand.Text = dr["ThuongHieu"].ToString();
+                    item.lbCategory.Text = dr["Loai"].ToString();
+                    item.lbID.Text = dr["ID"].ToString();
+                    item.lbImage.Text = dr["Hinh"].ToString();
+                    item.lbPrice.Text = dr["Gia"].ToString();
+                    item.lbInsuarence.Text = dr["BaoHanh"].ToString();
+
+                    item.btnModify.Text = dr["ID"].ToString();
                     item.btnModify.Click += btnModify_Click;
 
                     item.Visible = true;
                     item.Location = new System.Drawing.Point(0, x);
                     pnDsSp.Controls.Add(item);
-                    productIem.Add(item);
+                    productItem.Add(item);
                     x += Int32.Parse(item.Height.ToString());
                 }
             }

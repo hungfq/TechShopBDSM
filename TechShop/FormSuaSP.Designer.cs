@@ -33,6 +33,8 @@ namespace TechShop
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbBrand = new System.Windows.Forms.ComboBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
@@ -43,16 +45,14 @@ namespace TechShop
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbIsurance = new System.Windows.Forms.ComboBox();
             this.txtImgName = new System.Windows.Forms.TextBox();
             this.btnSaveImg = new System.Windows.Forms.Button();
             this.txtImgPath = new System.Windows.Forms.TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.pbImage = new System.Windows.Forms.PictureBox();
-            this.cbBrand = new System.Windows.Forms.ComboBox();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
-            this.cbIsurance = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -91,6 +91,28 @@ namespace TechShop
             this.panel3.Size = new System.Drawing.Size(365, 285);
             this.panel3.TabIndex = 22;
             // 
+            // cbBrand
+            // 
+            this.cbBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBrand.FormattingEnabled = true;
+            this.cbBrand.Location = new System.Drawing.Point(32, 203);
+            this.cbBrand.Name = "cbBrand";
+            this.cbBrand.Size = new System.Drawing.Size(286, 30);
+            this.cbBrand.TabIndex = 25;
+            this.cbBrand.Text = "Chọn nhãn hiệu";
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(32, 94);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(286, 30);
+            this.cbCategory.TabIndex = 24;
+            this.cbCategory.Text = "Chọn loại sản phẩm";
+            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(255)))));
@@ -104,6 +126,7 @@ namespace TechShop
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -193,7 +216,7 @@ namespace TechShop
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnReturn);
@@ -203,18 +226,19 @@ namespace TechShop
             this.panel2.Size = new System.Drawing.Size(1218, 52);
             this.panel2.TabIndex = 19;
             // 
-            // button1
+            // btnDelete
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(631, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 36);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "Xóa Sản phẩm";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.White;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.Red;
+            this.btnDelete.Location = new System.Drawing.Point(631, 7);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(195, 36);
+            this.btnDelete.TabIndex = 58;
+            this.btnDelete.Text = "Xóa Sản phẩm";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel1
             // 
@@ -230,6 +254,17 @@ namespace TechShop
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(814, 285);
             this.panel1.TabIndex = 18;
+            // 
+            // cbIsurance
+            // 
+            this.cbIsurance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbIsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbIsurance.FormattingEnabled = true;
+            this.cbIsurance.Location = new System.Drawing.Point(430, 203);
+            this.cbIsurance.Name = "cbIsurance";
+            this.cbIsurance.Size = new System.Drawing.Size(344, 30);
+            this.cbIsurance.TabIndex = 26;
+            this.cbIsurance.Text = "Chọn thời gian bảo hành";
             // 
             // txtImgName
             // 
@@ -287,39 +322,6 @@ namespace TechShop
             this.pbImage.TabIndex = 21;
             this.pbImage.TabStop = false;
             // 
-            // cbBrand
-            // 
-            this.cbBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBrand.FormattingEnabled = true;
-            this.cbBrand.Location = new System.Drawing.Point(32, 203);
-            this.cbBrand.Name = "cbBrand";
-            this.cbBrand.Size = new System.Drawing.Size(286, 30);
-            this.cbBrand.TabIndex = 25;
-            this.cbBrand.Text = "Chọn nhãn hiệu";
-            // 
-            // cbCategory
-            // 
-            this.cbCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(32, 94);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(286, 30);
-            this.cbCategory.TabIndex = 24;
-            this.cbCategory.Text = "Chọn loại sản phẩm";
-            // 
-            // cbIsurance
-            // 
-            this.cbIsurance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbIsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbIsurance.FormattingEnabled = true;
-            this.cbIsurance.Location = new System.Drawing.Point(430, 203);
-            this.cbIsurance.Name = "cbIsurance";
-            this.cbIsurance.Size = new System.Drawing.Size(344, 30);
-            this.cbIsurance.TabIndex = 26;
-            this.cbIsurance.Text = "Chọn thời gian bảo hành";
-            // 
             // FormSuaSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -367,7 +369,7 @@ namespace TechShop
         private System.Windows.Forms.TextBox txtImgPath;
         public System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.PictureBox pbImage;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.ComboBox cbBrand;
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.ComboBox cbIsurance;

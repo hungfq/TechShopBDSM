@@ -21,6 +21,8 @@ namespace TechShop
         DataTable dtBrand = new DataTable();
         DbInsurance dbInsurance = new DbInsurance();
         DataTable dtInsurance = new DataTable();
+        DbProduct dbProduct = new DbProduct();
+        DataTable dtProduct = new DataTable();
 
         public FormThemSP()
         {
@@ -62,6 +64,7 @@ namespace TechShop
                 MessageBox.Show("Không lấy được nội dung. Lỗi rồi!!!");
                 this.Close();
             }
+            txtImgName.Text = string.Empty;
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -90,13 +93,33 @@ namespace TechShop
             }
             catch (Exception ee)
             {
-                DialogResult result = MessageBox.Show(ee.ToString(), "", MessageBoxButtons.OK);
+                //DialogResult result = MessageBox.Show(ee.ToString(), "", MessageBoxButtons.OK);
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            string err = "";
+            try
+            {
+                bool status = dbProduct.insertProduct(ref err, txtName.Text, Int32.Parse(txtPrice.Text),
+                    txtImgName.Text, Int32.Parse(cbBrand.SelectedValue.ToString()),
+                    Int32.Parse(cbCategory.SelectedValue.ToString()),
+                    Int32.Parse(cbIsurance.SelectedValue.ToString()));
+                btnSaveImg.PerformClick();
+                if (status)
+                { 
+                    MessageBox.Show("Them san pham thanh cong");
+                    btnExit.PerformClick();
+                }
+                else
+                    MessageBox.Show(err);
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
+            
         }
     }
 }

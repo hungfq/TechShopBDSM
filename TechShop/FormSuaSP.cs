@@ -108,7 +108,49 @@ namespace TechShop
             }
             catch (Exception ee)
             {
-                DialogResult result = MessageBox.Show(ee.ToString(), "", MessageBoxButtons.OK);
+                //DialogResult result = MessageBox.Show(ee.ToString(), "", MessageBoxButtons.OK);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string err = "";
+            try
+            {
+                bool status = dbProduct.updateProduct(ref err,Int32.Parse( oddID) ,txtName.Text, Int32.Parse(txtPrice.Text),
+                    txtImgName.Text, Int32.Parse(cbBrand.SelectedValue.ToString()),
+                    Int32.Parse(cbCategory.SelectedValue.ToString()),
+                    Int32.Parse(cbIsurance.SelectedValue.ToString()));
+                btnSaveImg.PerformClick();
+                if (status)
+                    MessageBox.Show("Sua san pham thanh cong");
+                else
+                    MessageBox.Show(err);
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string err = "";
+            try
+            {
+                bool status = dbProduct.deleteProduct(ref err, Int32.Parse(oddID));
+                btnSaveImg.PerformClick();
+                if (status)
+                {
+                    MessageBox.Show("Xoa san pham thanh cong");
+                    btnReturn.PerformClick();
+                }
+                else
+                    MessageBox.Show(err);
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
             }
         }
     }

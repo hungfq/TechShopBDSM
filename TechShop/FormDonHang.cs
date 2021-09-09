@@ -39,7 +39,7 @@ namespace TechShop
                 dtCustomer.Clear();
                 dtCustomer = dbCustomer.getAllCustomer().Tables[0]; 
                 dtOrder.Clear();
-                dtOrder = dbOrder.getAllOrder().Tables[0];
+                dtOrder = dbOrder.getAllOrderWithInfo().Tables[0];
 
                 cbCustomer.DisplayMember = "name";
                 cbCustomer.ValueMember = "customer_id";
@@ -51,15 +51,16 @@ namespace TechShop
                 orderDetails = Model.ConvertDataTable<Order>(dtOrder);
                 List<OrderItem> orderItem = new List<OrderItem>();
                 int x = 0;
-                foreach (Order i in orderDetails)
+                foreach (DataRow dr in dtOrder.Rows)
                 {
                     OrderItem item = new OrderItem();
-                    item.lbName.Text = i.customer_id.ToString();
-                    item.lbID.Text = i.order_id.ToString();
-                    item.lbSale.Text = i.seller_id.ToString();
-                    item.lbSoldDate.Text = i.sold_date.ToString();
-                    item.lbTotalMoney.Text = i.total_money.ToString();
-                    item.btnView.Text = i.order_id.ToString();
+
+                    item.lbName.Text = dr["Ten"].ToString();
+                    item.lbID.Text = dr["ID"].ToString();
+                    item.lbSale.Text = dr["TenNV"].ToString();
+                    item.lbSoldDate.Text = dr["date"].ToString();
+                    item.lbTotalMoney.Text = dr["money"].ToString();
+                    item.btnView.Text = dr["ID"].ToString();
                     item.btnView.Click += btnView_Click;
 
                     item.Visible = true;

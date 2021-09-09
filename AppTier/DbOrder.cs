@@ -17,7 +17,11 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
+        public DataSet getAllOrderWithInfo()
 
+        {
+            return db.ExecuteQueryDataSet("select * from view_Orders", CommandType.Text, null);
+        }
         public DataSet getAllOrder()
         {
             return db.ExecuteQueryDataSet("select * from orders", CommandType.Text, null);
