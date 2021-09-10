@@ -125,7 +125,7 @@ namespace TechShop
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(544, 132);
+            this.label5.Location = new System.Drawing.Point(464, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 26);
             this.label5.TabIndex = 46;

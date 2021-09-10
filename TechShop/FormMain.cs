@@ -96,7 +96,7 @@ namespace TechShop
             hideSubmenu();
             setBtnBackColor(btnSanPham);
             OpenChildForm(formDsSanPham);
-            formDsSanPham.LoadData();
+            //formDsSanPham.LoadData();
         }
         public void btnDsSanPham_Click(object sender, EventArgs e)
         {

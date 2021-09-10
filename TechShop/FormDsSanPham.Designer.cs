@@ -30,7 +30,7 @@ namespace TechShop
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDsSanPham));
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.pnDsSp = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,15 +52,16 @@ namespace TechShop
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // labelTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Danh sách sản phẩm";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(32, 9);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(247, 33);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Danh sách sản phẩm";
+            this.labelTitle.Click += new System.EventHandler(this.labelTitle_Click);
             // 
             // pnDsSp
             // 
@@ -95,7 +96,7 @@ namespace TechShop
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(669, 194);
+            this.label4.Location = new System.Drawing.Point(659, 194);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 26);
             this.label4.TabIndex = 29;
@@ -125,7 +126,7 @@ namespace TechShop
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(557, 194);
+            this.label7.Location = new System.Drawing.Point(547, 194);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 26);
             this.label7.TabIndex = 26;
@@ -213,7 +214,7 @@ namespace TechShop
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.labelTitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -272,7 +273,7 @@ namespace TechShop
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel pnDsSp;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label3;

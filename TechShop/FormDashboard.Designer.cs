@@ -30,9 +30,9 @@ namespace TechShop
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,16 +66,16 @@ namespace TechShop
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(60, 565);
+            this.panel4.Location = new System.Drawing.Point(32, 578);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(378, 203);
+            this.panel4.Size = new System.Drawing.Size(402, 203);
             this.panel4.TabIndex = 19;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(189, 27);
+            this.pictureBox2.Location = new System.Drawing.Point(229, 38);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(133, 113);
@@ -124,10 +124,10 @@ namespace TechShop
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel8.Controls.Add(this.label13);
             this.panel8.Controls.Add(this.label15);
-            this.panel8.Location = new System.Drawing.Point(929, 565);
+            this.panel8.Location = new System.Drawing.Point(934, 578);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(238, 203);
+            this.panel8.Size = new System.Drawing.Size(269, 203);
             this.panel8.TabIndex = 20;
             // 
             // label13
@@ -162,16 +162,16 @@ namespace TechShop
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label9);
-            this.panel5.Location = new System.Drawing.Point(495, 565);
+            this.panel5.Location = new System.Drawing.Point(482, 578);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(379, 203);
+            this.panel5.Size = new System.Drawing.Size(399, 203);
             this.panel5.TabIndex = 21;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(189, 27);
+            this.pictureBox3.Location = new System.Drawing.Point(221, 38);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(133, 113);
@@ -219,10 +219,10 @@ namespace TechShop
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(670, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(673, 0);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(501, 389);
+            this.pictureBox4.Size = new System.Drawing.Size(498, 389);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -241,33 +241,33 @@ namespace TechShop
             // chart1
             // 
             this.chart1.BorderSkin.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Left;
-            legend1.BackColor = System.Drawing.Color.Transparent;
-            legend1.BorderColor = System.Drawing.Color.Transparent;
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.HeaderSeparatorColor = System.Drawing.Color.White;
-            legend1.ItemColumnSeparatorColor = System.Drawing.Color.White;
-            legend1.Name = "Legend1";
-            legend1.TitleForeColor = System.Drawing.Color.White;
-            legend1.TitleSeparatorColor = System.Drawing.Color.White;
-            this.chart1.Legends.Add(legend1);
+            legend3.BackColor = System.Drawing.Color.Transparent;
+            legend3.BorderColor = System.Drawing.Color.Transparent;
+            legend3.ForeColor = System.Drawing.Color.White;
+            legend3.HeaderSeparatorColor = System.Drawing.Color.White;
+            legend3.ItemColumnSeparatorColor = System.Drawing.Color.White;
+            legend3.Name = "Legend1";
+            legend3.TitleForeColor = System.Drawing.Color.White;
+            legend3.TitleSeparatorColor = System.Drawing.Color.White;
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.EmptyPointStyle.LabelForeColor = System.Drawing.Color.White;
-            series1.LabelBackColor = System.Drawing.Color.Transparent;
-            series1.LabelBorderColor = System.Drawing.Color.Transparent;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.MarkerBorderColor = System.Drawing.Color.Transparent;
-            series1.MarkerColor = System.Drawing.Color.Transparent;
-            series1.MarkerImageTransparentColor = System.Drawing.Color.Transparent;
-            series1.Name = "DoanhThu";
-            series1.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.White;
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(650, 389);
+            series3.ChartArea = "ChartArea1";
+            series3.EmptyPointStyle.LabelForeColor = System.Drawing.Color.White;
+            series3.LabelBackColor = System.Drawing.Color.Transparent;
+            series3.LabelBorderColor = System.Drawing.Color.Transparent;
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.Legend = "Legend1";
+            series3.MarkerBorderColor = System.Drawing.Color.Transparent;
+            series3.MarkerColor = System.Drawing.Color.Transparent;
+            series3.MarkerImageTransparentColor = System.Drawing.Color.Transparent;
+            series3.Name = "DoanhThu";
+            series3.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.White;
+            this.chart1.Series.Add(series3);
+            this.chart1.Size = new System.Drawing.Size(666, 389);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 

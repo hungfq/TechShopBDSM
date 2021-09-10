@@ -134,5 +134,13 @@ namespace TechShop
                 i.ck.Checked = ckAll.Checked;
             }
         }
+
+        private void labelTitle_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            InitializeComponent();
+            dbProduct = new DbProduct();
+            LoadData();
+        }
     }
 }

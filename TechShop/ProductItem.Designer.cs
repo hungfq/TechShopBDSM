@@ -64,7 +64,7 @@ namespace TechShop
             // 
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.Location = new System.Drawing.Point(551, 19);
+            this.lbPrice.Location = new System.Drawing.Point(535, 19);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(64, 23);
             this.lbPrice.TabIndex = 2;
@@ -84,7 +84,7 @@ namespace TechShop
             // 
             this.lbCategory.AutoSize = true;
             this.lbCategory.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCategory.Location = new System.Drawing.Point(654, 19);
+            this.lbCategory.Location = new System.Drawing.Point(644, 19);
             this.lbCategory.Name = "lbCategory";
             this.lbCategory.Size = new System.Drawing.Size(98, 23);
             this.lbCategory.TabIndex = 5;
@@ -140,6 +140,7 @@ namespace TechShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.lbInsuarence);

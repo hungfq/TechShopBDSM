@@ -45,7 +45,6 @@ namespace TechShop
                 txtName.Text = productList[0].name;
                 txtPrice.Text = productList[0].price.ToString();
                 txtImgName.Text = productList[0].image;
-                pbImage.Image = Image.FromFile(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\TechShop\\ImageStorage\\" + txtImgName.Text);
 
                 dtBrand.Clear();
                 dtBrand = dbBrand.getAllBrand().Tables[0];
@@ -68,9 +67,13 @@ namespace TechShop
                 cbIsurance.ValueMember = "insurance_id";
                 cbIsurance.DataSource = dtInsurance;
                 cbIsurance.SelectedValue = productList[0].insuarence_id;
+
+                //pbImage.Image = Image.FromFile(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\TechShop\\ImageStorage\\" + txtImgName.Text);
+
             }
-            catch (Exception)
+            catch (Exception ee)
             {
+                MessageBox.Show(ee.ToString());
                 pbImage.Image = null;
             }
         }
@@ -117,13 +120,18 @@ namespace TechShop
             string err = "";
             try
             {
-                bool status = dbProduct.updateProduct(ref err,Int32.Parse( oddID) ,txtName.Text, Int32.Parse(txtPrice.Text),
+                bool status = dbProduct.updateProduct(ref err, Int32.Parse(oddID), txtName.Text, Int32.Parse(txtPrice.Text),
                     txtImgName.Text, Int32.Parse(cbBrand.SelectedValue.ToString()),
                     Int32.Parse(cbCategory.SelectedValue.ToString()),
                     Int32.Parse(cbIsurance.SelectedValue.ToString()));
+
                 btnSaveImg.PerformClick();
+
                 if (status)
+                {
                     MessageBox.Show("Sua san pham thanh cong");
+                    btnReturn.PerformClick();
+                }
                 else
                     MessageBox.Show(err);
             }

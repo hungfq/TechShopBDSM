@@ -63,7 +63,7 @@ namespace TechShop
             // 
             this.lbSale.AutoSize = true;
             this.lbSale.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSale.Location = new System.Drawing.Point(532, 19);
+            this.lbSale.Location = new System.Drawing.Point(452, 19);
             this.lbSale.Name = "lbSale";
             this.lbSale.Size = new System.Drawing.Size(89, 23);
             this.lbSale.TabIndex = 12;

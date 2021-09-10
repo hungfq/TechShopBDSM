@@ -61,7 +61,10 @@ namespace TechShop
                 bool status = dbCustomer.updateCustomer(ref err, Int32.Parse(oddID),
                     txtName.Text, Int32.Parse(txtAge.Text),txtSDT.Text);
                 if (status)
+                {
+                    btnReturn.PerformClick();
                     MessageBox.Show("Sua khach hang thanh cong");
+                }
                 else
                     MessageBox.Show(err);
             }
