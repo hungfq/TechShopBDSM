@@ -31,7 +31,7 @@ namespace TechShop
             {
                 dtCustomer = new DataTable();
                 dtCustomer.Clear();
-                dtCustomer = dbCustomer.getCustomerById(oddID.ToString()).Tables[0];
+                dtCustomer = dbCustomer.getCustomerInfoById(oddID).Tables[0];
 
                 customerList = Model.ConvertDataTable<Customer>(dtCustomer);
 

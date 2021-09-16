@@ -16,10 +16,14 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
-        public DataSet getCategoryByID(string id)
+        public string getCategoryByID(int id)
         {
-            return db.ExecuteQueryDataSet("select * from categories where category_id=" + id, CommandType.Text, null);
+            return db.ExecuteScalarValue("select dbo.get_CategoryNameById(" + id.ToString() + ")", CommandType.Text, null).ToString();
         }
+        //public DataSet getCategoryByID(string id)
+        //{
+        //    return db.ExecuteQueryDataSet("select * from categories where category_id=" + id, CommandType.Text, null);
+        //}
         public DataSet getAllCategory()
         {
             return db.ExecuteQueryDataSet("select * from categories", CommandType.Text, null);

@@ -13,6 +13,7 @@ namespace TechShop
 {
     public partial class FormMain : Form
     {
+        FormDanhMuc frmDanhMuc = new FormDanhMuc();
         FormDsSanPham formDsSanPham = new FormDsSanPham();
         FormDsKhachHang formDsKhachHang = new FormDsKhachHang();
         FormDashboard frmDashboard = new FormDashboard();
@@ -202,6 +203,14 @@ namespace TechShop
             this.pnMain.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void btnDanhMuc_Click(object sender, EventArgs e)
+        {
+            resetBtnBackColor();
+            hideSubmenu();
+            setBtnBackColor(btnDanhMuc);
+            OpenChildForm(frmDanhMuc);
         }
     }     
 }

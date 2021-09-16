@@ -17,10 +17,14 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
-        public DataSet getBrandByID(string id)
+        public string getBrandByID(int id)
         {
-            return db.ExecuteQueryDataSet("select * from brands where brand_id=" + id, CommandType.Text, null);
+            return db.ExecuteScalarValue("select dbo.get_BrandNameById(" + id.ToString() + ")", CommandType.Text, null).ToString();
         }
+        //public DataSet getBrandByID(string id)
+        //{
+        //    return db.ExecuteQueryDataSet("select * from brands where brand_id=" + id, CommandType.Text, null);
+        //}
         public DataSet getAllBrand()
         {
             return db.ExecuteQueryDataSet("select * from brands", CommandType.Text, null);

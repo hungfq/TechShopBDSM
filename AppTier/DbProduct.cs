@@ -26,9 +26,15 @@ namespace AppTier
             return db.ExecuteQueryDataSet("select * from view_Products", CommandType.Text, null);
         }
         public DataSet getAllProduct()
-		{
-			return db.ExecuteQueryDataSet("select * from products", CommandType.Text, null);
-		}
+        {
+            return db.ExecuteQueryDataSet("select * from products", CommandType.Text, null);
+        }
+        public DataSet getAllProduct(string name, int brand_id, int category_id)
+        {
+            //return db.ExecuteQueryDataSet("dbo.sp_ProductsFilter", CommandType.StoredProcedure, new SqlParameter("@name", name), new SqlParameter("@brand_id", brand_id), new SqlParameter("@category_id", category_id),null);
+            return db.ExecuteQueryDataSet(("exec dbo.sp_ProductsFilter @name='" + name +
+                "', @brand_id=" + brand_id +",@category_id=" + category_id + ";"), CommandType.Text, null);
+        }
         public bool insertProduct(ref string err, string name, int price, string image, int brand_id, int category_id, int insurance_id)
         {
             return db.MyExecuteNonQuery("sp_InsertProduct", CommandType.StoredProcedure, ref err, new SqlParameter("@name", name), new SqlParameter("@price", price), new SqlParameter("@image", image), new SqlParameter("@brand_id", brand_id), new SqlParameter("@category_id", category_id), new SqlParameter("@insurance_id", insurance_id));
@@ -41,5 +47,6 @@ namespace AppTier
         {
             return db.MyExecuteNonQuery("sp_DeleteProduct", CommandType.StoredProcedure, ref err, new SqlParameter("@product_id ", product_id));
         }
+
     }
 }

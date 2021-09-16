@@ -26,6 +26,10 @@ namespace AppTier
         {
             return db.ExecuteQueryDataSet("select * from orders", CommandType.Text, null);
         }
+        public DataSet getAllOrder(string id)
+        {
+            return db.ExecuteQueryDataSet("select * from orders where customer_id="+id, CommandType.Text, null);
+        }
         public DataSet Income(string sold_date)
         {
             return db.ExecuteQueryDataSet("EXECUTE sp_GetIncome @sold_date=" + "'"+sold_date+"';", CommandType.Text, null);
@@ -44,15 +48,19 @@ namespace AppTier
         //    ddd = Int32.Parse(dt.Rows[0]["id"].ToString());
         //    return ddd;
         //}
+        public int getRevenue()
+        {
+            return Int32.Parse(db.ExecuteScalarValue("select dbo.revenue_alltime()", CommandType.Text, null).ToString());
+        }
         public int getLastOrder()
         {
-            return Int32.Parse(db.ExecuteScalarValue("select dbo.get_LastOrderId() as id", CommandType.Text, null).ToString());
+            return Int32.Parse(db.ExecuteScalarValue("select dbo.get_LastOrderId()", CommandType.Text, null).ToString());
         }
         public bool insertOrder(ref string err, int customer_id, int seller_id, DateTime sold_date, int total_money)
         {
             return db.MyExecuteNonQuery("sp_InsertOrder", CommandType.StoredProcedure, ref err, new SqlParameter("@customer_id", customer_id), new SqlParameter("@seller_id", seller_id), new SqlParameter("@sold_date", sold_date), new SqlParameter("@total_money", total_money));
         }
-            public bool updateOrder(ref string err, int order_id, int customer_id, int seller_id, DateTime sold_date, int total_money)
+        public bool updateOrder(ref string err, int order_id, int customer_id, int seller_id, DateTime sold_date, int total_money)
         {
             return db.MyExecuteNonQuery("sp_UpdateOrder", CommandType.StoredProcedure, ref err, new SqlParameter("@order_id", order_id), new SqlParameter("@customer_id", customer_id), new SqlParameter("@seller_id", seller_id), new SqlParameter("@sold_date", sold_date), new SqlParameter("@total_money", total_money));
         }

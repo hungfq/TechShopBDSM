@@ -31,7 +31,7 @@ namespace TechShop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBanHang));
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.pnSearch = new System.Windows.Forms.Panel();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.cbBrand = new System.Windows.Forms.ComboBox();
@@ -68,20 +68,21 @@ namespace TechShop
             this.btnSearch.Size = new System.Drawing.Size(94, 48);
             this.btnSearch.TabIndex = 40;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(17, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(588, 32);
-            this.textBox1.TabIndex = 57;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(17, 6);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(588, 32);
+            this.txtSearch.TabIndex = 57;
             // 
             // pnSearch
             // 
             this.pnSearch.BackColor = System.Drawing.Color.White;
-            this.pnSearch.Controls.Add(this.textBox1);
+            this.pnSearch.Controls.Add(this.txtSearch);
             this.pnSearch.Controls.Add(this.btnSearch);
             this.pnSearch.Location = new System.Drawing.Point(12, 33);
             this.pnSearch.Name = "pnSearch";
@@ -97,7 +98,7 @@ namespace TechShop
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(251, 35);
             this.cbCategory.TabIndex = 59;
-            this.cbCategory.Text = "  Nhãn hiệu";
+            this.cbCategory.Text = "Chọn loại sản phẩm";
             // 
             // cbBrand
             // 
@@ -108,7 +109,7 @@ namespace TechShop
             this.cbBrand.Name = "cbBrand";
             this.cbBrand.Size = new System.Drawing.Size(200, 35);
             this.cbBrand.TabIndex = 58;
-            this.cbBrand.Text = "  Loại sản phẩm";
+            this.cbBrand.Text = "Chọn nhãn hiệu";
             // 
             // cbCustomer
             // 
@@ -314,7 +315,7 @@ namespace TechShop
 
         #endregion
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Panel pnSearch;
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.ComboBox cbBrand;

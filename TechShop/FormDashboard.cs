@@ -28,6 +28,17 @@ namespace TechShop
         }
         public void LoadData()
         {
+            DrawChart();
+            DisplayRevenue();
+        }
+        public void DisplayRevenue()
+        {
+            int revenue = dbOrder.getRevenue();
+
+            lbRevenue.Text = "$" + revenue.ToString();
+        }
+        public void DrawChart()
+        {
             chart1.BackColor = Color.Transparent;
 
             chart1.ChartAreas["ChartArea1"].BackColor = Color.Transparent;
@@ -52,5 +63,6 @@ namespace TechShop
 
             chart1.Legends[0].Enabled = false;
         }
+        
     }
 }

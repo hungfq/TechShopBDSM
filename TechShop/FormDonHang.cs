@@ -14,6 +14,7 @@ namespace TechShop
 {
     public partial class FormDonHang : Form
     {
+        DbUser dbUser = new DbUser();
         DbCustomer dbCustomer = new DbCustomer();
         DataTable dtCustomer = new DataTable();
         DbOrder dbOrder = new DbOrder();
@@ -131,6 +132,48 @@ namespace TechShop
             foreach (OrderItem i in pnDsOrder.Controls)
             {
                 i.ck.Checked = ckAll.Checked;
+            }
+        }
+
+        private void cbCustomer_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbCustomer_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            try
+            {
+                pnDsOrder.Controls.Clear();
+                dtOrder.Clear();
+                dtOrder = dbOrder.getAllOrder(cbCustomer.SelectedValue.ToString()).Tables[0];
+
+                List<Order> orders = new List<Order>();
+                orders = Model.ConvertDataTable<Order>(dtOrder);
+                List<OrderItem> orderItem = new List<OrderItem>();
+                int x = 0;
+                foreach (Order i in orders)
+                {
+                    OrderItem item = new OrderItem();
+
+                    item.lbName.Text = dbCustomer.getCustomerById(i.customer_id.ToString());
+                    item.lbID.Text = i.order_id.ToString();
+                    item.lbSale.Text = dbUser.getUserById(i.seller_id.ToString());
+                    item.lbSoldDate.Text = i.sold_date.ToString();
+                    item.lbTotalMoney.Text = i.total_money.ToString();
+                    item.btnView.Text = i.order_id.ToString();
+                    item.btnView.Click += btnView_Click;
+
+                    item.Visible = true;
+                    item.Location = new System.Drawing.Point(0, x);
+                    pnDsOrder.Controls.Add(item);
+                    orderItem.Add(item);
+                    x += Int32.Parse(item.Height.ToString());
+                }
+            }
+            catch (SqlException eee)
+            {
+                MessageBox.Show(eee.ToString());
             }
         }
     }

@@ -25,6 +25,10 @@ namespace AppTier
                 " where users.user_id = "+ id,
                 CommandType.Text, null);
         }
+        public string getUserById(string id)
+        {
+            return db.ExecuteScalarValue("select dbo.get_UserNameById(" + id.ToString() + ")", CommandType.Text, null).ToString();
+        }
         public DataSet checkLogin(string username, string password)
         {
             return db.ExecuteQueryDataSet("select  dbo.check_Login('" + username + "','" + password + "') as login",

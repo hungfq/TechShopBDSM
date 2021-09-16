@@ -21,6 +21,7 @@ namespace TechShop
         DataTable dtBrand = new DataTable();
         DbProduct dbProduct;
         DataTable dtProduct = new DataTable();
+        DbInsurance dbInsurance = new DbInsurance();
         public FormDsSanPham()
         {
             InitializeComponent();
@@ -141,6 +142,55 @@ namespace TechShop
             InitializeComponent();
             dbProduct = new DbProduct();
             LoadData();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            pnDsSp.Controls.Clear();
+            try
+            {
+                string name = "";
+                name = txtSearch.Text;
+                int brand = 0;
+                if (cbBrand.SelectedValue != null)
+                    brand = Int32.Parse(cbBrand.SelectedValue.ToString());
+                int category = 0;
+                if (cbCategory.SelectedValue != null)
+                    category = Int32.Parse(cbCategory.SelectedValue.ToString());
+
+                dtProduct.Clear();
+                dtProduct = dbProduct.getAllProduct(name, brand, category).Tables[0];
+
+                List<Product> productDetails = new List<Product>();
+                productDetails = Model.ConvertDataTable<Product>(dtProduct);
+                List<ProductItem> productItem = new List<ProductItem>();
+                int x = 0;
+                foreach (Product i in productDetails)
+                {
+                    ProductItem item = new ProductItem();
+                    item.lbName.Text = i.name;
+                    item.lbID.Text = i.product_id.ToString();
+                    item.lbPrice.Text = i.price.ToString();
+                    item.lbImage.Text = i.image;
+                    item.lbBrand.Text = dbBrand.getBrandByID(i.brand_id);
+                    item.lbCategory.Text = dbCategory.getCategoryByID(i.category_id);
+                    item.lbInsuarence.Text = dbInsurance.getInsuranceByID(i.insuarence_id);
+
+                    item.btnModify.Text = i.product_id.ToString();
+                    item.btnModify.Click += btnModify_Click;
+
+                    item.Visible = true;
+                    item.Location = new System.Drawing.Point(0, x);
+                    pnDsSp.Controls.Add(item);
+                    productItem.Add(item);
+                    x += Int32.Parse(item.Height.ToString());
+                }
+            }
+            catch (Exception er)
+            {
+                //MessageBox.Show("Không lấy được nội dung. Lỗi rồi!!!");
+                MessageBox.Show(er.ToString());
+            }
         }
     }
 }

@@ -89,9 +89,10 @@ namespace TechShop
                     x += Int32.Parse(item.Height.ToString());
                 }
             }
-            catch (SqlException)
+            catch (SqlException er)
             {
                 MessageBox.Show("Không lấy được nội dung. Lỗi rồi!!!");
+                //MessageBox.Show(er.ToString());
             }
         }
         private void quantity_valueChange(object sender, EventArgs e)
@@ -216,6 +217,55 @@ namespace TechShop
             else
             {
                 MessageBox.Show("Vui long kiem tra lai","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            pnListItem.Controls.Clear();
+            try
+            {
+                string name = "";
+                name = txtSearch.Text;
+                int brand = 0;
+                if (cbBrand.SelectedValue!=null)
+                    brand = Int32.Parse(cbBrand.SelectedValue.ToString());
+                int category = 0;
+                if (cbCategory.SelectedValue != null)
+                    category = Int32.Parse(cbCategory.SelectedValue.ToString());
+
+                dtProduct.Clear();
+                dtProduct = dbProduct.getAllProduct(name, brand, category).Tables[0];
+
+                List<Product> productDetails = new List<Product>();
+                productDetails = Model.ConvertDataTable<Product>(dtProduct);
+                List<BanHang_ListItem> productIem = new List<BanHang_ListItem>();
+                int x = 0;
+                foreach (Product i in productDetails)
+                {
+                    // add item to list item
+                    BanHang_ListItem item = new BanHang_ListItem();
+                    item.lbName.Text = i.name;
+                    item.lbPrice.Text = i.price.ToString();
+                    item.lbID.Text = i.product_id.ToString();
+                    item.btnAdd.Text = i.product_id.ToString();
+                    item.btnAdd.Click += btnAdd_Click;
+
+                    item.Visible = true;
+                    item.Location = new System.Drawing.Point(0, x);
+                    pnListItem.Controls.Add(item);
+
+                    item.Dock = DockStyle.Top;
+                    item.BringToFront();
+
+                    productIem.Add(item);
+                    x += Int32.Parse(item.Height.ToString());
+                }
+            }
+            catch (Exception er)
+            {
+                //MessageBox.Show("Không lấy được nội dung. Lỗi rồi!!!");
+                MessageBox.Show(er.ToString());
             }
         }
     }

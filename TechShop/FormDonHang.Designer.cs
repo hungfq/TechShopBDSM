@@ -29,12 +29,8 @@ namespace TechShop
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDonHang));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.cbCustomer = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,9 +38,8 @@ namespace TechShop
             this.label8 = new System.Windows.Forms.Label();
             this.ckAll = new System.Windows.Forms.CheckBox();
             this.pnDsOrder = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.cbCustomer = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,39 +62,6 @@ namespace TechShop
             this.lbName.TabIndex = 0;
             this.lbName.Text = "Danh sách đơn hàng";
             this.lbName.Click += new System.EventHandler(this.lbName_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.White;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(763, 0);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(74, 48);
-            this.btnSearch.TabIndex = 40;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // cbCustomer
-            // 
-            this.cbCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCustomer.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCustomer.FormattingEnabled = true;
-            this.cbCustomer.Location = new System.Drawing.Point(843, 6);
-            this.cbCustomer.Name = "cbCustomer";
-            this.cbCustomer.Size = new System.Drawing.Size(348, 35);
-            this.cbCustomer.TabIndex = 51;
-            this.cbCustomer.Text = "  Khách hàng";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(26, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(611, 31);
-            this.textBox1.TabIndex = 50;
             // 
             // label2
             // 
@@ -170,23 +132,26 @@ namespace TechShop
             this.pnDsOrder.Size = new System.Drawing.Size(1198, 652);
             this.pnDsOrder.TabIndex = 41;
             // 
-            // panel2
+            // cbCustomer
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.cbCustomer);
-            this.panel2.Controls.Add(this.btnSearch);
-            this.panel2.Location = new System.Drawing.Point(11, 65);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1194, 48);
-            this.panel2.TabIndex = 56;
+            this.cbCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCustomer.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCustomer.FormattingEnabled = true;
+            this.cbCustomer.Location = new System.Drawing.Point(861, 74);
+            this.cbCustomer.Name = "cbCustomer";
+            this.cbCustomer.Size = new System.Drawing.Size(348, 35);
+            this.cbCustomer.TabIndex = 51;
+            this.cbCustomer.Text = "  Khách hàng";
+            this.cbCustomer.SelectionChangeCommitted += new System.EventHandler(this.cbCustomer_SelectionChangeCommitted);
+            this.cbCustomer.SelectedValueChanged += new System.EventHandler(this.cbCustomer_SelectedValueChanged);
             // 
             // FormDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1221, 844);
+            this.Controls.Add(this.cbCustomer);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
@@ -194,13 +159,11 @@ namespace TechShop
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ckAll);
             this.Controls.Add(this.pnDsOrder);
-            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDonHang";
             this.Text = "FormDonHang";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,9 +173,6 @@ namespace TechShop
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbName;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.ComboBox cbCustomer;
-        private System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label5;
@@ -220,6 +180,6 @@ namespace TechShop
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.CheckBox ckAll;
         private System.Windows.Forms.Panel pnDsOrder;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox cbCustomer;
     }
 }

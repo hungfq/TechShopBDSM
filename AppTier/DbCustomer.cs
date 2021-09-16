@@ -17,15 +17,25 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
-        public DataSet getCustomerById(string id)
+        public string getCustomerById(string id)
         {
-            return db.ExecuteQueryDataSet("select * from customers where customer_id=" + id, CommandType.Text, null);
+            return db.ExecuteScalarValue("select dbo.get_CusNameById(" + id + ")", CommandType.Text, null).ToString();
         }
-        
+        public DataSet getCustomerInfoById(string id)
+        {
+            return db.ExecuteQueryDataSet("select * from customers where customer_id="+id, CommandType.Text, null);
+        }
+
         public DataSet getAllCustomer()
 
         {
             return db.ExecuteQueryDataSet("select * from customers", CommandType.Text, null);
+        }
+        public DataSet getAllCustomer(string name)
+        {
+            //return db.ExecuteQueryDataSet("dbo.sp_ProductsFilter", CommandType.StoredProcedure, new SqlParameter("@name", name), new SqlParameter("@brand_id", brand_id), new SqlParameter("@category_id", category_id),null);
+            return db.ExecuteQueryDataSet(("exec sp_CustomerFilter @name='" + name +
+                 "';"), CommandType.Text, null);
         }
         public bool insertCustomer(ref string err, string name, int age, string phone_number)
         {

@@ -16,10 +16,14 @@ namespace AppTier
 		{
 			db = new DAL();
 		}
-        public DataSet getInsuranceByID(string id)
+        public string getInsuranceByID(int id)
         {
-            return db.ExecuteQueryDataSet("select * from insurances where insurance_id=" + id, CommandType.Text, null);
+            return db.ExecuteScalarValue("select dbo.get_InsuranceTimeById(" + id.ToString() + ")", CommandType.Text, null).ToString();
         }
+        //public DataSet getInsuranceByID(string id)
+        //{
+        //    return db.ExecuteQueryDataSet("select * from insurances where insurance_id=" + id, CommandType.Text, null);
+        //}
         public DataSet getAllInsurance()
         {
             return db.ExecuteQueryDataSet("select * from insurances", CommandType.Text, null);
