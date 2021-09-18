@@ -18,7 +18,7 @@ namespace TechShop
         DataTable dtCustomer;
         List<Customer> customerList = new List<Customer>();
         string oddID;
-        public FormSuaKH(String id)
+        public FormSuaKH(string id)
         {
             InitializeComponent();
             dbCustomer = new DbCustomer();

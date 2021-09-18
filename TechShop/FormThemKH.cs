@@ -27,7 +27,10 @@ namespace TechShop
                 bool status = dbCustomer.insertCustomer(ref err,txtName.Text,Int32.Parse(txtAge.Text),
                     txtSDT.Text);
                 if (status)
+                {
                     MessageBox.Show("Them khach hang thanh cong");
+                    btnExit.PerformClick();
+                }
                 else
                     MessageBox.Show(err);
             }

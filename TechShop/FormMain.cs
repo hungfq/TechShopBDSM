@@ -13,6 +13,7 @@ namespace TechShop
 {
     public partial class FormMain : Form
     {
+        FormUser frmUser = new FormUser(); 
         FormDanhMuc frmDanhMuc = new FormDanhMuc();
         FormDsSanPham formDsSanPham = new FormDsSanPham();
         FormDsKhachHang formDsKhachHang = new FormDsKhachHang();
@@ -178,6 +179,22 @@ namespace TechShop
             frmLogin.txtPassword.Text = null;
             
         }
+        private void btnDanhMuc_Click(object sender, EventArgs e)
+        {
+            resetBtnBackColor();
+            //hideSubmenu();
+            setBtnBackColor(btnDanhMuc);
+            OpenChildForm(frmDanhMuc);
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            resetBtnBackColor();
+            //hideSubmenu();
+            setBtnBackColor(btnUser);
+            OpenChildForm(frmUser);
+            frmUser.LoadData();
+        }
         private void setBtnBackColor(Button a)
         {
             a.BackColor = Color.FromArgb(41, 112, 189);
@@ -187,6 +204,13 @@ namespace TechShop
             foreach (var i in pnCtrl.Controls.OfType<Button>())
             {
                 i.BackColor = Color.FromArgb(32, 45, 63);
+            }
+            foreach (var i in pnCtrl.Controls.OfType<Panel>())
+            {
+                foreach (var j in i.Controls.OfType<Button>())
+                {
+                    j.BackColor = Color.FromArgb(32, 45, 63);
+                }
             }
         }
         private void hideSubmenu()
@@ -205,12 +229,6 @@ namespace TechShop
             childForm.Show();
         }
 
-        private void btnDanhMuc_Click(object sender, EventArgs e)
-        {
-            resetBtnBackColor();
-            hideSubmenu();
-            setBtnBackColor(btnDanhMuc);
-            OpenChildForm(frmDanhMuc);
-        }
+       
     }     
 }

@@ -1,63 +1,63 @@
-﻿using AppTier;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppTier;
 
 namespace TechShop
 {
-    public partial class FormDsKhachHang : Form
+    public partial class FormUser : Form
     {
-        List<CustomerItem> cusItem;
-        List<Customer> customer;
-        DbCustomer dbCustomer;
-        DataTable dtCustomer = null;
-        public FormDsKhachHang()
+        List<UserItem> userItem;
+        List<User> user;
+        DbUser dbUser;
+        DataTable dtUser = null;
+        DbRole dbRole = new DbRole();
+        public FormUser()
         {
             InitializeComponent();
-            dbCustomer = new DbCustomer();
-            LoadData();
+            dbUser = new DbUser();
         }
-        
         public void LoadData()
         {
-            cusItem = new List<CustomerItem>();
-            customer = new List<Customer>();
+            userItem = new List<UserItem>();
+            user = new List<User>();
             try
             {
                 // Vận chuyển dữ liệu vào DataTable dtKhachHang 
-                dtCustomer = new DataTable();
-                dtCustomer.Clear();
-                dtCustomer = dbCustomer.getAllCustomer().Tables[0];
+                dtUser = new DataTable();
+                dtUser.Clear();
+                dtUser = dbUser.getAllUser().Tables[0];
 
-                customer = Model.ConvertDataTable<Customer>(dtCustomer);
-                
+
+                user = Model.ConvertDataTable<User>(dtUser);
+
                 int x = 0;
-                foreach (Customer i in customer)
+                foreach (User i in user)
                 {
-                    CustomerItem item = new CustomerItem();
+                    UserItem item = new UserItem();
                     item.lbName.Text = i.name;
-                    item.lbAge.Text = i.age.ToString();
-                    item.lbID.Text = i.customer_id.ToString();
+                    item.lbID.Text = i.user_id.ToString();
+                    //item.lbRole.Text = i.role_id.ToString();
+                    item.lbRole.Text = dbRole.getRoleByID(i.role_id.ToString()).Tables[0].Rows[0][1].ToString();
+                    item.lbUsername.Text = i.username;
                     item.lbPhoneNum.Text = i.phone_number.ToString();
-                    item.btnModify.Text = i.customer_id.ToString();
+                    item.btnModify.Text = i.user_id.ToString();
                     item.btnModify.Click += btnModify_Click;
 
                     item.Visible = true;
                     item.Location = new System.Drawing.Point(0, x);
                     pnDsSp.Controls.Add(item);
-                    cusItem.Add(item);
+                    userItem.Add(item);
                     x += Int32.Parse(item.Height.ToString());
                 }
             }
-            catch (SqlException)
+            catch (Exception)
             {
                 MessageBox.Show("Không lấy được nội dung. Lỗi rồi!!!");
             }
@@ -65,7 +65,7 @@ namespace TechShop
         private void btnModify_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
-            FormSuaKH form = new FormSuaKH(((Button)sender).Text)
+            FormSuaUser form = new FormSuaUser(((Button)sender).Text)
             {
                 Dock = DockStyle.Fill,
                 TopLevel = false,
@@ -82,29 +82,29 @@ namespace TechShop
         {
             this.Controls.Clear();
             InitializeComponent();
-            dbCustomer = new DbCustomer();
+            dbUser = new DbUser();
             LoadData();
         }
         private void btnThemSP_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
-            FormThemKH formThemKH = new FormThemKH()
+            FormThemUser form = new FormThemUser()
             {
                 Dock = DockStyle.Fill,
                 TopLevel = false,
                 TopMost = true
             };
-            formThemKH.FormBorderStyle = FormBorderStyle.None;
-            this.Controls.Add(formThemKH);
-            formThemKH.Show();
+            form.FormBorderStyle = FormBorderStyle.None;
+            this.Controls.Add(form);
+            form.Show();
 
-            formThemKH.btnReturn.Click += btnReturn_Click;
-            formThemKH.btnExit.Click += btnReturn_Click;
+            form.btnReturn.Click += btnReturn_Click;
+            form.btnExit.Click += btnReturn_Click;
         }
 
         private void ckAll_CheckedChanged(object sender, EventArgs e)
         {
-            foreach (CustomerItem i in pnDsSp.Controls)
+            foreach (UserItem i in pnDsSp.Controls)
             {
                 i.ck.Checked = ckAll.Checked;
             }
@@ -113,23 +113,23 @@ namespace TechShop
         private void btnSearch_Click(object sender, EventArgs e)
         {
             pnDsSp.Controls.Clear();
-            cusItem = new List<CustomerItem>();
-            customer = new List<Customer>();
-            
-            try
+            userItem = new List<UserItem>();
+            user = new List<User>();
+
+            /*try
             {
                 string name = "";
                 name = txtSearch.Text;
-                dtCustomer = new DataTable();
-                dtCustomer.Clear();
-                dtCustomer = dbCustomer.getAllCustomer(name).Tables[0];
+                dtUser = new DataTable();
+                dtUser.Clear();
+                dtUser = dbUser.getAllCustomer(name).Tables[0];
 
-                customer = Model.ConvertDataTable<Customer>(dtCustomer);
+                user = Model.ConvertDataTable<User>(dtUser);
 
                 int x = 0;
-                foreach (Customer i in customer)
+                foreach (User i in user)
                 {
-                    CustomerItem item = new CustomerItem();
+                    UserItem item = new UserItem();
                     item.lbName.Text = i.name;
                     item.lbAge.Text = i.age.ToString();
                     item.lbID.Text = i.customer_id.ToString();
@@ -140,22 +140,22 @@ namespace TechShop
                     item.Visible = true;
                     item.Location = new System.Drawing.Point(0, x);
                     pnDsSp.Controls.Add(item);
-                    cusItem.Add(item);
+                    userItem.Add(item);
                     x += Int32.Parse(item.Height.ToString());
                 }
             }
-            catch (SqlException eee)
+            catch (Exception eee)
             {
                 //MessageBox.Show("Không lấy được nội dung. Lỗi rồi!!!");
                 MessageBox.Show(eee.ToString());
-            }
+            }*/
         }
 
         private void lbTitle_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
             InitializeComponent();
-            dbCustomer = new DbCustomer();
+            dbUser = new DbUser();
             LoadData();
         }
     }

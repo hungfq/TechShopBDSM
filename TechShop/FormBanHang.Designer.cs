@@ -152,11 +152,11 @@ namespace TechShop
             this.lbTienThua.AutoSize = true;
             this.lbTienThua.Font = new System.Drawing.Font("Open Sans Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTienThua.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lbTienThua.Location = new System.Drawing.Point(257, 178);
+            this.lbTienThua.Location = new System.Drawing.Point(340, 178);
             this.lbTienThua.Name = "lbTienThua";
-            this.lbTienThua.Size = new System.Drawing.Size(161, 38);
+            this.lbTienThua.Size = new System.Drawing.Size(81, 38);
             this.lbTienThua.TabIndex = 60;
-            this.lbTienThua.Text = "000000000";
+            this.lbTienThua.Text = "0000";
             this.lbTienThua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
@@ -216,11 +216,11 @@ namespace TechShop
             this.lbTotalMoney.AutoSize = true;
             this.lbTotalMoney.Font = new System.Drawing.Font("Open Sans Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotalMoney.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbTotalMoney.Location = new System.Drawing.Point(226, 10);
+            this.lbTotalMoney.Location = new System.Drawing.Point(326, 10);
             this.lbTotalMoney.Name = "lbTotalMoney";
-            this.lbTotalMoney.Size = new System.Drawing.Size(191, 45);
+            this.lbTotalMoney.Size = new System.Drawing.Size(96, 45);
             this.lbTotalMoney.TabIndex = 2;
-            this.lbTotalMoney.Text = "000000000";
+            this.lbTotalMoney.Text = "0000";
             this.lbTotalMoney.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1

@@ -118,24 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnBrandAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnReturn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAARoAAAEaAFQoPbzAAAAB3RJ
-        TUUH5QkSBAIRItI3WAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACiSURBVDhP
-        3ZVBCoAwDAR70ItP9W16UB/lA8Sz7oiVEirS2osGBmSTbDEN6h6iFavYTnhGy4pKdMKbedDIJUctRmEN
-        0cglB02DsIZoPzBkyBSFNGIS1hCNnK2/Loo16AXD5nQPjbOwhmjkwlp68ThWahG2KRe8ook3RMU3lH/l
-        4pdCFF2bu6CI060hGrnk+IYhw7aGaFmGDLnoB5ZgDRJ+Ac7tdue4Ef79FNIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnBrandModify.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJ
-        TUUH5QkFCCkmKMv5fAAAAMBJREFUSEvt1c0KAWEUgOHP794V2Ep+spmytJBrYEuKotwBF2LuQ26AXISt
-        UhZugPdo1CSbGZ1D+d56mmYxnanzTeN8Pt8vVUYDucedUSVscMIAGahXRB5TXHFGB6o1EaKFLCY4oge1
-        6tjjhgPkJQqoRFeV4kOftpBdq/Vu6AVjqJ3oGnZ4HTqC7Fil/xkqp9R8qDSH+VBpAfOhUhfrSB+mP4Gv
-        1MYKyw8ESFx8x2nNkDj5huVADVOSZ6vw+Sxz7g4SW1PcZcwEFAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QkDCR4H0Ax8/QAAAGlJREFU
+        SEtjGOyAFYjDgNgIzKMyYAbiHCB+D8RlIAFqAmTDpwExHxBTDYwajhWMGo4VgAzPBmKaGA4C6UD8CYhn
+        ATEvSIDagOYW0DyIQICmkQwDo5aQBEYtIQkgW0L1KhMGaFrpEwEYGACPZyjhq4OTMQAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
 </root>

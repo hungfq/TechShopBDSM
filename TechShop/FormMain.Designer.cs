@@ -39,7 +39,6 @@ namespace TechShop
             this.pnManagerSubMenu = new System.Windows.Forms.Panel();
             this.btnDanhMuc = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
-            this.btnAccount = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
@@ -165,11 +164,10 @@ namespace TechShop
             this.pnManagerSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(37)))), ((int)(((byte)(55)))));
             this.pnManagerSubMenu.Controls.Add(this.btnDanhMuc);
             this.pnManagerSubMenu.Controls.Add(this.btnUser);
-            this.pnManagerSubMenu.Controls.Add(this.btnAccount);
             this.pnManagerSubMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnManagerSubMenu.Location = new System.Drawing.Point(0, 710);
+            this.pnManagerSubMenu.Location = new System.Drawing.Point(0, 769);
             this.pnManagerSubMenu.Name = "pnManagerSubMenu";
-            this.pnManagerSubMenu.Size = new System.Drawing.Size(308, 171);
+            this.pnManagerSubMenu.Size = new System.Drawing.Size(308, 112);
             this.pnManagerSubMenu.TabIndex = 18;
             // 
             // btnDanhMuc
@@ -179,7 +177,7 @@ namespace TechShop
             this.btnDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDanhMuc.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDanhMuc.ForeColor = System.Drawing.Color.White;
-            this.btnDanhMuc.Location = new System.Drawing.Point(0, 3);
+            this.btnDanhMuc.Location = new System.Drawing.Point(0, 0);
             this.btnDanhMuc.Name = "btnDanhMuc";
             this.btnDanhMuc.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
             this.btnDanhMuc.Size = new System.Drawing.Size(308, 56);
@@ -197,7 +195,7 @@ namespace TechShop
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.ForeColor = System.Drawing.Color.White;
-            this.btnUser.Location = new System.Drawing.Point(0, 59);
+            this.btnUser.Location = new System.Drawing.Point(0, 56);
             this.btnUser.Name = "btnUser";
             this.btnUser.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
             this.btnUser.Size = new System.Drawing.Size(308, 56);
@@ -206,23 +204,7 @@ namespace TechShop
             this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUser.UseVisualStyleBackColor = true;
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnAccount.FlatAppearance.BorderSize = 0;
-            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccount.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccount.ForeColor = System.Drawing.Color.White;
-            this.btnAccount.Location = new System.Drawing.Point(0, 115);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Padding = new System.Windows.Forms.Padding(90, 0, 0, 0);
-            this.btnAccount.Size = new System.Drawing.Size(308, 56);
-            this.btnAccount.TabIndex = 14;
-            this.btnAccount.Text = "Tài khoản";
-            this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnKhachHang
             // 
@@ -427,7 +409,6 @@ namespace TechShop
         public System.Windows.Forms.Panel pnMain;
         private System.Windows.Forms.Panel pnManagerSubMenu;
         private System.Windows.Forms.Button btnUser;
-        private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnDanhMuc;
     }

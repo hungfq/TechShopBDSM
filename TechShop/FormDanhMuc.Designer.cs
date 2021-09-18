@@ -29,20 +29,177 @@ namespace TechShop
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDanhMuc));
+            this.pnBrandBig = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnBrand = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbBrand = new System.Windows.Forms.Label();
+            this.pnInsuarenceBig = new System.Windows.Forms.Panel();
+            this.lbInsuarence = new System.Windows.Forms.Label();
+            this.pnCategoryBig = new System.Windows.Forms.Panel();
+            this.lbCategory = new System.Windows.Forms.Label();
+            this.btnBrandModify = new System.Windows.Forms.Button();
+            this.btnBrandAdd = new System.Windows.Forms.Button();
+            this.pnBrandBig.SuspendLayout();
+            this.pnInsuarenceBig.SuspendLayout();
+            this.pnCategoryBig.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pnBrandBig
+            // 
+            this.pnBrandBig.Controls.Add(this.btnBrandAdd);
+            this.pnBrandBig.Controls.Add(this.btnBrandModify);
+            this.pnBrandBig.Controls.Add(this.label2);
+            this.pnBrandBig.Controls.Add(this.pnBrand);
+            this.pnBrandBig.Controls.Add(this.label8);
+            this.pnBrandBig.Controls.Add(this.lbBrand);
+            this.pnBrandBig.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnBrandBig.Location = new System.Drawing.Point(0, 0);
+            this.pnBrandBig.Name = "pnBrandBig";
+            this.pnBrandBig.Size = new System.Drawing.Size(411, 844);
+            this.pnBrandBig.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 26);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "ID";
+            // 
+            // pnBrand
+            // 
+            this.pnBrand.AutoScroll = true;
+            this.pnBrand.BackColor = System.Drawing.Color.White;
+            this.pnBrand.Location = new System.Drawing.Point(12, 152);
+            this.pnBrand.Name = "pnBrand";
+            this.pnBrand.Size = new System.Drawing.Size(384, 680);
+            this.pnBrand.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(90, 109);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(129, 26);
+            this.label8.TabIndex = 50;
+            this.label8.Text = "Thương hiệu";
+            // 
+            // lbBrand
+            // 
+            this.lbBrand.AutoSize = true;
+            this.lbBrand.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBrand.Location = new System.Drawing.Point(127, 21);
+            this.lbBrand.Name = "lbBrand";
+            this.lbBrand.Size = new System.Drawing.Size(157, 33);
+            this.lbBrand.TabIndex = 1;
+            this.lbBrand.Text = "Thương hiệu";
+            this.lbBrand.Click += new System.EventHandler(this.lbBrand_Click);
+            // 
+            // pnInsuarenceBig
+            // 
+            this.pnInsuarenceBig.Controls.Add(this.lbInsuarence);
+            this.pnInsuarenceBig.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnInsuarenceBig.Location = new System.Drawing.Point(823, 0);
+            this.pnInsuarenceBig.Name = "pnInsuarenceBig";
+            this.pnInsuarenceBig.Size = new System.Drawing.Size(411, 844);
+            this.pnInsuarenceBig.TabIndex = 2;
+            // 
+            // lbInsuarence
+            // 
+            this.lbInsuarence.AutoSize = true;
+            this.lbInsuarence.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInsuarence.Location = new System.Drawing.Point(138, 21);
+            this.lbInsuarence.Name = "lbInsuarence";
+            this.lbInsuarence.Size = new System.Drawing.Size(122, 33);
+            this.lbInsuarence.TabIndex = 3;
+            this.lbInsuarence.Text = "Bảo hành";
+            // 
+            // pnCategoryBig
+            // 
+            this.pnCategoryBig.Controls.Add(this.lbCategory);
+            this.pnCategoryBig.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnCategoryBig.Location = new System.Drawing.Point(411, 0);
+            this.pnCategoryBig.Name = "pnCategoryBig";
+            this.pnCategoryBig.Size = new System.Drawing.Size(412, 844);
+            this.pnCategoryBig.TabIndex = 1;
+            // 
+            // lbCategory
+            // 
+            this.lbCategory.AutoSize = true;
+            this.lbCategory.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCategory.Location = new System.Drawing.Point(119, 21);
+            this.lbCategory.Name = "lbCategory";
+            this.lbCategory.Size = new System.Drawing.Size(176, 33);
+            this.lbCategory.TabIndex = 2;
+            this.lbCategory.Text = "Loại sản phẩm";
+            // 
+            // btnBrandModify
+            // 
+            this.btnBrandModify.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrandModify.FlatAppearance.BorderSize = 0;
+            this.btnBrandModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrandModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrandModify.Image = ((System.Drawing.Image)(resources.GetObject("btnBrandModify.Image")));
+            this.btnBrandModify.Location = new System.Drawing.Point(345, 104);
+            this.btnBrandModify.Name = "btnBrandModify";
+            this.btnBrandModify.Size = new System.Drawing.Size(51, 42);
+            this.btnBrandModify.TabIndex = 62;
+            this.btnBrandModify.UseVisualStyleBackColor = false;
+            this.btnBrandModify.Click += new System.EventHandler(this.btnBrandModify_Click);
+            // 
+            // btnBrandAdd
+            // 
+            this.btnBrandAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrandAdd.FlatAppearance.BorderSize = 0;
+            this.btnBrandAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrandAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrandAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnBrandAdd.Image")));
+            this.btnBrandAdd.Location = new System.Drawing.Point(288, 104);
+            this.btnBrandAdd.Name = "btnBrandAdd";
+            this.btnBrandAdd.Size = new System.Drawing.Size(51, 42);
+            this.btnBrandAdd.TabIndex = 63;
+            this.btnBrandAdd.UseVisualStyleBackColor = false;
+            this.btnBrandAdd.Click += new System.EventHandler(this.btnBrandAdd_Click);
             // 
             // FormDanhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1234, 844);
+            this.Controls.Add(this.pnCategoryBig);
+            this.Controls.Add(this.pnInsuarenceBig);
+            this.Controls.Add(this.pnBrandBig);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDanhMuc";
             this.Text = "FormDanhMuc";
+            this.pnBrandBig.ResumeLayout(false);
+            this.pnBrandBig.PerformLayout();
+            this.pnInsuarenceBig.ResumeLayout(false);
+            this.pnInsuarenceBig.PerformLayout();
+            this.pnCategoryBig.ResumeLayout(false);
+            this.pnCategoryBig.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel pnBrandBig;
+        private System.Windows.Forms.Panel pnInsuarenceBig;
+        private System.Windows.Forms.Panel pnCategoryBig;
+        private System.Windows.Forms.Label lbBrand;
+        private System.Windows.Forms.Label lbInsuarence;
+        private System.Windows.Forms.Label lbCategory;
+        private System.Windows.Forms.Panel pnBrand;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Button btnBrandModify;
+        public System.Windows.Forms.Button btnBrandAdd;
     }
 }

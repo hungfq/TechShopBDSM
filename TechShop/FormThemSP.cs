@@ -88,7 +88,7 @@ namespace TechShop
             {
                 string p1 = txtImgPath.Text;
                 string p2 = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\TechShop\\ImageStorage\\" + txtImgName.Text;
-                File.Copy(p1,p2, true);
+                File.Copy(p1, p2, true);
                 DialogResult result = MessageBox.Show("Save image successfully", "", MessageBoxButtons.OK);
             }
             catch (Exception ee)
@@ -108,7 +108,7 @@ namespace TechShop
                     Int32.Parse(cbIsurance.SelectedValue.ToString()));
                 btnSaveImg.PerformClick();
                 if (status)
-                { 
+                {
                     MessageBox.Show("Them san pham thanh cong");
                     btnExit.PerformClick();
                 }
@@ -119,7 +119,7 @@ namespace TechShop
             {
                 MessageBox.Show(ee.ToString());
             }
-            
+
         }
     }
 }

@@ -70,5 +70,19 @@ namespace TechShop
         public int product_id { get; set; }
         public int order_id { get; set; }
         public int quantity { get; set; }
-    }    
+    }
+    public class User
+    {
+        public int user_id { get; set; }
+        public string name { get; set; }
+        public string phone_number { get; set; }
+        public int role_id { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+    }
+    public class Brand
+    {
+        public int brand_id { get; set; }
+        public string name { get; set; }
+    }
 }

@@ -16,7 +16,17 @@ namespace AppTier
         public DbRole()
         {
             db = new DAL();
-        }  
+        }
+        public DataSet getAll()
+        {
+            return db.ExecuteQueryDataSet("select * from roles",
+                CommandType.Text, null);
+        }
+        public DataSet getRoleByID(string id)
+        {
+            return db.ExecuteQueryDataSet("select * from roles where role_id="+id,
+                CommandType.Text, null);
+        }
         public bool insertRole(ref string err, string name)
         {
             return db.MyExecuteNonQuery("sp_InsertRole", CommandType.StoredProcedure, ref err,  new SqlParameter("@name", name));
