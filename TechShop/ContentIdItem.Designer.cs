@@ -56,7 +56,7 @@ namespace TechShop
             this.button1.Location = new System.Drawing.Point(0, 59);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(364, 1);
+            this.button1.Size = new System.Drawing.Size(356, 1);
             this.button1.TabIndex = 49;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -68,7 +68,7 @@ namespace TechShop
             this.txtContent.Location = new System.Drawing.Point(79, 17);
             this.txtContent.Name = "txtContent";
             this.txtContent.ReadOnly = true;
-            this.txtContent.Size = new System.Drawing.Size(205, 24);
+            this.txtContent.Size = new System.Drawing.Size(195, 24);
             this.txtContent.TabIndex = 50;
             // 
             // btnDelete
@@ -79,7 +79,7 @@ namespace TechShop
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(329, 13);
+            this.btnDelete.Location = new System.Drawing.Point(322, 13);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(33, 43);
@@ -95,7 +95,7 @@ namespace TechShop
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(288, 13);
+            this.btnSave.Location = new System.Drawing.Point(281, 13);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(33, 43);
@@ -115,7 +115,7 @@ namespace TechShop
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbID);
             this.Name = "ContentIdItem";
-            this.Size = new System.Drawing.Size(364, 60);
+            this.Size = new System.Drawing.Size(356, 60);
             this.ResumeLayout(false);
             this.PerformLayout();
 
