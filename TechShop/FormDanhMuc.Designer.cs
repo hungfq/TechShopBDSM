@@ -37,8 +37,8 @@ namespace TechShop
             this.pnBrand = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.lbBrand = new System.Windows.Forms.Label();
-            this.pnInsuarenceBig = new System.Windows.Forms.Panel();
-            this.lbInsuarence = new System.Windows.Forms.Label();
+            this.pnInsuranceBig = new System.Windows.Forms.Panel();
+            this.lbInsurance = new System.Windows.Forms.Label();
             this.pnCategoryBig = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbCategory = new System.Windows.Forms.Label();
@@ -47,8 +47,13 @@ namespace TechShop
             this.btnCategoryModify = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.pnCategory = new System.Windows.Forms.Panel();
+            this.btnInsuranceAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnInsuranceModify = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pnInsurance = new System.Windows.Forms.Panel();
             this.pnBrandBig.SuspendLayout();
-            this.pnInsuarenceBig.SuspendLayout();
+            this.pnInsuranceBig.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,24 +139,30 @@ namespace TechShop
             this.lbBrand.Text = "Thương hiệu";
             this.lbBrand.Click += new System.EventHandler(this.lbBrand_Click);
             // 
-            // pnInsuarenceBig
+            // pnInsuranceBig
             // 
-            this.pnInsuarenceBig.Controls.Add(this.lbInsuarence);
-            this.pnInsuarenceBig.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnInsuarenceBig.Location = new System.Drawing.Point(823, 0);
-            this.pnInsuarenceBig.Name = "pnInsuarenceBig";
-            this.pnInsuarenceBig.Size = new System.Drawing.Size(411, 844);
-            this.pnInsuarenceBig.TabIndex = 2;
+            this.pnInsuranceBig.Controls.Add(this.btnInsuranceAdd);
+            this.pnInsuranceBig.Controls.Add(this.lbInsurance);
+            this.pnInsuranceBig.Controls.Add(this.label1);
+            this.pnInsuranceBig.Controls.Add(this.pnInsurance);
+            this.pnInsuranceBig.Controls.Add(this.btnInsuranceModify);
+            this.pnInsuranceBig.Controls.Add(this.label5);
+            this.pnInsuranceBig.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnInsuranceBig.Location = new System.Drawing.Point(823, 0);
+            this.pnInsuranceBig.Name = "pnInsuranceBig";
+            this.pnInsuranceBig.Size = new System.Drawing.Size(411, 844);
+            this.pnInsuranceBig.TabIndex = 2;
             // 
-            // lbInsuarence
+            // lbInsurance
             // 
-            this.lbInsuarence.AutoSize = true;
-            this.lbInsuarence.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInsuarence.Location = new System.Drawing.Point(138, 21);
-            this.lbInsuarence.Name = "lbInsuarence";
-            this.lbInsuarence.Size = new System.Drawing.Size(122, 33);
-            this.lbInsuarence.TabIndex = 3;
-            this.lbInsuarence.Text = "Bảo hành";
+            this.lbInsurance.AutoSize = true;
+            this.lbInsurance.Font = new System.Drawing.Font("Open Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInsurance.Location = new System.Drawing.Point(138, 21);
+            this.lbInsurance.Name = "lbInsurance";
+            this.lbInsurance.Size = new System.Drawing.Size(122, 33);
+            this.lbInsurance.TabIndex = 3;
+            this.lbInsurance.Text = "Bảo hành";
+            this.lbInsurance.Click += new System.EventHandler(this.lbInsurance_Click);
             // 
             // pnCategoryBig
             // 
@@ -243,6 +254,63 @@ namespace TechShop
             this.pnCategory.Size = new System.Drawing.Size(384, 680);
             this.pnCategory.TabIndex = 65;
             // 
+            // btnInsuranceAdd
+            // 
+            this.btnInsuranceAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnInsuranceAdd.FlatAppearance.BorderSize = 0;
+            this.btnInsuranceAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsuranceAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsuranceAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnInsuranceAdd.Image")));
+            this.btnInsuranceAdd.Location = new System.Drawing.Point(291, 102);
+            this.btnInsuranceAdd.Name = "btnInsuranceAdd";
+            this.btnInsuranceAdd.Size = new System.Drawing.Size(51, 42);
+            this.btnInsuranceAdd.TabIndex = 74;
+            this.btnInsuranceAdd.UseVisualStyleBackColor = false;
+            this.btnInsuranceAdd.Click += new System.EventHandler(this.btnInsuranceAdd_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 26);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "ID";
+            // 
+            // btnInsuranceModify
+            // 
+            this.btnInsuranceModify.BackColor = System.Drawing.Color.Transparent;
+            this.btnInsuranceModify.FlatAppearance.BorderSize = 0;
+            this.btnInsuranceModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsuranceModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsuranceModify.Image = ((System.Drawing.Image)(resources.GetObject("btnInsuranceModify.Image")));
+            this.btnInsuranceModify.Location = new System.Drawing.Point(348, 102);
+            this.btnInsuranceModify.Name = "btnInsuranceModify";
+            this.btnInsuranceModify.Size = new System.Drawing.Size(51, 42);
+            this.btnInsuranceModify.TabIndex = 73;
+            this.btnInsuranceModify.UseVisualStyleBackColor = false;
+            this.btnInsuranceModify.Click += new System.EventHandler(this.btnInsuranceModify_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(93, 107);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(129, 26);
+            this.label5.TabIndex = 71;
+            this.label5.Text = "Thương hiệu";
+            // 
+            // pnInsurance
+            // 
+            this.pnInsurance.AutoScroll = true;
+            this.pnInsurance.BackColor = System.Drawing.Color.White;
+            this.pnInsurance.Location = new System.Drawing.Point(15, 150);
+            this.pnInsurance.Name = "pnInsurance";
+            this.pnInsurance.Size = new System.Drawing.Size(384, 680);
+            this.pnInsurance.TabIndex = 70;
+            // 
             // FormDanhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -251,15 +319,15 @@ namespace TechShop
             this.ClientSize = new System.Drawing.Size(1234, 844);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnCategoryBig);
-            this.Controls.Add(this.pnInsuarenceBig);
+            this.Controls.Add(this.pnInsuranceBig);
             this.Controls.Add(this.pnBrandBig);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDanhMuc";
             this.Text = "FormDanhMuc";
             this.pnBrandBig.ResumeLayout(false);
             this.pnBrandBig.PerformLayout();
-            this.pnInsuarenceBig.ResumeLayout(false);
-            this.pnInsuarenceBig.PerformLayout();
+            this.pnInsuranceBig.ResumeLayout(false);
+            this.pnInsuranceBig.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -269,10 +337,10 @@ namespace TechShop
         #endregion
 
         private System.Windows.Forms.Panel pnBrandBig;
-        private System.Windows.Forms.Panel pnInsuarenceBig;
+        private System.Windows.Forms.Panel pnInsuranceBig;
         private System.Windows.Forms.Panel pnCategoryBig;
         private System.Windows.Forms.Label lbBrand;
-        private System.Windows.Forms.Label lbInsuarence;
+        private System.Windows.Forms.Label lbInsurance;
         private System.Windows.Forms.Panel pnBrand;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label8;
@@ -285,5 +353,10 @@ namespace TechShop
         public System.Windows.Forms.Button btnCategoryModify;
         public System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pnCategory;
+        public System.Windows.Forms.Button btnInsuranceAdd;
+        public System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnInsurance;
+        public System.Windows.Forms.Button btnInsuranceModify;
+        public System.Windows.Forms.Label label5;
     }
 }

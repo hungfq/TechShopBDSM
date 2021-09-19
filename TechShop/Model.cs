@@ -90,4 +90,9 @@ namespace TechShop
         public int category_id { get; set; }
         public string name { get; set; }
     }
+    public class Insurance
+    {
+        public int insurance_id { get; set; }
+        public string time { get; set; }
+    }
 }
