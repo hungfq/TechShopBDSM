@@ -85,4 +85,9 @@ namespace TechShop
         public int brand_id { get; set; }
         public string name { get; set; }
     }
+    public class Category
+    {
+        public int category_id { get; set; }
+        public string name { get; set; }
+    }
 }
