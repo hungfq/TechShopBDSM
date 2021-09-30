@@ -29,21 +29,10 @@ namespace TechShop
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbID = new System.Windows.Forms.Label();
             this.lbQuantity = new System.Windows.Forms.Label();
             this.lbProductName = new System.Windows.Forms.Label();
             this.lbOrderID = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lbID
-            // 
-            this.lbID.AutoSize = true;
-            this.lbID.Font = new System.Drawing.Font("Open Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbID.Location = new System.Drawing.Point(37, 16);
-            this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(27, 23);
-            this.lbID.TabIndex = 19;
-            this.lbID.Text = "ID";
             // 
             // lbQuantity
             // 
@@ -79,7 +68,6 @@ namespace TechShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lbID);
             this.Controls.Add(this.lbQuantity);
             this.Controls.Add(this.lbProductName);
             this.Controls.Add(this.lbOrderID);
@@ -91,8 +79,6 @@ namespace TechShop
         }
 
         #endregion
-
-        public System.Windows.Forms.Label lbID;
         public System.Windows.Forms.Label lbQuantity;
         public System.Windows.Forms.Label lbProductName;
         public System.Windows.Forms.Label lbOrderID;

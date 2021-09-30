@@ -30,7 +30,6 @@ namespace TechShop
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDonHang_ChiTiet));
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -40,16 +39,6 @@ namespace TechShop
             this.btnXoa = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 26);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "ID";
             // 
             // label3
             // 
@@ -137,7 +126,6 @@ namespace TechShop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1221, 844);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
@@ -152,8 +140,6 @@ namespace TechShop
         }
 
         #endregion
-
-        public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label label8;

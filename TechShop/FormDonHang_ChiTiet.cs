@@ -52,7 +52,6 @@ namespace TechShop
                 foreach (OrderDetail i in orderDetails)
                 {
                     OrderDetailItem item = new OrderDetailItem();
-                    item.lbID.Text = i.orderdetail_id.ToString();
                     item.lbOrderID.Text = i.order_id.ToString();
                     //DataSet
                     
