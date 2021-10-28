@@ -47,7 +47,7 @@ namespace TechShop
         public int brand_id { get; set; }
         public int category_id { get; set; }
 
-        public int insuarence_id { get; set; }
+        public int insurance_id { get; set; }
     }
     public class Customer
     {

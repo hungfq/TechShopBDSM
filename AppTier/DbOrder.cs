@@ -52,6 +52,10 @@ namespace AppTier
         {
             return Int32.Parse(db.ExecuteScalarValue("select dbo.revenue_alltime()", CommandType.Text, null).ToString());
         }
+        public int getOrderAmount()
+        {
+            return Int32.Parse(db.ExecuteScalarValue("select dbo.get_OrderNumber()", CommandType.Text, null).ToString());
+        }
         public int getLastOrder()
         {
             return Int32.Parse(db.ExecuteScalarValue("select dbo.get_LastOrderId()", CommandType.Text, null).ToString());

@@ -66,10 +66,16 @@ namespace TechShop
                 cbIsurance.DisplayMember = "time";
                 cbIsurance.ValueMember = "insurance_id";
                 cbIsurance.DataSource = dtInsurance;
-                cbIsurance.SelectedValue = productList[0].insuarence_id;
+                cbIsurance.SelectedValue = productList[0].insurance_id;
 
-                //pbImage.Image = Image.FromFile(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\TechShop\\ImageStorage\\" + txtImgName.Text);
+                try
+                {
+                    pbImage.Image = Image.FromFile(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\TechShop\\ImageStorage\\" + txtImgName.Text);
+                }
+                catch
+                {
 
+                }
             }
             catch (Exception ee)
             {

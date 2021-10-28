@@ -280,7 +280,7 @@ namespace TechShop
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(308, 56);
             this.btnSignOut.TabIndex = 11;
-            this.btnSignOut.Text = "      Sign Out ";
+            this.btnSignOut.Text = "      Đăng xuất";
             this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSignOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSignOut.UseVisualStyleBackColor = true;

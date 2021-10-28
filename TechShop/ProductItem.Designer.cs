@@ -140,7 +140,7 @@ namespace TechShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.lbInsuarence);

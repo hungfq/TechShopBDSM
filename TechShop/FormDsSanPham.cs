@@ -174,7 +174,7 @@ namespace TechShop
                     item.lbImage.Text = i.image;
                     item.lbBrand.Text = dbBrand.getBrandByID(i.brand_id);
                     item.lbCategory.Text = dbCategory.getCategoryByID(i.category_id);
-                    item.lbInsuarence.Text = dbInsurance.getInsuranceByID(i.insuarence_id);
+                    item.lbInsuarence.Text = dbInsurance.getInsuranceByID(i.insurance_id);
 
                     item.btnModify.Text = i.product_id.ToString();
                     item.btnModify.Click += btnModify_Click;

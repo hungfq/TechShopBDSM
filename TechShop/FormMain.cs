@@ -13,7 +13,7 @@ namespace TechShop
 {
     public partial class FormMain : Form
     {
-        FormUser frmUser = new FormUser(); 
+        FormUser frmUser = new FormUser();
         FormDanhMuc frmDanhMuc = new FormDanhMuc();
         FormDsSanPham formDsSanPham = new FormDsSanPham();
         FormDsKhachHang formDsKhachHang = new FormDsKhachHang();
@@ -141,7 +141,7 @@ namespace TechShop
             OpenChildForm(frmLogin);
             frmLogin.txtUsername.Focus();
             txtName.Text = "username";
-            
+
         }
         private void btnSubmit_click(object sender, EventArgs e)
         {
@@ -157,15 +157,16 @@ namespace TechShop
                     role = dtUser.Rows[0]["r_name"].ToString();
                     txtName.Text = dtUser.Rows[0]["u_name"].ToString();
                 }
-                catch (Exception ê) {
+                catch (Exception ê)
+                {
                     MessageBox.Show(ê.ToString());
                 }
-                if (role == "admin")
+                if (role == "ADMIN")
                 {
                     role_admin();
                     btnDashboard.PerformClick();
                 }
-                else if (role == "seller")
+                else if (role == "MANAGER")
                 {
                     role_user();
                     btnDashboard.PerformClick();
@@ -177,7 +178,7 @@ namespace TechShop
             }
             frmLogin.txtUsername.Text = null;
             frmLogin.txtPassword.Text = null;
-            
+
         }
         private void btnDanhMuc_Click(object sender, EventArgs e)
         {
@@ -228,7 +229,5 @@ namespace TechShop
             childForm.BringToFront();
             childForm.Show();
         }
-
-       
-    }     
+    }
 }

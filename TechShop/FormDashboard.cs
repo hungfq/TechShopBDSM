@@ -30,12 +30,19 @@ namespace TechShop
         {
             DrawChart();
             DisplayRevenue();
+            DisplayOrderAmount();
         }
         public void DisplayRevenue()
         {
             int revenue = dbOrder.getRevenue();
 
             lbRevenue.Text = "$" + revenue.ToString();
+        }
+        public void DisplayOrderAmount()
+        {
+            int amount = dbOrder.getOrderAmount();
+
+            lbAmount.Text =  amount.ToString();
         }
         public void DrawChart()
         {
@@ -63,6 +70,5 @@ namespace TechShop
 
             chart1.Legends[0].Enabled = false;
         }
-        
     }
 }
