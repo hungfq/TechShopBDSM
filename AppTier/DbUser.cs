@@ -29,9 +29,7 @@ namespace AppTier
         }
         public DataSet getUserInfo(string id)
         {
-            return db.ExecuteQueryDataSet("select users.user_id as id, users.name as u_name, roles.name as r_name" +
-                " from users inner join roles on users.role_id = roles.role_id" +
-                " where users.user_id = "+ id,
+            return db.ExecuteQueryDataSet("select * from dbo.find_UserInfor(" + id + ");",
                 CommandType.Text, null);
         }
         public string getUserById(string id)
