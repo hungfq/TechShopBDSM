@@ -195,7 +195,7 @@ namespace TechShop
                 try
                 {
                     bool status = dbOrder.insertOrder(ref err, Int32.Parse(cbCustomer.SelectedValue.ToString()),
-                    id, DateTime.Today, Int32.Parse(lbTotalMoney.Text));
+                    id, DateTime.Now, Int32.Parse(lbTotalMoney.Text));
                     int order_id = dbOrder.getLastOrder();
 
                     foreach (CartItem ci in pnCart.Controls)
