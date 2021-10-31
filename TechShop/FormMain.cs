@@ -13,6 +13,7 @@ namespace TechShop
 {
     public partial class FormMain : Form
     {
+        FormBaoCaoKhachHang formBaoCaoKhachHang = new FormBaoCaoKhachHang();
         FormBaoCaoTaiChinh formBaoCaoTaiChinh = new FormBaoCaoTaiChinh();
         FormUser frmUser = new FormUser();
         FormDanhMuc frmDanhMuc = new FormDanhMuc();
@@ -39,16 +40,7 @@ namespace TechShop
             btnSignOut.PerformClick();
             frmLogin.btnSubmit.Click += btnSubmit_click;
         }
-        private void role_none()
-        {
-            btnBanHang.Visible = false;
-            btnDashboard.Visible = false;
-            btnDonHang.Visible = false;
-            btnSanPham.Visible = false;
-            btnKhachHang.Visible = false;
-            btnBaoCao.Visible = false;
-            btnManager.Visible = false;
-        }
+
         private void role_admin()
         {
             btnBanHang.Visible = true;
@@ -59,12 +51,36 @@ namespace TechShop
             btnBaoCao.Visible = true;
             btnManager.Visible = true;
         }
-        private void role_user()
+        private void role_manager()
         {
             btnBanHang.Visible = true;
             btnDashboard.Visible = true;
+            btnDonHang.Visible = true;
             btnSanPham.Visible = true;
             btnKhachHang.Visible = true;
+            btnBaoCao.Visible = true;
+            btnManager.Visible = false;
+        }
+        private void role_seller()
+        {
+            btnBanHang.Visible = true;
+            btnDashboard.Visible = true;
+            btnDonHang.Visible = true;
+            btnSanPham.Visible = true;
+            btnKhachHang.Visible = true;
+            btnBaoCao.Visible = false;
+            btnManager.Visible = false;
+        }
+
+        private void role_none()
+        {
+            btnBanHang.Visible = false;
+            btnDashboard.Visible = false;
+            btnDonHang.Visible = false;
+            btnSanPham.Visible = false;
+            btnKhachHang.Visible = false;
+            btnBaoCao.Visible = false;
+            btnManager.Visible = false;
         }
 
 
@@ -158,9 +174,9 @@ namespace TechShop
                     role = dtUser.Rows[0]["r_name"].ToString();
                     txtName.Text = dtUser.Rows[0]["u_name"].ToString();
                 }
-                catch (Exception ê)
+                catch (Exception ee)
                 {
-                    MessageBox.Show(ê.ToString());
+                    MessageBox.Show(ee.ToString());
                 }
                 if (role == "ADMIN")
                 {
@@ -169,7 +185,12 @@ namespace TechShop
                 }
                 else if (role == "MANAGER")
                 {
-                    role_user();
+                    role_manager();
+                    btnDashboard.PerformClick();
+                }
+                else if (role == "SELLER")
+                {
+                    role_seller();
                     btnDashboard.PerformClick();
                 }
             }
@@ -203,7 +224,16 @@ namespace TechShop
             //hideSubmenu();
             setBtnBackColor(btnBaoCaoTaiChinh);
             OpenChildForm(formBaoCaoTaiChinh);
-           // frmUser.LoadData();
+            formBaoCaoTaiChinh.Reset();
+            //formBaoCaoTaiChinh.LoadData();
+        }
+        private void btnBaoCaoKhachHang_Click(object sender, EventArgs e)
+        {
+            resetBtnBackColor();
+            //hideSubmenu();
+            setBtnBackColor(btnBaoCaoKhachHang);
+            OpenChildForm(formBaoCaoKhachHang);
+            formBaoCaoKhachHang.LoadData();
         }
         private void setBtnBackColor(Button a)
         {

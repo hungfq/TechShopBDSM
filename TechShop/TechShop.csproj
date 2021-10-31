@@ -67,6 +67,12 @@
     <Compile Include="BanHang_ListItem.Designer.cs">
       <DependentUpon>BanHang_ListItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCaoKhachHangItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaoCaoKhachHangItem.Designer.cs">
+      <DependentUpon>BaoCaoKhachHangItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="CartItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     </Compile>
     <Compile Include="FormBanHang.Designer.cs">
       <DependentUpon>FormBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaoCaoKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCaoKhachHang.Designer.cs">
+      <DependentUpon>FormBaoCaoKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBaoCaoTaiChinh.cs">
       <SubType>Form</SubType>
@@ -220,6 +232,9 @@
     <EmbeddedResource Include="BanHang_ListItem.resx">
       <DependentUpon>BanHang_ListItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoKhachHangItem.resx">
+      <DependentUpon>BaoCaoKhachHangItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CartItem.resx">
       <DependentUpon>CartItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBanHang.resx">
       <DependentUpon>FormBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaoCaoKhachHang.resx">
+      <DependentUpon>FormBaoCaoKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBaoCaoTaiChinh.resx">
       <DependentUpon>FormBaoCaoTaiChinh.cs</DependentUpon>

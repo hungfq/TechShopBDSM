@@ -97,8 +97,10 @@ namespace TechShop
             // 
             // cbYear
             // 
+            this.cbYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(71)))));
             this.cbYear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbYear.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbYear.ForeColor = System.Drawing.Color.White;
             this.cbYear.FormattingEnabled = true;
             this.cbYear.Location = new System.Drawing.Point(919, 133);
             this.cbYear.Name = "cbYear";

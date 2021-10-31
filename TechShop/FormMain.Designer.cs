@@ -105,6 +105,7 @@ namespace TechShop
             this.btnBaoCaoKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBaoCaoKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBaoCaoKhachHang.UseVisualStyleBackColor = true;
+            this.btnBaoCaoKhachHang.Click += new System.EventHandler(this.btnBaoCaoKhachHang_Click);
             // 
             // btnBaoCaoTaiChinh
             // 

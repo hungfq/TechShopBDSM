@@ -80,6 +80,10 @@ namespace AppTier
         {
             return db.ExecuteQueryDataSet("select * from dbo.find_YearsInOrder();", CommandType.Text, null);
         }
+        public DataSet view_OrderFromCustomer()
+        {
+            return db.ExecuteQueryDataSet("select * from view_OrderFromCustomer", CommandType.Text, null);
+        }
     }
    
 }

@@ -23,13 +23,22 @@ namespace TechShop
 
         private void FormBaoCaoTaiChinh_Load(object sender, EventArgs e)
         {
-            LoadData();
+            //LoadData();
         }
         public void LoadData()
         {
             LoadComboboxData();
             DrawChart();
         }
+        public void Reset()
+        {
+            this.Controls.Clear();
+            InitializeComponent();
+            dbOrder = new DbOrder();
+            dtChart = new DataTable();
+            dtCombobox = new DataTable();
+            LoadData();
+        } 
         public void DrawChart()
         {
             chart1.BackColor = Color.Transparent;
@@ -65,7 +74,6 @@ namespace TechShop
             cbYear.ValueMember = "years";
             cbYear.DataSource = dtCombobox;
             cbYear.SelectedIndex = 0;
-            //cbYear.Text = "Năm";
         }
 
         private void cbYear_SelectedIndexChanged(object sender, EventArgs e)
