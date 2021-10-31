@@ -13,6 +13,7 @@ namespace TechShop
 {
     public partial class FormMain : Form
     {
+        FormBaoCaoTaiChinh formBaoCaoTaiChinh = new FormBaoCaoTaiChinh();
         FormUser frmUser = new FormUser();
         FormDanhMuc frmDanhMuc = new FormDanhMuc();
         FormDsSanPham formDsSanPham = new FormDsSanPham();
@@ -196,6 +197,14 @@ namespace TechShop
             OpenChildForm(frmUser);
             frmUser.LoadData();
         }
+        private void btnBaoCaoTaiChinh_Click(object sender, EventArgs e)
+        {
+            resetBtnBackColor();
+            //hideSubmenu();
+            setBtnBackColor(btnBaoCaoTaiChinh);
+            OpenChildForm(formBaoCaoTaiChinh);
+           // frmUser.LoadData();
+        }
         private void setBtnBackColor(Button a)
         {
             a.BackColor = Color.FromArgb(41, 112, 189);
@@ -229,5 +238,7 @@ namespace TechShop
             childForm.BringToFront();
             childForm.Show();
         }
+
+       
     }
 }

@@ -122,6 +122,7 @@ namespace TechShop
             this.btnBaoCaoTaiChinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBaoCaoTaiChinh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBaoCaoTaiChinh.UseVisualStyleBackColor = true;
+            this.btnBaoCaoTaiChinh.Click += new System.EventHandler(this.btnBaoCaoTaiChinh_Click);
             // 
             // btnBaoCao
             // 

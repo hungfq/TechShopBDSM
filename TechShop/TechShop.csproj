@@ -94,6 +94,12 @@
     <Compile Include="FormBanHang.Designer.cs">
       <DependentUpon>FormBanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBaoCaoTaiChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCaoTaiChinh.Designer.cs">
+      <DependentUpon>FormBaoCaoTaiChinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDanhMuc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBanHang.resx">
       <DependentUpon>FormBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaoCaoTaiChinh.resx">
+      <DependentUpon>FormBaoCaoTaiChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDanhMuc.resx">
       <DependentUpon>FormDanhMuc.cs</DependentUpon>

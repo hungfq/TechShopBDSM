@@ -76,6 +76,10 @@ namespace AppTier
         {
             return db.MyExecuteNonQuery("sp_deleteAllOD", CommandType.StoredProcedure, ref err, new SqlParameter("@order_id  ", order_id));
         }
+        public DataSet find_YearsInOrder()
+        {
+            return db.ExecuteQueryDataSet("select * from dbo.find_YearsInOrder();", CommandType.Text, null);
+        }
     }
    
 }
