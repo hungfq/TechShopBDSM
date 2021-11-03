@@ -70,7 +70,7 @@ namespace TechShop
 
                 try
                 {
-                    pbImage.Image = Image.FromFile(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\TechShop\\ImageStorage\\" + txtImgName.Text);
+                    pbImage.Image = Image.FromFile(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName + "\\ImageStorage\\" + txtImgName.Text);
                 }
                 catch
                 {
@@ -111,7 +111,7 @@ namespace TechShop
             try
             {
                 string p1 = txtImgPath.Text;
-                string p2 = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\TechShop\\ImageStorage\\" + txtImgName.Text;
+                string p2 = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName + "\\ImageStorage\\" + txtImgName.Text;
                 File.Copy(p1, p2, true);
                 DialogResult result = MessageBox.Show("Save image successfully", "", MessageBoxButtons.OK);
             }
