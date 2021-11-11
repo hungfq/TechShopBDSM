@@ -23,7 +23,7 @@ namespace TechShop
         {
             try
             {
-                string name = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + "\\TechShop\\ImageStorage\\" + lbImage.Text;
+                string name = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName + "\\ImageStorage\\" + lbImage.Text;
                 System.Diagnostics.Process.Start(name);
             }
             catch (Exception ee)
