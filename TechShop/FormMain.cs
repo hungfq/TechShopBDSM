@@ -233,7 +233,7 @@ namespace TechShop
             //hideSubmenu();
             setBtnBackColor(btnBaoCaoKhachHang);
             OpenChildForm(formBaoCaoKhachHang);
-            formBaoCaoKhachHang.LoadData();
+            formBaoCaoKhachHang.Reset();
         }
         private void setBtnBackColor(Button a)
         {

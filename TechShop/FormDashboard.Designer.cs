@@ -30,9 +30,9 @@ namespace TechShop
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbRevenue = new System.Windows.Forms.Label();
@@ -152,10 +152,10 @@ namespace TechShop
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(673, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(734, 0);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(498, 389);
+            this.pictureBox4.Size = new System.Drawing.Size(437, 389);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -174,33 +174,33 @@ namespace TechShop
             // chart1
             // 
             this.chart1.BorderSkin.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Left;
-            legend3.BackColor = System.Drawing.Color.Transparent;
-            legend3.BorderColor = System.Drawing.Color.Transparent;
-            legend3.ForeColor = System.Drawing.Color.White;
-            legend3.HeaderSeparatorColor = System.Drawing.Color.White;
-            legend3.ItemColumnSeparatorColor = System.Drawing.Color.White;
-            legend3.Name = "Legend1";
-            legend3.TitleForeColor = System.Drawing.Color.White;
-            legend3.TitleSeparatorColor = System.Drawing.Color.White;
-            this.chart1.Legends.Add(legend3);
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.BorderColor = System.Drawing.Color.Transparent;
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.HeaderSeparatorColor = System.Drawing.Color.White;
+            legend1.ItemColumnSeparatorColor = System.Drawing.Color.White;
+            legend1.Name = "Legend1";
+            legend1.TitleForeColor = System.Drawing.Color.White;
+            legend1.TitleSeparatorColor = System.Drawing.Color.White;
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.EmptyPointStyle.LabelForeColor = System.Drawing.Color.White;
-            series3.LabelBackColor = System.Drawing.Color.Transparent;
-            series3.LabelBorderColor = System.Drawing.Color.Transparent;
-            series3.LabelForeColor = System.Drawing.Color.White;
-            series3.Legend = "Legend1";
-            series3.MarkerBorderColor = System.Drawing.Color.Transparent;
-            series3.MarkerColor = System.Drawing.Color.Transparent;
-            series3.MarkerImageTransparentColor = System.Drawing.Color.Transparent;
-            series3.Name = "DoanhThu";
-            series3.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.White;
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(666, 389);
+            series1.ChartArea = "ChartArea1";
+            series1.EmptyPointStyle.LabelForeColor = System.Drawing.Color.White;
+            series1.LabelBackColor = System.Drawing.Color.Transparent;
+            series1.LabelBorderColor = System.Drawing.Color.Transparent;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.MarkerBorderColor = System.Drawing.Color.Transparent;
+            series1.MarkerColor = System.Drawing.Color.Transparent;
+            series1.MarkerImageTransparentColor = System.Drawing.Color.Transparent;
+            series1.Name = "DoanhThu";
+            series1.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.White;
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(682, 389);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -212,7 +212,7 @@ namespace TechShop
             this.label1.Location = new System.Drawing.Point(378, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(462, 46);
+            this.label1.Size = new System.Drawing.Size(451, 45);
             this.label1.TabIndex = 3;
             this.label1.Text = "Biểu đồ doanh thu trong năm";
             // 

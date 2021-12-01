@@ -18,6 +18,13 @@ namespace TechShop
         public FormBaoCaoKhachHang()
         {
             InitializeComponent();
+            //LoadData();
+        }
+        public void Reset()
+        {
+            this.Controls.Clear();
+            InitializeComponent();
+            dbOrder = new DbOrder();
             LoadData();
         }
         public void LoadData()
